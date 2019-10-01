@@ -1,0 +1,96 @@
+<!--<textarea mXattribut="name:name;id:id;cols:cols;rows:rows;wrap:wrap;class:style"><mx:text id="content" /></textarea>
+<mx:bloc id="links">
+	<div class="fieldActions">
+		<mx:bloc id="expand">
+			<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="expand"><mx:text id="label" /></a>
+		</mx:bloc id="expand">
+	</div>
+</mx:bloc id="links">-->
+
+
+<span class="list">
+	<mx:bloc id="input">
+		<input type="text" mXattribut="id:id;value:value" />
+	</mx:bloc id="input">
+</span>
+<span class="cleanall"><a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;id:idreinit" class="cleanall"><mx:text id="label" /></a></span>
+
+<textarea mXattribut="name:name;id:id;cols:cols;rows:rows;wrap:wrap;" style="display:none"><mx:text id="content" /></textarea>
+<script type="text/javascript">
+	<!--
+	
+		var elementID = "<mx:text id="elementID" />";
+		var prefixElementID = "<mx:text id="prefixElementID" />";
+		//var separator = "<mx:text id="separator" />";
+		var lastElementID = false;
+		$(document).ready(function() {
+			
+			$('input[id^="'+prefixElementID+'"]').each(function () {
+				lastElementID = $(this).attr('id');
+			});
+			$('input[id^="'+prefixElementID+'"]').live('keyup', function() {
+				if (detectCTRL()) {
+					return;
+				}
+				var currentElementID = $(this).attr('id');
+				if ((currentElementID == lastElementID) && ($(this).val() != '')) {
+					//console.log(currentElementID+' == '+lastElementID);
+				
+					var id = currentElementID.replace(prefixElementID+'_', '');
+					
+					var newElementID  = prefixElementID+'_'+((id*1)+1);
+					//console.log($('#'+newElementID).val() == undefined);
+					if ($('#'+newElementID).val() == undefined) {
+						$(this).after('<input type="text" id="'+newElementID+'" />');
+					}
+					
+					lastElementID = newElementID;
+				} else if (($(this).val() == '') && (currentElementID != lastElementID)) {
+					var previousElementID = $(this).prev().attr('id');
+					$(this).remove();
+					
+					$('#' + previousElementID).focus();
+					
+				}
+				
+				var output = '';
+				$('input[id^="'+prefixElementID+'"]').each(function () {
+					if ($(this).attr('id') != lastElementID) {
+						output+=$(this).val()+"<mx:text id="separator" />";
+					}
+				});
+				$('#'+elementID).html(output);
+				
+				
+			});
+		});
+		
+		function detectCTRL(e){
+			if (!e) e = event;
+			if (e.ctrlKey || e.keyCode==9 ){
+				return true;
+			}
+		}
+		
+		$(document).ready(function() {
+			$('#reinit<mx:text id="elementID" />').click(function() {
+			
+				if (confirm('souhaitez-vous réinitialiser cette liste?')) {
+					$('input[id^="'+prefixElementID+'"]').each(function () {
+						var currentElementID = $(this).attr('id');
+						var id = currentElementID.replace(prefixElementID+'_', '');
+						console.log(id);
+ 						if (id == '1') {
+							$(this).val('');
+						} else {
+							$(this).remove();
+						}
+						lastElementID = prefixElementID+'_1';
+					});
+					
+				}
+			});
+		
+		});
+	//-->
+</script>

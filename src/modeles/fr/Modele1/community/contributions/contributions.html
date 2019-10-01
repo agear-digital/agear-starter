@@ -1,0 +1,49 @@
+<div class="contributions">
+
+	<!-- Formulaire -->
+	<mx:bloc id="form_contribution">
+		<a mXattribut="href:href;hreflang:hreflang;title:title;" class="contributionBack button bigB"><span><mx:text id="label" /></span></a><!-- Lien retour	 -->
+		<mx:text id="content" />
+	</mx:bloc id="form_contribution">
+
+	<!-- Preview -->
+	<mx:bloc id="preview">
+		<div id="postHeader" class="pb10 mb20 text">
+			<h2><mx:text id="title" /></h2>
+			<div class="post_infos">
+				<strong class="author"><mx:text id="author" /></strong><br />
+				<span class="post_date"><mx:text id="date" /></span>,
+			</div>
+			<div class="postTag">
+				Tags&nbsp;:&nbsp; <mx:bloc id="noTags"><span class="noTags"><mx:text id="noTags"></span></mx:bloc id="noTags">
+				<mx:bloc id="tags"><span><mx:text id="tag" /></span></mx:bloc id="tags">
+			</div>
+		</div>
+		<div class="postPictureResume mb20">
+			<mx:bloc id="image"><div class="contributionsPreviewDescImg"><img mxAttribut="src:src" /></div><span class="hide"><mx:bloc id="imageSize">normal</mx:bloc id="imageSize"></span></mx:bloc id="image">
+		</div>
+			<div class="postDescription lead"><mx:text id="description" /></div>
+
+			<div id="text" class="text margin-top">
+				<div class="PreviewContent col-xs-12 margin-bottom une_colonne"><mx:text id="content" /></div>
+			</div>
+		<div class="submit mt30">
+			<mx:bloc id="save">
+				<a mXattribut="href:href;hreflang:hreflang;title:title;" class="contributionsSave btn btn-primary"><mx:text id="label" /></a>
+			</mx:bloc id="save">
+			<mx:bloc id="edit">
+				<a mXattribut="href:href;hreflang:hreflang;title:title;" class="contributionsEdit btn btn-default"><mx:text id="label" /></a>
+			</mx:bloc id="edit">
+		</div>
+	</mx:bloc id="preview">
+
+	<!-- Message affiche apres l'enregistrement de la contribution si elle est en attente de moderation -->
+	<mx:bloc id="msg_moderation">
+		<div class="contributionValidate" >
+			<p>Merci pour votre contribution !</p>
+			<p>Votre billet est soumis &agrave; modération, vous serez notifi&eacute; lors de sa publication.</p>
+			<a mXattribut="href:href;hreflang:hreflang;title:title;" class="btn btn-default"><mx:text id="label" /></a><!-- Lien retour	 -->
+		</div>
+	</mx:bloc id="msg_moderation">
+
+</div>

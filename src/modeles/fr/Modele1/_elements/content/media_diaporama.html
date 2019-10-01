@@ -1,0 +1,67 @@
+<script type="text/javascript">
+<!--
+	var <mx:text id="diaporamId" />=new Array();
+	
+	function <mx:text id="diaporamclassname" />(title, interval, width, height){
+		this.Index=<mx:text id="diaporamId" />.length;
+		this.Images=new Array();
+		this.ImgIndex=0;
+		this.ID=null;
+		this.interval=interval==undefined ? <mx:text id="delaytime" />*1000 : new Number(interval);
+		this.Add=function(src){
+			var Index=this.Images.length;
+			this.Images[Index]=new Array();
+			this.Images[Index]["image"]=new Image();
+			this.Images[Index]["image"].src=src;
+			this.Images[Index]["rel"]=src;
+		}
+		this.Show=function(Index){
+			if(Index < 0)Index=this.Images.length - 1;
+			else{if(Index > this.Images.length - 1)Index=0;}
+			window.document.getElementById("<mx:text id="divid" />").innerHTML='<img src="' + this.Images[Index]["image"].src +'" alt="disc' + this.Index +'">';
+			this.ImgIndex=Index;
+		}
+		this.First=function(){
+			this.Show(0);
+		}
+		this.Last=function(){
+			this.Show(this.Images.length - 1);
+		}
+		this.Previous=function(){
+			if(this.ImgIndex > 0)this.Show(this.ImgIndex - 1);
+		}
+		this.Next=function(){
+			if(this.ImgIndex < this.Images.length - 1)this.Show(this.ImgIndex + 1);
+		}
+		this.Play=function(){
+			this.ID=setInterval("<mx:text id="diaporamId" />[" + this.Index + "].Show(<mx:text id="diaporamId" />[" + this.Index + "].ImgIndex + 1);", this.interval);
+		}
+		this.Stop=function(){
+			clearInterval(this.ID);
+			this.ID=null;
+		}
+		this.Click=function(Index){
+			this.Stop();
+			this.Show(Index);
+		}
+		this.Build=function(){
+			window.document.getElementById("<mx:text id="divid" />").innerHTML='<img src="' + this.Images[0]["image"].src +'" alt="disc' + this.Index +'">';
+		}
+		<mx:text id="diaporamId" />[this.Index]=this;
+	}
+-->	
+</script>
+<p mXattribut="class:align">
+		<span mXattribut="id:divid" class="diaporama" >
+			<script type="text/javascript">
+				<!--
+				var <mx:text id="diaporamclassname" />=new <mx:text id="diaporamclassname" />();
+				<mx:bloc id="images">
+					<mx:text id="diaporamclassname" />.Add("<mx:text id="imagePath" />");
+				</mx:bloc id="images">
+				<mx:text id="diaporamclassname" />.Build();
+				<mx:text id="diaporamId" />[0].Play();
+				-->
+			</script>
+		 </span>
+</p>

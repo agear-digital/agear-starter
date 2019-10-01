@@ -1,0 +1,40 @@
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h2><a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitle" itemprop="mainEntityOfPage"><span itemprop="name headline"><mx:text id="post_title" /></span></a></h2>
+  </header>
+  <mx:bloc id="picture">
+  <section><mx:text id="post_picture" /></section>
+  </mx:bloc id="picture">
+  <mx:bloc id="authorBlog">
+  <section itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><mx:bloc id="prenom"><mx:text id="prenom"></mx:bloc id="prenom">&nbsp;<mx:bloc id="nom"><mx:text id="nom"></mx:bloc id="nom"></span></section>
+  </mx:bloc id="authorBlog">
+  <mx:bloc id="date">
+  <section itemprop="datePublished"><mx:text id="post_date" /></section>
+  </mx:bloc id="date">
+  <mx:bloc id="categorie">
+  <section>Catégorie(s) : <span itemprop="articleSection"><mx:text id="post_categorie" /></span></section>
+  </mx:bloc id="categorie">
+  <section itemprop="keywords"><mx:bloc id="tags"><mx:text id="tag" />,&nbsp;</mx:bloc id="tags"></section>
+  <section itemprop="description"><mx:text id="post_resume" /></section>
+  <mx:bloc id="nb_char_max_description">300</mx:bloc id="nb_char_max_description"><!-- Nombre max de caracteres pour la description -->
+  <mx:bloc id="extension_description">...</mx:bloc id="extension_description"><!-- Extension utilisee lorsque la description est tronquee -->
+
+  <!-- Donnees relative aux commentaires -->
+  <mx:bloc id="comments_datas">
+  <section>
+    <mx:bloc id="last_commenter"><mx:text id="name" /></mx:bloc id="last_commenter">
+    <mx:bloc id="last_comment_date"><mx:text id="date" /></mx:bloc id="last_comment_date">
+    <mx:bloc id="link"><a mXattribut="href:href;hreflang:hreflang;title:title" itemprop="discussionUrl"><mx:text id="label" /></a></mx:bloc id="link">
+  </section>
+  </mx:bloc id="comments_datas">
+
+  <!-- Donnees relative aux notes -->
+  <mx:bloc id="ratings_datas">
+    <section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><mx:text id="content" /></section>
+  </mx:bloc id="ratings_datas">
+  <!-- Lien vers le billet -->
+  <mx:bloc id="more">
+    <a mXattribut="href:href;hreflang:hreflang;title:title" class="btn--primary" itemprop="url"><mx:text id="label" /></a>
+  </mx:bloc id="more">
+
+</article>

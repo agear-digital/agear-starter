@@ -1,0 +1,83 @@
+<div id="article" class="multiArticlesDetail">
+
+  <div class="row">
+    <mx:bloc id="picture"><div class="col-sm-4"><mx:text id="picture" /></div></mx:bloc id="picture">
+	<div class="col-sm-8">
+		<h1><mx:text id="article_title" /></h1>
+	</div>
+  </div>
+
+  <mx:bloc id="description"><div class="lead"><mx:text id="description" /></div></mx:bloc id="description">
+
+  <div id="text" class="text">
+    <mx:text id="article" />
+  </div>
+
+  <mx:bloc id="view_more">
+    <div id="infos">
+      <h3>Infos</h3>
+      <div><mx:text id="view_more" /></div>
+    </div>
+  </mx:bloc id="view_more">
+
+  <mx:bloc id="view_more_links">
+    <div id="links">
+      <h3>En savoir plus</h3>
+      <ul>
+        <mx:bloc id="links">
+          <li><a mXattribut="href:href;hreflang:hreflang;title:title" class="articleViewMoreLinks" ><span><mx:text id="link" /></span></a></li>
+        </mx:bloc id="links">
+      </ul>
+    </div>
+  </mx:bloc id="view_more_links">
+
+
+
+
+	<mx:bloc id="author"><div class="margin-bottom margin-top"> <mx:text id="author" /></div></mx:bloc id="author">
+
+	<div class=" row margin-top margin-bottom">
+	<!-- Donnees relative aux notes -->
+
+		<ul class="articleAction  col-sm-4 list-group ">
+			<li class="list-group-item"><mx:reacttoarticle title="R&eacute;agir &agrave; l'article" content="R&eacute;agir" /></li>
+			<li class="list-group-item"><mx:sendarticle title="Envoyer l'article" content="Envoyer l'article" /></li>
+			<mx:bloc id="links_comments">
+				<mx:bloc id="add_comment"><li class="list-group-item"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="add_comment" /></a></li></mx:bloc id="add_comment">
+				<mx:bloc id="view_comments"><li class="list-group-item"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="view_comments" /></a></li></mx:bloc id="view_comments">
+			</mx:bloc id="links_comments">
+		</ul>
+
+
+		<mx:bloc id="ratings_datas">
+			<div class="ratings col-sm-offset-4 col-sm-4" ><mx:text id="content" /></div>
+		</mx:bloc id="ratings_datas">
+
+
+	</div>
+
+
+	<div class="btn btn-default margin-top margin-bottom" ><mx:referer title="Revenir à la page précédente" content="Retour" /></div>
+
+
+
+	<!-- Liste des commentaires -->
+	<mx:bloc id="list_comments">
+		<div class="listComments" ><mx:text id="content" /></div>
+	</mx:bloc id="list_comments">
+
+		<!-- Formulaire d'ajout de commentaire -->
+	<mx:bloc id="form_add_comment">
+		<div class="addComments" ><mx:text id="content" /></div>
+	</mx:bloc id="form_add_comment">
+
+	<ul class="pagination">
+		<mx:bloc id="previous">
+			<li><a mXattribut="href:href;hreflang:hreflang;title:title" class="PagerPrevious" ><span><mx:text id="previous" /></span></a></li>
+		</mx:bloc id="previous">
+		<mx:bloc id="next">
+			<li><a mXattribut="href:href;hreflang:hreflang;title:title" class="PagerNext"><span><mx:text id="next" /></span></a></li>
+		</mx:bloc id="next">
+	</ul>
+
+</div>

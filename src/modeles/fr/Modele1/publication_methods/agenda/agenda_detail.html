@@ -1,0 +1,35 @@
+<div id="event">
+	<div id="chapo">
+		<h1><mx:text id="event_title" /></h1>
+		<img mXattribut="src:imgchapo;alt:altchapo" />
+		<div class="date"><mx:text id="event_date" /></div>
+		<div class="periode"><mx:text id="event_period" /></div>
+		<div class="chapo_description"><mx:text id="chapo" /></div>
+	</div>
+	
+	<hr class="clear" />
+	
+	<div id="text">
+		<mx:text id="article" />
+	</div>
+	
+	<hr class="clear" />
+	
+	<mx:bloc id="view_more">
+		<div id="infos">
+			<h3>Info : </h3>
+			<p><mx:text id="view_more" /></p>
+		</div>
+	</mx:bloc id="view_more">
+	
+	<mx:bloc id="view_more_links">
+		<div id="links">
+			<h3>Aussi : </h3>
+			<ul>
+				<mx:bloc id="links">
+					<li><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="link" /></a></li>
+				</mx:bloc id="links">
+			</ul>
+		</div>
+	</mx:bloc id="view_more_links">
+</div>

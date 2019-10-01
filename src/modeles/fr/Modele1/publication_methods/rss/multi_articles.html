@@ -1,0 +1,82 @@
+<div id="articlesList">
+  <mx:bloc id="articles_list">
+    <div id="chapoList">
+      <mx:bloc id="articles">
+      
+        <mx:bloc id="colleft">
+          <div class="chapo colleft">
+            <h1><mx:text id="article_title" /></h1>
+            <div class="chapoPicture"><mx:text id="picture" /></div>
+            <div class="chapo"><mx:text id="description" /></div>
+            <div class="linksmore"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="en_savoir_plus" /></a></div>
+          </div>
+        </mx:bloc id="colleft">
+        
+        <mx:bloc id="colright">
+          <div class="chapo colright">
+            <h1><mx:text id="article_title" /></h1>
+            <div class="chapoPicture"><mx:text id="chapo_picture" /></div>
+            <div class="chapo"><mx:text id="chapo" /></div>
+            <div class="linksmore"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="en_savoir_plus" /></a></div>
+          </div>
+        </mx:bloc id="colright">
+        
+        <mx:bloc id="separator">
+          <hr class="clear" />
+        </mx:bloc id="separator">
+      </mx:bloc id="articles">
+      
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <div class="pager"><mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item" /></a></mx:bloc id="items"></div>
+      </mx:bloc id="pager">
+      
+    </div>
+  </mx:bloc id="articles_list">
+  
+  <mx:bloc id="archives_link">
+    <p class="articlesArchivesLink"><a mXattribut="href:hrefarchive;hreflang:hreflangarchive;title:titlearchive" class="archivesLink"><span>Voir les archives</span></a></p>
+  </mx:bloc id="archives_link">
+  
+  <mx:bloc id="archives_list">
+    <div id="articlesArchives">
+      <table>
+        <caption>Historique</caption>
+        <thead>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <mx:bloc id="archives">
+            <tr mXattribut="class:ligneclass">
+              <td><a mXattribut="href:href;hreflang:hreflang;title:title"  class="archivesLinkTitle"><span><mx:text id="article_archive_title" /></span></a></td>
+              <td><mx:text id="article_archive_date" /></td>
+            </tr>
+          </mx:bloc id="archives">
+        </tbody>
+      </table>
+            
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <div class="pager"><mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item" /></a></mx:bloc id="items"></div>
+      </mx:bloc id="pager">
+    
+    </div>
+  </mx:bloc id="archives_list">
+</div>

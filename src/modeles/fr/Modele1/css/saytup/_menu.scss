@@ -1,0 +1,114 @@
+/* ----------------------------- */
+/* ==Menu                  */
+/* ----------------------------- */
+.nav-button
+{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    display: block;
+
+    @include respond-to('medium-up')
+    {
+        display: none;
+    }
+}
+
+.main-menu
+{
+    display: none;
+
+    @include respond-to('medium-up')
+    {
+        display: block;
+
+        background: $menu-background-base;
+    }
+    &.is-opened
+    {
+        display: block;
+    }
+}
+
+.main-menu-link
+{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: $menu-color-base;
+    border-bottom: $menu-border-base;
+    background: $menu-background-base;
+
+    @include respond-to('medium-up')
+    {
+        text-align: center;
+        border: none;
+        background: none;
+    }
+
+    &:hover
+    {
+        text-decoration: none;
+        color: $menu-hover-color-base;
+        background: $menu-hover-background-base;
+    }
+}
+
+.main-menu-sub-link
+{
+    background: $gray-dark;
+
+    @extend .main-menu-link;
+    @include respond-to('medium-up')
+    {
+        border-bottom: $menu-border-base;
+        background: $menu-background-base;
+    }
+}
+
+.main-menu-list
+{
+    padding: 0;
+}
+
+.main-menu-nav
+{
+    @extend .flex-column;
+    @include respond-to('medium-up')
+    {
+        flex-direction: row;
+    }
+}
+
+.main-menu-item
+{
+    position: relative;
+    display: block;
+    text-align: left;
+
+    @include respond-to('medium-up')
+    {
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+.main-menu-sub-nav
+{
+    display: block;
+
+    @include respond-to('medium-up')
+    {
+        display: none;
+    }
+}
+
+.main-menu-item:hover .main-menu-sub-nav
+{
+    @include respond-to('medium-up')
+    {
+        position: absolute;
+        display: block;
+    }
+}

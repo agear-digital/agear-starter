@@ -1,0 +1,37 @@
+<mx:bloc id="messageHTML"><!--subject-->{!MAIL_SUBJECT:Validation de votre inscription sur le site!}<!--subject--><table border="0" cellpadding="0" cellspacing="0" style="background-color: #85175b" width="100%">
+	<tbody>
+		<tr>
+			<td style="background-color: #414243; color: #fff; font-size: 18px; padding: 10px 20px;">Validation de votre inscription sur le site <mx:text id="site" />&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<table bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td style="padding: 30px 20px 10px;">
+			<p style="font-size: 11px; color: #999;"><mx:text id="date" /></p>
+
+			<p>Bonjour,<br />
+			Vous avez une demande d&#39;inscription sur le site <mx:text id="webmaster_name" /> cot&eacute; publique<mx:bloc id="heading"> (Pour la page <mx:text id="heading" />)</mx:bloc id="heading">.<br />
+			<mx:bloc id="form"> <mx:text id="fields" /> : <mx:text id="data" /><br />
+			</mx:bloc id="form"> Cliquez sur le lien suivant pour valider cette inscription :<br />
+			<a mxattribut="href:href"><mx:text id="url" /></a></p>
+
+			<p>&nbsp;</p>
+
+			<p>Note : Attention, si le lien est pass&eacute; sur deux lignes, il risque de ne pas fonctionner.<br />
+			Vous devrez alors le recopier en entier dans la barre d&#39;adresses de votre navigateur.<br />
+			<br />
+			</mx:bloc id="user_informations"></p>
+
+			<p><span style="line-height: 1.5; font-size: 1.3em;">&Agrave; bient&ocirc;t !</span><br />
+			<a href="<mx:text id="site_url" />"><mx:text id="site_url" /></a></p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{USE_MAIN_TEMPLATE:1}</mx:bloc id="messageHTML"><mx:bloc id="messageTXT"><!--subject-->{!MAIL_SUBJECT:Validation de votre inscription sur le site!}<!--subject--><p><mx:text id="date" /> Bonjour, Vous avez une demande d&#39;inscription sur le site <mx:text id="webmaster_name" /> cot&eacute; publique<mx:bloc id="heading"> (Pour la page <mx:text id="heading" />)</mx:bloc id="heading">. <mx:bloc id="form"> <mx:text id="fields" /> : <mx:text id="data" /> </mx:bloc id="form"> Cliquez sur le lien suivant pour valider cette inscription : <mx:text id="url" /> Note : Attention, si le lien est pass&eacute; sur deux lignes, il risque de ne pas fonctionner. Vous devrez alors le recopier en entier dans la barre d&#39;adresses de votre navigateur. A bient&ocirc;t, <mx:text id="webmaster_name" /></p>
+</mx:bloc id="messageTXT">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <title>Gestion des paragraphes avec images</title>
+    <name>MedialibsTextAndImages</name>
+    <version>
+        <num date="2019-07-30">1.0</num>
+    </version>
+    <emajine_compatibility>
+        <min_version>2.06b</min_version>
+    </emajine_compatibility>
+    <webo_shop_info>
+        <key></key>
+        <url></url>
+        <author>
+            <name><!CDATA[Medialibs]]></name>
+            <email>prestation@medialibs.com</email>
+        </author>
+    </webo_shop_info>
+    <description>
+    <!CDATA[
+      L'add-on permet de gérer les blocs paragraphes avec images
+    ]]>
+    </description>
+    <compatibility>
+    <!CDATA[
+      Information de compatibilit?(modules ou librairies n?essaires, ?)
+    ]]>
+    </compatibility>
+</data>
+

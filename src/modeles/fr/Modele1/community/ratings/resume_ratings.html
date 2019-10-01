@@ -1,0 +1,37 @@
+<div class="resumeRatings">
+	<form mXattribut="action:action" method="post">
+		<fieldset>
+			<div><label mXattribut="for:for"><mx:text id="label" /> : </label></div>
+			<div mXattribut="id:id">
+				<select mXattribut="name:name;" disabled="disabled">
+					<mx:bloc id="options">
+						<option mXattribut="value:value;selected:selected"><mx:text id="option" /></option>
+					</mx:bloc id="options">
+				</select>
+			</div>
+			<div>
+				<!-- Affichage de l'equivalent texte de chaque note (au survol des etoiles) -->
+				<span mXattribut="id:idcaption"></span>
+			</div>
+
+			<div mXattribut="style:style;id:idinforating">
+				<!-- Affichage de la moyenne -->
+				<mx:bloc id="avg_rating">
+					<span class="RatingsLabel" ><mx:text id="label" /> :</span><span mXattribut="id:id"><mx:text id="avg" /></span>
+				</mx:bloc id="avg_rating">
+
+				<!-- Affichage du nombre de votes -->
+				<mx:bloc id="nb_ratings">
+				 	<span class="RatingsLabel" ><mx:text id="label" /> :</span> <span mXattribut="id:id"><mx:text id="nb" /></span>
+				</mx:bloc id="nb_ratings">
+
+				<!-- Affichage de la date du dernier vote -->
+				<mx:bloc id="date_last_rating">
+					(<span class="RatingsLabel" ><mx:text id="label" /></span> <span mXattribut="id:id"><mx:text id="date" /></span>)
+				</mx:bloc id="date_last_rating">
+			</div>
+			<mx:bloc id="js"><mx:text id="code" /></mx:bloc id="js">
+		</fieldset>
+	</form>
+
+</div>

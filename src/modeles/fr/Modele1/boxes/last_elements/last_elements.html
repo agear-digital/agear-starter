@@ -1,0 +1,103 @@
+<div class="widget col-xs-12" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+
+	<mx:bloc id="statics">
+		<div>
+			<mx:bloc id="news">
+				<div class="col-xs-12 col-sm-12 col-md-4 margin-bottom">
+					<mx:bloc id="title">
+						<h4><a mxAttribut="href:href;hreflang:hreflang;title:title" class="widgetLastElementsTitle" ><span><mx:text id="content_title" /></span></a></h4>
+					</mx:bloc id="title">
+
+					<mx:bloc id="picture">
+						<div class="widgetLastElementsPicture">
+							<mx:text id="content_picture" />
+						</div>
+					</mx:bloc id="picture">
+
+					<mx:bloc id="description">
+						<div class="widgetLastElementsDescription">
+							<mx:text id="content_description" />
+						</div>
+					</mx:bloc id="description">
+					<a mxAttribut="href:href;hreflang:hreflang;title:title" class="pull-right" ><span><mx:text id="view_more" /></span></a>
+				</div>
+			</mx:bloc id="news">
+		</div>
+	</mx:bloc id="statics">
+
+	<mx:bloc id="dynamics">
+		<div class="widgetContainer">
+			<!-- Pour que le deroulement dynamique fonctionne, il est recommendé de définir la meme hauteur en pixel
+				et l'overflow sur hidden, pour le div parent, et les div de chaque element. -->
+			<div mxAttribut="id:frame_id" style="height:170px; overflow:hidden;">
+				<noscript>
+					<div>
+					<mx:bloc id="noscript">
+
+						<mx:bloc id="title">
+							<h4><a mxAttribut="href:href;hreflang:hreflang;title:title"><mx:text id="content_title" /></a></h4>
+						</mx:bloc id="title">
+
+						<mx:bloc id="picture">
+							<div class="widgetLastElementsPicture">
+								<mx:text id="content_picture" />
+							</div>
+						</mx:bloc id="picture">
+
+						<mx:bloc id="description">
+							<div class="widgetLastElementsDescription">
+								<mx:text id="content_description" />
+							</div>
+						</mx:bloc id="description">
+
+					<a mxAttribut="href:href;hreflang:hreflang;title:title" class="pull-right" ><span><mx:text id="view_more" /></span></a>
+					</mx:bloc id="noscript">
+					</div>
+				</noscript>
+
+				<mx:bloc id="news">
+					<div class="news">
+						<div style="height:170px; overflow:hidden">
+								<mx:bloc id="title">
+									<h4><a mxAttribut="href:href;hreflang:hreflang;title:title"><mx:text id="content_title" /></a></h4>
+								</mx:bloc id="title">
+
+								<mx:bloc id="picture">
+									<div class="widgetLastElementsPicture">
+										<mx:text id="content_picture" />
+									</div>
+								</mx:bloc id="picture">
+
+								<mx:bloc id="description">
+									<div class="widgetLastElementsDescription">
+										<mx:text id="content_description" />
+									</div>
+								</mx:bloc id="description">
+
+							<a mxAttribut="href:href;hreflang:hreflang;title:title" class="pull-right" ><span><mx:text id="view_more" /></span></a>
+						</div>
+					</div>
+				</mx:bloc id="news">
+			</div>
+
+			<script type="text/javascript">
+				<!--
+					delay		= 20;		/* delay : temps en millisecondes entre chaque déplacement */
+					increment	= 4;		/* increment : nombre de pixels de chaque déplacement */
+					pause		= 2000;		/* pause : temps en millisecondes d'attente sur chaque élément */
+
+					<mx:text id="scroller_name"/> = new scroller('<mx:text id="scroller_name"/>', '<mx:text id="frame_id"/>', delay, increment, pause);
+				-->
+			</script>
+		</div>
+	</mx:bloc id="dynamics">
+	<div class="widgetFooter"></div>
+</div>
+<!--
+	<mx:bloc id="title_size">40</mx:bloc id="title_size">
+	<mx:bloc id="content_size">100</mx:bloc id="content_size">
+
+	Définition de la taille des visuels (thumbnail ou normal)
+	<mx:bloc id="imageSize">thumbnail</mx:bloc id="imageSize">
+-->

@@ -1,0 +1,42 @@
+<mx:bloc id="subject">{sender} vous a envoyé une carte</mx:bloc id="subject">
+
+<mx:bloc id="messageHTML">
+	<mx:text id="date"/>
+	<p>
+		Bonjour <mx:text id="recipient" />,<br />
+		<mx:text id="sender" /> vous a envoy&eacute; une carte &eacute;lectronique.
+	<p>
+	<p>
+		Vous pouvez la consulter avec l'adresse :<br />
+		<a mXattribut="href:href" ><mx:text id="url" /></a><br />
+		Note : Attention, si le lien est passé sur deux lignes, il risque de ne pas fonctionner.
+		Vous devrez alors le recopier en entier dans la barre d'adresses de votre navigateur.
+	</p>
+	<p>
+	Conformément à la réglementation de la Commission Nationale de l'Informatique et des Libertés (CNIL),
+	nous ne revendrons pas, ni communiquerons en aucune manière votre e-mail et vous ne serez inscrit à aucun
+	programme publicitaire.
+	Vous disposez en outre d'un droit d'accès, de modification et de suppression des données vous concernant (art. 34
+	de la loi "Informatique et Libertés"). Pour l'exercer, vous pouvez nous contacter.
+	</p>
+	A très bientôt
+</mx:bloc id="messageHTML">
+
+<mx:bloc id="messageTXT">
+	<mx:text id="date"/>
+	Bonjour <mx:text id="recipient" />,
+	<mx:text id="sender" /> vous a envoyé une carte électronique.
+	
+	Vous pouvez la consulter avec l'adresse :
+	<mx:text id="url" />
+	Note : Attention, si le lien est passé sur deux lignes, il risque de ne pas fonctionner.
+	Vous devrez alors le recopier en entier dans la barre d'adresses de votre navigateur.
+	
+	Conformément à la réglementation de la Commission Nationale de l'Informatique et des Libertés (CNIL),
+	nous ne revendrons pas, ni communiquerons en aucune manière votre e-mail et vous ne serez inscrit à aucun
+	programme publicitaire.
+	Vous disposez en outre d'un droit d'accès, de modification et de suppression des données vous concernant (art. 34
+	de la loi "Informatique et Libertés"). Pour l'exercer, vous pouvez nous contacter.
+
+	A très bientôt
+</mx:bloc id="messageTXT">

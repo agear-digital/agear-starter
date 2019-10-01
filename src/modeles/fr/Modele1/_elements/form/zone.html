@@ -1,0 +1,44 @@
+<mx:bloc id="country">
+	<select name="country_selection" id="country_selection" <mx:text id="js" />>
+		<mx:bloc id="options">
+			<option mXattribut="value:value;selected:selected"><mx:text id="option" /></option>
+		</mx:bloc id="options">
+	</select>
+</mx:bloc id="country">
+
+<mx:bloc id="state">
+<div id="div_state_selection" mXattribut="style:style">
+	<select name="state_selection" id="state_selection">
+		<mx:bloc id="options">
+			<option mXattribut="value:value;selected:selected"><mx:text id="option" />&nbsp;</option>
+		</mx:bloc id="options">
+	</select>
+</div>
+</mx:bloc id="state">
+
+<mx:bloc id="javascript">
+	<script type="text/javascript">
+		<!--
+		<mx:text id="js_array" />
+		
+		function updateStates(name){
+			var hiddenvalue='';
+			var country_selection=document.getElementById('country_selection');
+			var states_selection=document.getElementById('state_selection');
+			var value=country_selection.value;
+			while (states_selection.options.length) {
+				states_selection.remove(0);
+			}
+			if(typeof states[value]=='undefined'){
+				document.getElementById('div_state_selection').style.display='none';
+			}else{
+				var options=states[value];
+				for (var i = 0; i < options.length; i++) {
+					states_selection[i]=new Option(options[i]);
+				}
+				document.getElementById('div_state_selection').style.display='block';
+			}
+		}
+		//-->
+	</script>	
+</mx:bloc id="javascript">

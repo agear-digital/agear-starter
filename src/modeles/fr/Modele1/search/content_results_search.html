@@ -1,0 +1,56 @@
+<div id="search" class="">
+	<h1><mx:text id="title" /></h1>
+
+	<!-- Fait appel au template content_search.html -->
+  <mx:text id="search_form" />
+
+	<mx:bloc id="no_match_found">
+		<p>Aucun document ne correspond aux termes de recherche sp&eacute;cifi&eacute;s (<strong><mx:text id="words" /></strong>).
+	</mx:bloc id="no_match_found">
+
+	<mx:bloc id="error">
+		<div class="error" >Impossible d'effectuer une recherche. L'indexation du contenu du site est peut-etre en cours.</div>
+	</mx:bloc id="error">
+
+	<mx:bloc id="display_results">
+		<div><mx:text id="stats" /></div>
+
+		<mx:bloc id="results">
+      <article>
+        <header>
+          <h2><mx:text id="index" />. <a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitlte"><mx:text id="title" /></a></h2>
+        </header>
+        <section>
+          <mx:bloc id="content"><mx:text id="content" /></mx:bloc id="content">
+        </section>
+        <footer>
+          <a mXattribut="href:hrefurl;hreflang:hreflangurl;title:titleurl"><mx:text id="url" /></a>
+        </footer>
+      </article>
+		</mx:bloc id="results">
+
+	  <mx:bloc id="searchpager">
+	    <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+	    <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+	    <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+	    <mx:bloc id="next">&gt;</mx:bloc id="next">
+	    <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+	    <nav><ul class="is-unstyled"><mx:bloc id="items"><li class="inbl"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title;class:class" class="btn btn--primary"><mx:text id="item" /></a></li></mx:bloc id="items"></ul></nav>
+	  </mx:bloc id="searchpager">
+
+	</mx:bloc id="display_results">
+</div>
+<!--
+<mx:bloc id="pager_configuration">
+	<mx:bloc id="one">1</mx:bloc id="one">
+	<mx:bloc id="two">2</mx:bloc id="two">
+	<mx:bloc id="three">3</mx:bloc id="three">
+	<mx:bloc id="four">4</mx:bloc id="four">
+	<mx:bloc id="five">5</mx:bloc id="five">
+	<mx:bloc id="six">6</mx:bloc id="six">
+	<mx:bloc id="seven">7</mx:bloc id="seven">
+	<mx:bloc id="height">8</mx:bloc id="height">
+	<mx:bloc id="nine">9</mx:bloc id="nine">
+	<mx:bloc id="zero">0</mx:bloc id="zero">
+</mx:bloc id="pager_configuration">
+-->

@@ -1,0 +1,56 @@
+<div id="accountAuthentification">
+	<h1><mx:text id="title" /></h1>
+
+	<mx:bloc id="information_message">
+		<div id="information_message">
+			<mx:text id="message" />
+		</div>
+	</mx:bloc id="information_message">
+
+	<div id="accountAuthentificationForm" class="w50 posLeft pr30">
+		<form id="contentLoginForm" method="post" mXattribut="action:action">
+			<fieldset>
+				<h3 class="borderBottom pb10"><mx:text id="login_legend" /></h3>
+				<mx:bloc id="authentificationError">
+					<div class="loginError">
+						<mx:text id="errorMessage" />
+					</div>
+				</mx:bloc id="authentificationError">
+				<div class="row username form-group">
+					<label for="username"><mx:text id="username" /></label>
+					<input type="text" name="username" id="username" class="form-control" />
+				</div>
+				<div class="row password form-group">
+					<label for="password"><mx:text id="password" /></label>
+					<input type="password" name="password" id="password" class="form-control" />
+				</div>
+				<mx:bloc id="rememberMe">
+					<div class="row rememberMe form-group">
+						<input type="checkbox" name="rememberMe" id="rememberMe" value="1" />
+						<label for="rememberMe"><mx:text id="rememberMe" /></label>
+					</div>
+				</mx:bloc id="rememberMe">
+				<div class="submit">
+					<input type="submit" value="OK" class="btn btn-primary mr20" />
+					<a mXattribut="href:hrefpassword;hreflang:hreflangpassword;title:titlepassword" class="lostPassword" ><mx:text id="lost_password" /></a>
+				</div>
+				<input type="hidden" name="manageaccount" value="1" />
+				<mx:bloc id="facebook">
+					<mx:facebookConnect title="Se connecter avec Facebook" content="Se connecter avec Facebook" popup="true" />
+				</mx:bloc id="facebook">
+			</fieldset>
+		</form>
+	</div>
+
+	<div id="accountAuthentificationSubscription" class="w50 posRight pl30">
+		<h3 class="borderBottom pb10">Incrivez-vous</h3>
+		<mx:text id="subscriptioncomment" />
+		<a mXattribut="href:hrefsubscribe;hreflang:hreflangsubscribe;title:titlesubscribe" class="accountAuthentificationSubscriptionb btn btn-primary"><mx:text id="subscribe" /></a>
+	</div>
+	<br class="clear" />
+	<div class="socialNetworkConnect txtCenter">
+		<mx:facebookConnect title="Se connecter avec Facebook" content="Se connecter avec Facebook" />
+		<mx:twitterConnect title="Se connecter avec Twitter" content="Se connecter avec Twitter" />
+		<mx:googleplusConnect title="Se connecter avec Google Plus" content="Se connecter avec Google Plus" />
+	</div>
+</div>

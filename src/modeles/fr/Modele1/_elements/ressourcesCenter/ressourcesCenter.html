@@ -1,0 +1,83 @@
+<div class="categories" style="height:500px;width:170px;float:left;overflow:auto;">
+	<mx:bloc id="tools">
+		<div id="tools">
+			<div>
+			<mx:bloc id="add">
+				<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+			</mx:bloc id="add">
+			<mx:bloc id="edit">
+				<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+			</mx:bloc id="edit">
+			<mx:bloc id="delete">
+				<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+			</mx:bloc id="delete">
+		</div>
+		</div>
+	</mx:bloc id="tools">
+
+	<mx:bloc id="categoriesTree">
+		<mx:text id="categoriesTree" />
+	</mx:bloc id="categoriesTree">
+</div>
+<div class="ressources" style="height:500px;float:left;overflow:auto; width:520px;">
+	<div class="header"><h1><mx:text id="title" /></h1></div>
+
+	<mx:bloc id="addFile">
+	   <a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class" class="button ajouter_img"><span><mx:text id="label" /></span></a>
+	</mx:bloc id="addFile">
+
+	<mx:bloc id="ressources">
+		<div id="listMedias">
+			<mx:bloc id="contents">
+				<div class="media" >
+					<div class="icon"><mx:text id="icon" /></div>
+					<span class="label"><mx:text id="label" /></span>
+					<div class="tools">
+						<mx:bloc id="displayFile">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+						</mx:bloc id="displayFile">
+						<mx:bloc id="editFile">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+							<div id="error_msg_editFile" style="display:none;">Vous ne pouvez pas modifier cette image !</div>
+						</mx:bloc id="editFile">
+						<mx:bloc id="moveFile">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+						</mx:bloc id="moveFile">
+						<mx:bloc id="resizeFile">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+							<div id="error_msg_resizeFile" style="display:none;">Vous ne pouvez pas modifier cette image !</div>
+						</mx:bloc id="resizeFile">
+						<mx:bloc id="deleteFile">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick;class:class"><mx:text id="label" /></a>
+							<div id="error_msg_deleteFile" style="display:none;">Vous ne pouvez pas supprimer cette image !</div>
+						</mx:bloc id="deleteFile">
+					</div>
+				</div>
+				<script type="text/javascript">
+				<!--
+				var mediasList=$('#listMedias').find('div.media');
+				mediasList.hover(
+					function(){
+						$(this).addClass('hover');
+					},
+					function(){
+						$(this).removeClass('hover');
+					}
+				);
+				//-->
+				</script>
+			</mx:bloc id="contents">
+			<div class="vide">
+			<mx:bloc id="empty">
+				<mx:text id="emptyMsg" />
+			</mx:bloc id="empty">
+			</div>
+		</div>
+	</mx:bloc id="ressources">
+</div>
+
+<mx:bloc id="quotas">
+	<div id="quotas">
+		Vous utilisez actuellement <strong><mx:text id="diskUsage" /> (<mx:text id="diskUsagePercent" />) </strong>de votre espace de <mx:text id="diskTotal" />.
+	</div>
+</mx:bloc id="quotas">

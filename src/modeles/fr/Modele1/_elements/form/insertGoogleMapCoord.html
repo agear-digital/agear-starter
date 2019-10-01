@@ -1,0 +1,38 @@
+<span mXattribut="id:divcatid;class:stylecatid"><mx:text id="defaultValue" /></span>
+
+<mx:bloc id="divAddress">
+<div class="row">
+	<span class="label"><label mXattribut="for:for"><mx:text id="adresse"/></label></span>
+	<div class="formw">
+		<input type="text" mXattribut="id:idadresse"/> <input type="button" mXattribut="id:idsearch;value:valuesearch" />
+	</div>
+</div>
+</mx:bloc id="divAddress">
+
+<mx:bloc id="divMap">
+<div mXattribut="id:idmap" style="width:400px; height:300px; margin:1px auto;overflow: hidden"></div>
+</mx:bloc id="divMap">
+
+<input type="hidden" mXattribut="name:namehidden;id:idhidden;value:valuehidden"/>
+
+<script type="text/javascript">
+<!--
+	var fieldID='<mx:text id="fieldID" />';
+	var mode='<mx:text id="mode" />';
+
+	var mapConfig= '';
+	var mapOptions= new Array();
+	var zoomControls = '';
+
+	$(function(){
+		setTimeout(function (){
+			mapOptions = loadFieldMap(fieldID, mode);
+			mapConfig = mapOptions['map'];
+			
+		}
+
+		,500);
+	});
+
+//-->
+</script>

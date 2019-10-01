@@ -1,0 +1,67 @@
+<article>
+  <mx:bloc id="heading">
+  <header>
+    <h1><mx:text id="title" /><mx:pagerCurrentPage format=" - Page %s" /></h1>
+  </header>
+
+  <mx:bloc id="description">
+  <section><mx:text id="description" /></section>
+  </mx:bloc id="description">
+  </mx:bloc id="heading">
+
+  <!-- Affiche "Billets avec le tag ..." si recherche par tag -->
+  <mx:bloc id="results_by_tag">
+  <section><mx:text id="msg" /> : <mx:text id="tag" /></section>
+  </mx:bloc id="results_by_tag">
+
+  <!-- Affiche "Billets ecrits par ..." si recherche par author -->
+  <mx:bloc id="results_by_author">
+  <section><mx:text id="msg" /> : <mx:text id="author" /></section>
+  </mx:bloc id="results_by_author">
+
+  <!-- Affiche "Billets publies le ..." si recherche par date -->
+  <mx:bloc id="results_by_date">
+  <section><mx:text id="msg" /> : <mx:text id="date" /></section>
+  </mx:bloc id="results_by_date">
+
+  <!-- Bloc contenant le formulaire de contribution -->
+  <mx:bloc id="contribution_form">
+  	<mx:text id="content" />
+  </mx:bloc id="contribution_form">
+
+  <!-- Lien pour l'ajout d'un billet si l'option contribution est active -->
+  <mx:bloc id="contribute">
+  	<span class="contribute"><a mXattribut="href:href;hreflang:hreflang;title:title;class:class"><span><mx:text id="label" /></span></a></span>
+  </mx:bloc id="contribute">
+
+  <!-- Liste des billets -->
+  <mx:bloc id="posts">
+
+  <!-- Liste de billets -->
+  <section class="grid-3-small-1 has-gutter">
+  <mx:bloc id="post">
+  	<mx:text id="post" />
+  </mx:bloc id="post">
+  </section>
+
+  	<!-- Pager -->
+  	<mx:bloc id="pager">
+  		<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+  		<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+  		<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+  		<mx:bloc id="next">&gt;</mx:bloc id="next">
+  		<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+      <footer><nav><ul class="is-unstyled"><mx:bloc id="items"><li class="inbl"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title;class:class" class="btn btn--primary"><mx:text id="item" /></a></li></mx:bloc id="items"></ul></nav></footer>
+  	</mx:bloc id="pager">
+  </mx:bloc id="posts">
+
+  <!-- Detail d'un billet -->
+  <mx:bloc id="post">
+  	<mx:text id="detail" />
+  </mx:bloc id="post">
+
+  <!-- Message dans le cas ou aucun billet n'est trouve -->
+  <mx:bloc id="no_results">
+  <section><mx:text id="msg" /></section>
+  </mx:bloc id="no_results">
+</article>

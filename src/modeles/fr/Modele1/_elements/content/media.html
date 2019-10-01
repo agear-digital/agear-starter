@@ -1,0 +1,23 @@
+<mx:bloc id="picture">
+<div mXattribut="class:class">
+		<!-- Image avec lien -->
+    <mx:bloc id="pictureElmt">
+		<a mXattribut="href:href;title:title;rel:rel;class:gallery_type" >
+			<figure>
+			  <mx:text id="media" />
+			  <figcaption><mx:text id="figcaption" /></figcaption>
+			</figure>
+		</a>
+		</mx:bloc id="pictureElmt">
+    <!-- Image sans lien -->
+    <mx:bloc id="simplePicture">
+    <mx:bloc id="pictureElmt">
+    <figure>
+      <mx:text id="media" />
+      <figcaption><mx:text id="figcaption" /></figcaption>
+    </figure>
+    </mx:bloc id="pictureElmt">
+    </mx:bloc id="simplePicture">
+</div>
+<mx:text id="js" />
+</mx:bloc id="picture">

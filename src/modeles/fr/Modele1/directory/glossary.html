@@ -1,0 +1,76 @@
+<div id="directory">
+  <!-- Affichage du libellé de la catégorie courante -->
+  <h2><mx:text id="category_label" /></h2>
+  
+  <div id="directoryPresentation">
+    <mx:bloc id="category_picture">
+      <!--<mx:bloc id="display_type">fullsize</mx:bloc id="display_type"> Type d'affichage de l'image : thumbnail / fullsize-->
+      <mx:text id="category_picture" />
+    </mx:bloc id="category_picture">
+    
+    <mx:bloc id="category_description">
+    	<div id="category_description">
+      	<mx:text id="category_description" />
+      </div>
+    </mx:bloc id="category_description">
+    <hr class="clear" />
+  </div>
+  
+  <!-- Affichage d'un formulaire permetant le tri des resultats-->
+  <mx:bloc id="sort">
+    <form id="sort_form" method="post" mXattribut="action:action">
+      <fieldset>
+        <legend>Trier</legend>
+        <div class="row">
+        <label for="sort_value"><mx:text id="sort_label" /></label>
+        <select name="sort_value" id="sort_value" onchange="document.getElementById('sort_form').submit();">
+          <mx:bloc id="options">
+            <option mXattribut="value:value;selected:selected"><mx:text id="label" /></option>
+          </mx:bloc id="options">
+        </select>
+        </div>
+        <div class="row">
+        <label for="asc">ASC</label><input type="radio" name="sort_way" value="ASC" id="asc" mXattribut="checked:checked_asc" class="radio" onchange="document.getElementById('sort_form').submit();"/>
+        </div>
+        <div class="row">
+        <label for="desc">DESC</label><input type="radio" name="sort_way" value="DESC" id="desc" mXattribut="checked:checked_desc" class="radio" onchange="document.getElementById('sort_form').submit();"/>
+        </div>
+      </fieldset>
+        <noscript>
+          <div class="submit">
+          <input type="submit" value="Sort" name="sort_sbt" />
+          </div>
+        </noscript>
+    </form>
+  </mx:bloc id="sort">
+  
+  <!-- Affichage des catégories enfantes pour la navigation -->
+  <mx:bloc id="children_categories">
+    <ul>
+      <mx:bloc id="items">
+        <li>
+          <a mXattribut="href:href;hreflang:hreflang;title:title">
+            <mx:text id="label" />
+          </a>
+        </li>
+      </mx:bloc id="items">
+    </ul>
+  </mx:bloc id="children_categories">
+  
+  <!-- Affichage des entrées de la catégorie -->
+  <mx:bloc id="entries">
+  	<mx:bloc id="glossary">
+  		<div class="glossary">
+  			<mx:bloc id="letters">
+  				<a mXattribut="href:href;hreflang:hreflang;title:title;class:class"><mx:text id="label" /></a><mx:text id="separator" />
+  			</mx:bloc id="letters">
+  		</div>
+  		<mx:bloc id="separator">&nbsp;|&nbsp;</mx:bloc id="separator">
+  	</mx:bloc id="glossary">
+    <div class="entries">
+      <mx:bloc id="entry">
+        <mx:text id="entry" />
+      </mx:bloc id="entry">
+    </div>
+  </mx:bloc id="entries">
+</div>

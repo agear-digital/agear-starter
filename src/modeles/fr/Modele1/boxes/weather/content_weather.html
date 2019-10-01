@@ -1,0 +1,62 @@
+<div id="weather">
+	<h1><mx:text id="title" />, <mx:text id="location_name" /></h1>
+	<mx:bloc id="town_selector">
+		<form id="townselectionweathercontent" mXattribut="action:action" method="post">
+			<fieldset>
+				<legend><mx:text id="select_label" /></legend>
+				<div class="row">
+						<label for="select_townselectionweathercontent"><mx:text id="select_label" /></label>
+						<select name="select_townselectionweather" id="select_townselectionweathercontent">
+							<mx:bloc id="options"><option mXattribut="value:value;selected:selected"><mx:text id="option" /></option></mx:bloc id="options">
+						</select>
+				</div>
+			</fieldset>
+			<div class="submit">
+				<input type="submit" name="submittownselectionweather" mXattribut="value:value" />
+			</div>
+		</form>
+	</mx:bloc id="town_selector">
+
+	<div id="currentWeather">
+		<h2><mx:text id="current_weather" /></h2>
+		<div>
+			<div class="weatherCondition posLeft mr20 pt10">
+				<img mXattribut="alt:altcondition;src:srccondition" />
+			</div>
+			<div>
+				<div class="weatherConditionDescription">Temps : <mx:text id="weather_condition" /></div>
+				<div class="weatherRow">
+					<span class="weatherLabel"><mx:text id="temperature_label" />&nbsp;:&nbsp;</span>
+					<span class="weatherValue"><mx:text id="weather_temperature" /></span>
+				</div>
+				<div class="weatherRow">
+					<span class="weatherLabel"><mx:text id="humidity_label" />&nbsp;:&nbsp;</span>
+					<span class="weatherValue"><mx:text id="weather_humidity" /></span>
+				</div>
+				<div class="weatherRow">
+					<span class="weatherLabel"><mx:text id="wind_label" />&nbsp;:&nbsp;</span>
+					<span class="weatherValue"><mx:text id="weather_wind" /></span>
+				</div>
+			</div>
+			<br class="clear" />
+		</div>
+	</div>
+
+	<div id="weatherForecast">
+		<h2><mx:text id="weather_forecast" /></h2>
+		<!-- <div class="weatherForecastUpdatetime"><mx:text id="weather_forecast_updatetime" /></div> -->
+		<mx:bloc id="weather_forecast">
+		<div class="forecastItem">
+				<mx:bloc id="day">
+				<div class="posLeft mr20"><img mXattribut="src:srcday;alt:altday" /></div>
+				<div>
+					<strong><mx:text id="forecast_day" /></strong>
+					<div class="weatherConditionDescription"><mx:text id="forecast_day_condition" /></div>
+					</mx:bloc id="day">
+					<span class="temperature"><mx:text id="forecast_temperature_min" /> / <mx:text id="forecast_temperature_max" /></span>
+				</div>
+				<br class="clear" />
+		</div>
+		</mx:bloc id="weather_forecast">
+	</div>
+</div>

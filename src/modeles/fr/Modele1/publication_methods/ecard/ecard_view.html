@@ -1,0 +1,27 @@
+<div class="ecardFormView" >
+
+	<h1><mx:text id="title" /></h1>
+
+	<mx:bloc id="description">
+		<div class="ecardViewDescription" >
+			<mx:text id="description" />
+		</div>
+	</mx:bloc id="description">
+
+	<div class="ecardMediaDetail">
+		<mx:text id="ecard_media" />
+	</div>
+
+	<div class="ecardFormViewMessage">Message de <span class="ecardSender" ><mx:text id="ecard_sender" /></span> pour <span class="ecardRecipient" ><mx:text id="ecard_recipient" /></span> envoy&eacute; <span class="ecardDate" ><mx:text id="ecard_date" /></span></div>
+
+	<div class="ecardMessage" ><mx:text id="ecard_message" /></div>
+
+
+	<mx:bloc id="preview_actions">
+	<p>
+		<a mXattribut="href:href_send;hreflang:hreflang_send;title:title_send" class="ecardFormViewSend"><span><mx:text id="send_ecard" /></span></a>
+		<a mXattribut="href:href_back;hreflang:hreflang_back;title:title_back" class="ecardFormViewBack"><span><mx:text id="back" /></span></a>
+	</p>
+	</mx:bloc id="preview_actions">
+
+</div>

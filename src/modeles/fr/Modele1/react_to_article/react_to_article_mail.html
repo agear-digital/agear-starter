@@ -1,0 +1,27 @@
+<mx:bloc id="messageHTML">
+	<html>
+		<body>
+			<p>Bonjour,<br />
+			Vous recevez ce message de la part de <mx:text id="sender_name" /> !<br />
+			Cette personne r&eacute;agit &agrave; l'article :<br />
+			<a mXattribut="href:href" ><mx:text id="url" /></a></p>
+			<mx:bloc id="sender_message">
+				<p><mx:text id="comment" /></p>
+				<p><mx:text id="sender_message" /></p>
+			</mx:bloc id="sender_message">
+		</body>
+	</html>
+</mx:bloc id="messageHTML">
+
+<mx:bloc id="messageTXT">
+	Bonjour,
+	Vous recevez ce message de la part de <mx:text id="sender_name" /> !
+	
+	Cette personne r&eacute;agit &agrave; l'article :
+	<mx:text id="url" />
+	
+	<mx:bloc id="sender_message">
+	<mx:text id="comment" />
+	<mx:text id="sender_message" />
+	</mx:bloc id="sender_message">
+</mx:bloc id="messageTXT">	

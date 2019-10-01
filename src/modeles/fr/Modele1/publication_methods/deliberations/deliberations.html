@@ -1,0 +1,63 @@
+<div class="">
+
+	<mx:bloc id="search">
+		<div class="col-xs-12 bg-info margin-bottom">
+			<form method="post" mXattribut="action:action" class="form">
+				<h4><mx:text id="legend"/></h4>
+				<div class="form-group">
+					<label for="yearselect" class="control-label"><mx:text id="label"/>&nbsp;:&nbsp;</label>
+					<select name="yearselect" id="yearselect" onchange="document.getElementById('formYearSelect').submit();" class="form-control">
+						<mx:bloc id="options"><mx:text id="option" /></mx:bloc id="options">
+					</select>
+				</div>
+
+
+				<noscript>
+					<div class="submit">
+						<input type="submit" name="valid" mXattribut="value:value" />
+					</div>
+				</noscript>
+			</form>
+		</div>
+	</mx:bloc id="search">
+
+
+
+	<mx:bloc id="deliberations">
+		<mx:bloc id="month"><h1><mx:text id="month" /></h1></mx:bloc id="month">
+		<div class="thumbnail sm-margin row">
+			<div class="caption">
+				<div class="row">
+					<mx:bloc id="pdf">
+						<div class="col-xs-12 col-sm-4"><a mXattribut="href:href;hreflang:hreflang;title:title" class="deliberationPDF" ><span><mx:text id="label" /></span></a></div>
+					</mx:bloc id="pdf">
+					<div class="col-xs-12 col-sm-8">
+						<h2 class="media-heading"><mx:text id="title" /></h2>
+						<mx:bloc id="date"><div class="date"><mx:text id="date" /></div><mx:bloc id="date">
+						<div class="btn btn-primary"><a mXattribut="href:href;hreflang:hreflang;title:title"><span><mx:text id="label" /></span></a></div>
+					</div>
+				</div>
+			</div>
+			<mx:bloc id="subjects"><div class="col-xs-12"><div class="sm-padding text"><mx:text id="subjects" /></div></div><mx:bloc id="subjects">
+		</div>
+	</mx:bloc id="deliberations">
+
+	<mx:bloc id="pager">
+		<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+		<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+		<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+		<mx:bloc id="next">&gt;</mx:bloc id="next">
+		<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+		<ul class="pagination row">
+            <mx:bloc id="items">
+              <!-- <mx:text id="spacer" />-->
+              <li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item" /></a></li>
+         	</mx:bloc id="items">
+        </ul>
+	</mx:bloc id="pager">
+
+	<mx:bloc id="no_datas">
+		<div class="sm-padding" >Aucune délibération n'est disponible.</p>
+	</mx:bloc id="no_datas">
+
+</div>

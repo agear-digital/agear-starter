@@ -1,0 +1,68 @@
+<div id="calendar">
+  <mx:bloc id="eventsList">
+    <div id="calendarEventsList">
+      <mx:bloc id="events">
+        <div mXattribut="id:idactu" class="calendar_event">
+          <mx:text id="chapo_picture" />
+          <h2><mx:text id="event_title" /></h2>
+          <div class="date"><mx:text id="event_date" /></div>
+          <div class="period"><mx:text id="event_period" /></div>
+          <p class="chapo"><mx:text id="chapo" /></p>
+          <div class="linksmore"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="en_savoir_plus" /></a></div>
+        </div>
+        <mx:bloc id="separator"><hr class="separator" /></mx:bloc id="separator">
+      </mx:bloc id="events">
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <div class="pager">Pages de r&eacute;ultats :<mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item" /></a></mx:bloc id="items"></div>
+      </mx:bloc id="pager">
+    </div>
+    <hr class="separator" />
+  </mx:bloc id="events_list">
+  
+  <mx:bloc id="archives_link">
+    <p class="calendar_archives_link"><a mXattribut="href:hrefarchive;hreflang:hreflangarchive;title:titlearchive">Voir les archives</a></p>
+  </mx:bloc id="archives_link">
+  
+  <mx:bloc id="archives_list">
+    <div id="calendar_archives">
+      <table>
+        <caption>Historique</caption>
+        <thead>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <mx:bloc id="archives">
+            <tr mXattribut="class:ligneclass">
+              <td><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="event_archive_title" /></a></td>
+              <td><mx:text id="event_archive_date" /></td>
+            </tr>
+          </mx:bloc id="archives">
+        </tbody>
+      </table>
+            
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <div class="pager">Pages de r&eacute;sultats :<mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item" /></a></mx:bloc id="items"></div>
+      </mx:bloc id="pager">
+    
+     </div>
+  </mx:bloc id="archives_list">
+</div>

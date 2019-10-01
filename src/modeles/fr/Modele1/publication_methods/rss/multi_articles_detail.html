@@ -1,0 +1,36 @@
+<div id="article">
+	
+	<div id="chapo">
+		<h1><mx:text id="article_title" /></h1>
+		(<mx:bloc id="date"><mx:text id="date" /></mx:bloc id="date"> 
+							<mx:bloc id="author"><mx:text id="author" /></mx:bloc id="author">)
+		<mx:text id="chapo_picture" />
+		<mx:text id="chapo" />
+	</div>
+	
+	<hr class="clear" />
+	
+	<div id="text">
+		<mx:text id="article" />
+	</div>
+	
+	<hr class="clear" />
+	
+	<mx:bloc id="view_more">
+		<div id="infos">
+			<h3>Info : </h3>
+			<mx:text id="view_more" />
+		</div>
+	</mx:bloc id="view_more">
+	
+	<mx:bloc id="view_more_links">
+		<div id="links">
+			<h3>Aussi : </h3>
+			<ul>
+				<mx:bloc id="links">
+					<li><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="link" /></a></li>
+				</mx:bloc id="links">
+			</ul>
+		</div>
+	</mx:bloc id="view_more_links">
+</div>

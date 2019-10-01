@@ -1,0 +1,21 @@
+<div id="faq">
+	<h1><mx:text id="title"/> - Questions fr&eacute;quemment pos&eacute;es</h1>
+	<a name="sommary"></a>
+	<ol>
+		<mx:bloc id="sommary">
+			<li><a mXattribut="href:href"><span><mx:text id="title"/></span></a><!--<mx:text id="date" />--></li>
+		</mx:bloc id="sommary">
+	</ol>
+
+	<mx:bloc id="content">
+		<div class="faqDetail">
+			<a mXattribut="name:name"></a>
+			<h4><mx:text id="title"/></h4>
+			<!--<mx:text id="date" />-->
+			<div class="answer">
+				<mx:text id="reponse"/>
+				<div class="answerBack"><a href="#sommary"><mx:text id="back"/></a></div>
+			</div>
+		</div>
+	</mx:bloc id="content">
+</div>

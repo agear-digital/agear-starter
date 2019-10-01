@@ -1,0 +1,53 @@
+<mx:bloc id="subject">{user} a commenté votre article !</mx:bloc id="subject"><table border="0" cellpadding="0" cellspacing="0" style="background-color: #85175b" width="100%">
+	<tbody>
+		<tr>
+			<td style="background-color: #414243; color: #fff; font-size: 18px; padding: 10px 20px;">{subject}</td>
+		</tr>
+	</tbody>
+</table>
+
+<table bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td style="padding: 30px 20px 10px;">
+			<p style="font-size: 11px; color: #999;"><mx:text id="commentDate" />,</p>
+			<mx:bloc id="authorProfile"><mx:text id="profileSummary" /></mx:bloc id="authorProfile"> a comment&eacute; votre article <a mxattribut="href:articleUrl" style="color:#31a5da;font-size:12px"><mx:text id="articleTitle" /></a>&nbsp;:</td>
+		</tr>
+	</tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td align="center">
+			<table border="0" cellpadding="0" cellspacing="0" width="80%">
+				<tbody>
+					<tr>
+						<td style="background: #eee; padding: 20px;"><mx:text id="commentMessage" /></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td style="text-align: center; padding: 30px 0;"><a mxattribut="href:href" style="background: #31a5da; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">R&eacute;pondez &agrave; son commentaire !</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<table bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td style="padding: 30px 20px 10px;">
+			<p><span style="line-height: 1.5; font-size: 1.3em;">&Agrave; bient&ocirc;t !</span><br />
+			<a href="<mx:text id="site" />"><mx:text id="site" /></a></p>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{USE_MAIN_TEMPLATE:1}

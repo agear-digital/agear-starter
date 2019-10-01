@@ -1,0 +1,47 @@
+<form mXattribut="action:action" method="post" role="form">
+	<div mXattribut="id:id" class="flex-container">
+		<select mXattribut="name:name;disabled:disabled" class="form-control">
+			<mx:bloc id="options">
+				<option mXattribut="value:value;selected:selected"><mx:text id="option" /></option>
+			</mx:bloc id="options">
+		</select>
+	</div>
+
+  <!-- Affichage de l'equivalent texte de chaque note (au survol des etoiles)
+	<span class="rating-value"><span mXattribut="id:idcaption" class="badge"></span></span>-->
+	<div>
+    <!-- Message affiche lorsque l'utilisateur a deja vote -->
+    <mx:bloc id="alreadyrate">
+    <div mXattribut="id:idalreadyrate">
+        <mx:text id="msg_alreadyrate" />
+    </div>
+    </mx:bloc id="alreadyrate">
+
+		<div mXattribut="style:style;id:idinforating">
+			<!-- Affichage de la moyenne -->
+			<mx:bloc id="avg_rating">
+				<mx:text id="label" /> :
+				<span mXattribut="id:id"><mx:text id="avg" /></span>
+			</mx:bloc id="avg_rating">
+				<mx:bloc id="nb_ratings">
+					<span class="nb_ratings"> - <mx:text id="nb" /> vote(s)</span>
+				</mx:bloc id="nb_ratings">
+		</div>
+
+		<!-- Message affiche lorsque l'utilisateur doit s'identifier pour voter -->
+          <mx:bloc id="disabledBloc">
+              <div mXattribut="id:iddisabled">
+                  <mx:text id="msg_disabled" />
+              </div>
+          </mx:bloc id="disabledBloc">
+
+
+		<mx:bloc id="js"><mx:text id="code" /></mx:bloc id="js">
+
+		<mx:bloc id="sbmt">
+			<noscript>
+				<div class="submit"><input type="submit" name="submit_rating" mXattribut="value:value_submit" class="btn--primary" /></div>
+			</noscript>
+		</mx:bloc id="sbmt">
+	</div>
+</form>

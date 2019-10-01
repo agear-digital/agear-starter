@@ -1,0 +1,43 @@
+<div class="directorySearchContent">
+	<mx:text id="search_form"/>
+
+	<mx:bloc id="switch_search">
+		<a mXattribut="href:href;hreflang:hreflang:title:title" class="switchSearch" ><span><mx:text id="switch_search_label"/></span></a>
+	</mx:bloc id="switch_search">
+
+	<mx:bloc id="results_header">
+		<div id="resultsHeader" class="borderTop pt10 mt10">
+			<mx:bloc id="some_results">
+				<div class="pb10">
+					<strong>
+						<span class="resultsCount" ><mx:text id="results_count" /></span>
+						<span class="resultsFor" ><mx:text id="results_for" /></span>
+					</strong>
+				</div>
+			</mx:bloc id="some_results">
+			<mx:bloc id="no_result">
+				<h4 class="noResult" ><mx:text id="no_result"/></h4>
+			</mx:bloc id="no_result">
+		</div>
+	</mx:bloc id="results_header">
+
+	<mx:bloc id="entries">
+		<div class="entries">
+			<mx:bloc id="entry">
+				<mx:text id="entry" />
+			</mx:bloc id="entry">
+		</div>
+
+		<mx:bloc id="pager">
+			<div class="pager">
+				<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+				<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+				<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+				<mx:bloc id="next">&gt;</mx:bloc id="next">
+				<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+				<div class="pager"><mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title;class:class"><mx:text id="item" /></a></mx:bloc id="items"></div>
+			</div>
+		</mx:bloc id="pager">
+	</mx:bloc id="entries">
+
+</div>

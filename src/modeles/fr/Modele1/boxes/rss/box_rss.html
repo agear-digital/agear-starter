@@ -1,0 +1,35 @@
+<div class="widget widgetRss" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+
+	<div class="widgetContainer">
+		<mx:text id="feed_title" />
+		<mx:bloc id="feed_date"><mx:text id="feed_date" /></mx:bloc id="feed_date">
+		<mx:bloc id="feed_description"><mx:text id="feed_description" /></mx:bloc id="feed_description">
+			<a mXattribut="href:href;hreflang:hreflang;title:title" onclick="window.open(this.href);return false"><mx:text id="link_label" /></a>
+			<mx:bloc id="items">
+				<div class="widgetRssItem" >
+					<h5 class="widgetRssItemTitle" ><mx:text id="item_title" /></h5>
+					<mx:bloc id="item_date"><div class="widgetRssItemDate" ><span class="glyphicon glyphicon-calendar"></span>&nbsp;<mx:text id="item_date" /></div></mx:bloc id="item_date">
+					<mx:bloc id="item_author"><div class="widgetRssItemDate" ><mx:text id="item_author" /></div></mx:bloc id="item_author">
+					<mx:bloc id="item_description"><div class="widgetRssItemDescription" ><mx:text id="item_description" /></div></mx:bloc id="item_description">
+					<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="btn btn-primary"><mx:text id="link_label" /></a>
+				</div>
+			</mx:bloc id="items">
+	</div>
+
+	<div class="widgetFooter"></div>
+</div>
+<hr class="clear" />
+<!--
+Longueur max du titre du fil
+<mx:bloc id="feed_title_maxlength">500</mx:bloc id="feed_title_maxlength">
+
+Longueur max de la description du fil
+<mx:bloc id="feed_description_maxlength">500</mx:bloc id="feed_description_maxlength">
+
+Longueur max du titre des items
+<mx:bloc id="item_title_maxlength">500</mx:bloc id="item_title_maxlength">
+
+Longueur max de la description des items
+<mx:bloc id="item_description_maxlength">500</mx:bloc id="item_description_maxlength">
+-->

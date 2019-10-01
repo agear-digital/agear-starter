@@ -1,0 +1,107 @@
+<div id="articlesList">
+  <h1><mx:heading_label /></h1>
+  <!--
+  <mx:bloc id="rssLink">
+    <a href="<mx:text id="feedUrl" />"><mx:text id="linkContent" /></a>
+  </mx:bloc id="rssLink">
+  -->
+  <mx:bloc id="articles_list">
+      <mx:bloc id="articles">
+        <div class="row">
+            <div class="col-xs-12">
+              <div class="thumbnail">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <mx:bloc id="picture"><div class="col-sm-4"><mx:text id="picture" /></div></mx:bloc id="picture">
+                      <div class="col-sm-8">
+                        <h2><mx:text id="article_title" /></h2>
+                        <div class="btn btn-primary"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="en_savoir_plus" /></a></div>
+                      </div>
+                  </div>
+
+                  <div class="col-xs-12">
+                    <mx:bloc id="description"><div class="sm-padding text"><mx:text id="description" /></div></mx:bloc id="description">
+                  </div>
+
+                  <!-- Donnees relative aux commentaires -->
+                  <div class="col-xs-12">
+                    <mx:bloc id="comments_datas">
+                      <div class="col-sm-6">
+                        <mx:bloc id="link"><div><a mXattribut="href:href;hreflang:hreflang;title:title" class="commentsDatasLink" ><mx:text id="label" /></a></div></mx:bloc id="link">
+                        <mx:bloc id="last_comment_date" ><div class="lastCommentDate" ><mx:text id="date" /></div></mx:bloc id="last_comment_date">
+                        <mx:bloc id="last_commenter" ><div class="lastCommenter"><mx:text id="name" /></div></mx:bloc id="last_commenter">
+                      </div>
+                    </mx:bloc id="comments_datas">
+
+                    <!-- Donnees relative aux notes  -->
+                    <mx:bloc id="ratings_datas">
+                      <div class="col-sm-6 ratings" ><mx:text id="content" /></div>
+                    </mx:bloc id="ratings_datas">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </mx:bloc id="articles">
+
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <ul class="pagination">
+            <mx:bloc id="items">
+              <!-- <mx:text id="spacer" />-->
+              <li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title;class:class"><mx:text id="item" /></a></mx:bloc id="items">
+        </ul>
+      </mx:bloc id="pager">
+
+  </mx:bloc id="articles_list">
+
+  <mx:bloc id="archives_link">
+    <p class="articlesArchivesLink"><a mXattribut="href:hrefarchive;hreflang:hreflangarchive;title:titlearchive" class="archivesLink"><span>Voir les archives</span></a></p>
+  </mx:bloc id="archives_link">
+
+  <mx:bloc id="archives_list">
+    <div id="articlesArchives">
+      <table>
+        <caption>Historique</caption>
+        <thead>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <mx:bloc id="archives">
+            <tr mXattribut="class:ligneclass">
+              <td><a mXattribut="href:href;hreflang:hreflang;title:title"  class="archivesLinkTitle"><span><mx:text id="article_archive_title" /></span></a></td>
+              <td><mx:text id="article_archive_date" /></td>
+            </tr>
+          </mx:bloc id="archives">
+        </tbody>
+      </table>
+
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <ul class="pagination">
+            <mx:bloc id="items">
+              <!-- <mx:text id="spacer" />-->
+              <li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item" /></a></mx:bloc id="items">
+        </ul>
+      </mx:bloc id="pager">
+
+    </div>
+  </mx:bloc id="archives_list">
+</div>

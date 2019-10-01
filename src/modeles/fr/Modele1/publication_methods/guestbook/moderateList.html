@@ -1,0 +1,76 @@
+<div class="guestbook">
+
+	<h1><mx:text id="title"/></h1>
+	
+	<div class="description" ><mx:text id="description"/></div>
+
+	<h2><mx:text id="messages_moderation"/></h2>
+	<mx:bloc id="back">
+		<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="guestbookBack" ><span><mx:text id="label"/></a>
+	</mx:bloc id="back">
+
+	<mx:bloc id="content">
+	
+		<mx:bloc id="nbmsg">
+			<div class="guestbookNbmsg" ><mx:text id="label"/> : <mx:text id="nb"/></div>
+		</mx:bloc id="nbmsg">
+		
+		<mx:bloc id="msg">
+			<div>
+				<h4><mx:text id="titremsg" /></h4>
+				<div class="guestbookPar" ><span class="guestbookParAuthor" ><mx:text id="auteurmsg" /></span>, <span class="guestbookParDate" ><mx:text id="datemsg" /></span></div>
+				<div class="guestbookMsg" ><mx:text id="contenumsg" /></div>
+				
+				<mx:bloc id="moderation">
+					<div class="guestbookModeration" >
+						<mx:bloc id="edit">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="guestbookModerationEdit" ><span><mx:text id="label"/></span></a>
+						</mx:bloc id="edit">
+						<mx:bloc id="delete">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="guestbookModerationDelete" ><span><mx:text id="label"/></span></a>
+						</mx:bloc id="delete">
+						<mx:bloc id="display">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;"  class="guestbookModerationDisplay" ><span><mx:text id="label"/></span></a>
+						</mx:bloc id="display">
+					</div>
+				</mx:bloc id="moderation">
+			</div>
+		</mx:bloc id="msg">
+		
+		<mx:bloc id="pager">
+			<div class="pager">
+				<mx:bloc id="previous">
+					<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="guestbookPagerPrevious" >&lt;</a>
+				</mx:bloc id="previous">
+				<mx:bloc id="page">
+					<mx:bloc id="link"><a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="guestbookPagerLink" ><span><mx:text id="label"/></span></a></mx:bloc id="link">
+					<mx:bloc id="current"><span class="guestbookPagerCurrent" ><mx:text id="label"/></span></mx:bloc id="current">
+				</mx:bloc id="page">
+				<mx:bloc id="next">
+					<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="guestbookPagerNext" >&gt;</a>
+				</mx:bloc id="next">
+			</div>
+		</mx:bloc id="pager">
+
+	</mx:bloc id="content">
+
+	<mx:bloc id="no_content">
+		<div class="noContent" ><mx:text id="message"/></div>
+	</mx:bloc id="no_content">
+	
+	<mx:bloc id="form">
+		<div class="guestbookForm" >
+			<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="guestbookFormLink" ><mx:text id="label"/></a>
+			<div><mx:text id="formulaire"/></div>
+		</div>
+	</mx:bloc id="form">
+
+	<mx:bloc id="deleteconfirm">
+		<div class="deleteconfirm" >
+			<mx:text id="confirm" />
+			<mx:bloc id="yes"><a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="deleteconfirmYes" ><span><mx:text id="label"/></span></a></mx:bloc id="yes">
+			<mx:bloc id="no"><a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick" class="deleteconfirmNo"><span><mx:text id="label"/></span></a></mx:bloc id="no">
+		</div>
+	</mx:bloc id="deleteconfirm">
+	
+</div>

@@ -1,0 +1,92 @@
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1><a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitle"><span itemprop="name headline"><mx:text id="post_title" /></span></a></h1>
+  </header>
+  <mx:bloc id="picture">
+  <section><mx:text id="post_picture" /></section>
+  <!--<mx:bloc id="imageSize">normal</mx:bloc id="imageSize">-->
+  </mx:bloc id="picture">
+  <mx:bloc id="author">
+  <section itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><mx:text id="post_author" /></span></section>
+  </mx:bloc id="author">
+  <mx:bloc id="date">
+  <section itemprop="datePublished"><mx:text id="post_date" /></section>
+  </mx:bloc id="date">
+  <mx:bloc id="categorie">
+  <section>Catégorie(s) : <span itemprop="articleSection"><mx:text id="post_categorie" /></span></section>
+  </mx:bloc id="categorie">
+  <section itemprop="keywords"><mx:bloc id="tags"><mx:text id="tag" />,&nbsp;</mx:bloc id="tags"></section>
+  <section itemprop="articleBody"><mx:text id="post_detail" /><section>
+<!-- Pagination Précédent / Suivant -->
+<mx:bloc id="linkPagination">
+	<div class="postNavigation mt20 mb20 clearfix borderTop borderBottom">
+		<a mXattribut="href:hrefBefore;hreflang:hreflangBefore;title:titleBefore" class="directoryEntryPrevious posLeft pa10 pr20">
+			<i class="glyphicon glyphicon-chevron-left mr10"></i><mx:text id="before_label" />
+		</a>
+		<a mXattribut="href:hrefAfter;hreflang:hreflangAfter;title:titleAfter" class="directoryEntryNext posRight pa10 pl20">
+			<mx:text id="after_label" /><i class="glyphicon glyphicon-chevron-right ml10"></i>
+		</a>
+	</div>
+</mx:bloc id="linkPagination">
+<div class="col-xs-12 row margin-top margin-bottom">
+	<div class="ratings col-sm-4">
+		<!-- Donnees relative aux notes -->
+		<mx:bloc id="ratings_datas">
+			<div class="ratingsDatas" ><mx:text id="content" /></div>
+		</mx:bloc id="ratings_datas">
+	</div>
+</div>
+<div class="col-xs-12">
+	<mx:bloc id="authorBlog">
+		<div id="authorBillet" class="borderAll pa20 mb20">
+			<div class="col-sm-2">
+				<div class="authorPicture txtCenter">
+					<a mXattribut="id:id;onclick:onclick;title:title">
+						<mx:bloc id="picture"><mx:text id="picture"></mx:bloc id="picture">
+					</a>
+				</div>
+				<div class="authorName txtCenter pt10 pb10">
+					<!-- <a mXattribut="id:id;onclick:onclick;title:title"> -->
+						<mx:bloc id="prenom"><mx:text id="prenom"></mx:bloc id="prenom">
+						<mx:bloc id="nom"><mx:text id="nom"></mx:bloc id="nom">
+					<!-- </a> -->
+				</div>
+				<div class="authorMetas txtCenter">
+					<mx:bloc id="gplus">
+						<a mXattribut="href:href;title:title" target="_blank" class="googleplus"><mx:text id="label" /></a>
+					</mx:bloc id="gplus">
+					<mx:bloc id="twitter">
+						<a mXattribut="href:href;title:title" target="_blank" class="twitter"><mx:text id="label" /></a>
+					</mx:bloc id="twitter">
+					<mx:bloc id="siteweb">
+						<a mXattribut="href:href;title:title" target="_blank" class="siteweb"><mx:text id="label" /></a>
+					</mx:bloc id="siteweb">
+				</div>
+			</div>
+			<div mXattribut="id:idDiv;" class="col-sm-10 pt20">
+				<div class='authorDesc'>
+					<mx:bloc id="biography"><mx:text id="biography" /></mx:bloc id="biography">
+				</div>
+			</div>
+			<br class="clear" />
+		</div>
+	</mx:bloc id="authorBlog">
+	<mx:bloc id="back">
+		<a mXattribut="href:href;hreflang:hreflang;title:title" class="BlogBack btn btn-default" ><mx:text id="label" /></a>
+	</mx:bloc id="back">
+	<ul class="postAction mt20">
+		<mx:bloc id="links_comments">
+			<mx:bloc id="view_comments"><li class="articleActionViewComments" ><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="view_comments" /></a></li></mx:bloc id="view_comments">
+			<mx:bloc id="add_comment"><li class="articleActionAddComments" ><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="add_comment" /></a></li></mx:bloc id="add_comment">
+		</mx:bloc id="links_comments">
+	</ul>
+</div>
+	<!-- Formulaire d'ajout de commentaire -->
+	<mx:bloc id="form_add_comment">
+		<div class="addComments col-xs-12"><mx:text id="content" /></div>
+	</mx:bloc id="form_add_comment">
+	<!-- Liste des commentaires -->
+	<mx:bloc id="list_comments">
+		<div class="listComments col-xs-12"><mx:text id="content" /></div>
+	</mx:bloc id="list_comments">
+</article>

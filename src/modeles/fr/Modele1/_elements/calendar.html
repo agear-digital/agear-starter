@@ -1,0 +1,32 @@
+<table class="calendar table"  >
+	<caption><mx:text id="caption" /></caption>
+	<thead>
+		<tr>
+			<th><a href="javascript:void(0);" mXattribut="onclick:onclickpreviousyear;hreflang:hreflangpreviousyear;title:titlepreviousyear">&lt;&lt;</a></th>
+			<th><a href="javascript:void(0);" mXattribut="onclick:onclickpreviousmonth;hreflang:hreflangpreviousmonth;title:titlepreviousmonth">&lt;</a></th>
+			<th colspan="3"><a href="javascript:void(0);" mXattribut="onclick:onclick;hreflang:hreflang;title:title"><mx:text id="today" /></a></th>
+			<th><a href="javascript:void(0);" mXattribut="onclick:onclicknextmonth;hreflang:hreflangnextmonth;title:titlenextmonth">&gt;</a></th>
+			<th><a href="javascript:void(0);" mXattribut="onclick:onclicknextyear;hreflang:hreflangnextyear;title:titlenextyear">&gt;&gt;</a></th>
+		</tr>
+		<tr>
+			<mx:bloc id="days">
+				<th class="days"><mx:text id="day_label" /></th>
+			</mx:bloc id="days">
+		</tr>
+	</thead>
+	<tbody>
+		<mx:bloc id="weeks">
+			<tr>
+				<mx:bloc id="days_number">
+					<td mXattribut="class:class">
+						<mx:bloc id="active">
+							<a href="javascript:void(0);" mXattribut="onclick:onclick;hreflang:hreflang;title:title"><mx:text id="day" /></a>
+						</mx:bloc id="active">
+						<mx:bloc id="inactive">&nbsp;</mx:bloc id="inactive">
+					</td>
+				</mx:bloc id="days_number">
+			</tr>
+		</mx:bloc id="weeks">
+	</tbody>
+
+</table>

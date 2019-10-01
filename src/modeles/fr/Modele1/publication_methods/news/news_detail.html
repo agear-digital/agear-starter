@@ -1,0 +1,91 @@
+<div id="news">
+  	<div class="row">
+    	<mx:bloc id="picture"><div class="col-sm-4"><mx:text id="picture" /></div></mx:bloc id="picture">
+		<!-- <mx:bloc id="imageSize">normal</mx:bloc id="imageSize"> -->
+
+		<div class="col-sm-8">
+			<h1><mx:text id="news_title" /></h1>
+			<mx:bloc id="author"><div class="text"> <mx:text id="author" /></div></mx:bloc id="author">
+	    	<mx:bloc id="date"><div><mx:text id="date" /></div></mx:bloc id="date">
+	    	<mx:bloc id="period"><div><mx:text id="period" /></div></mx:bloc id="period">
+		</div>
+	</div>
+
+
+    <mx:bloc id="description"><div class="lead"><mx:text id="description" /></div></mx:bloc id="description">
+
+	<div id="text" class="text margin-top">
+		<mx:text id="article" />
+	</div>
+
+
+
+	<mx:bloc id="view_more">
+    	<div id="infos">
+      	<h3>Info : </h3>
+      	<p><mx:text id="view_more" /></p>
+    	</div>
+	</mx:bloc id="view_more">
+
+	<mx:bloc id="view_more_links">
+	    <div>
+	      <h3>Aussi : </h3>
+			<ul>
+        		<mx:bloc id="links">
+          		<li><a mXattribut="href:href;hreflang:hreflang;title:title"><span><mx:text id="link" /></span></a></li>
+        		</mx:bloc id="links">
+			</ul>
+		</div>
+	</mx:bloc id="view_more_links">
+
+	<mx:bloc id="gmap">
+		<div id="newsGmap"><mx:text id="map" /></div>
+	</mx:bloc id="gmap">
+
+	<mx:bloc id="gmaplink">
+  		<a mXattribut="href:href;hreflang:hreflang;title:title" class="gmapLink" ><span><mx:text id="label" /></span></a>
+	</mx:bloc id="gmaplink">
+
+
+	<div class=" row margin-top margin-bottom">
+
+	<!-- Donnees relative aux notes -->
+		<mx:bloc id="ratings_datas">
+			<div class="ratings col-sm-4" ><mx:text id="content" /></div>
+		</mx:bloc id="ratings_datas">
+
+	</div>
+
+
+	<mx:bloc id="links_comments">
+		<mx:bloc id="add_comment"><div class="btn btn-default"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="add_comment" /></a></div></mx:bloc id="add_comment">
+	</mx:bloc id="links_comments">
+
+	<!-- Formulaire d'ajout de commentaire -->
+	<mx:bloc id="form_add_comment">
+		<div class="row" >
+			<div class="col-xs-12"><mx:text id="content" /></div>
+		</div>
+	</mx:bloc id="form_add_comment">
+
+	<!-- Liste des commentaires -->
+	<mx:bloc id="list_comments">
+		<div class="row" >
+			<div class="col-xs-12"><mx:text id="content" /></div>
+		</div>
+	</mx:bloc id="list_comments">
+
+
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="pagination">
+				<mx:bloc id="previous">
+		            <li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title" class="PagerPrevious" ><span><mx:text id="previous" /></span></a></li>
+				</mx:bloc id="previous">
+				<mx:bloc id="next">
+					<li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title" class="PagerNext"><span><mx:text id="next" /></span></a></li>
+				</mx:bloc id="next">
+			</ul>
+		</div>
+	</div>
+</div>

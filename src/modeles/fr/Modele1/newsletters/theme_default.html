@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<title><mx:text id="object"/></title>
+	</head>
+ <body>
+<!--		Pour être cohérent avec tout les clients mail ou webmail (ex: outlook, hotmail, thunderbird...)
+		les styles ne doivent pas se trouver dans l'entête de la page (head).-->
+		<!-- Le bloc pour saisir vos styles  -->
+  <mx:bloc id="styles">
+		<mx:text id="styles" />
+		<!-- Le bloc pour y saisir votre feuille de styles -->
+		<mx:bloc id="css">letter.css</mx:bloc id="css">
+		<!-- Saisissez ici vos styles si vous n'utilisez pas de feuille de styles  -->
+		<!-- Exemple :
+		<style type="text/css">
+			body {
+				padding:0;
+				margin:0;
+				width:100%;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size:62.5%;
+			}
+		</style>
+		-->
+ 	</mx:bloc id="styles">
+	<div id="newsletter" mXattribut="class:newsletter">
+		<mx:text id="content" />
+		<a mXattribut="href:href" target="_blank"><mx:text id="unsubscribe" /></a>
+	</div>
+
+	</body>
+</html>

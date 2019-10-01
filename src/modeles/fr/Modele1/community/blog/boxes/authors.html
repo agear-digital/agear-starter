@@ -1,0 +1,30 @@
+<div class="widget widgetBlogAuthors" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+
+	<div class="widgetContainer">
+		<mx:bloc id="list_mode">
+			<ul>
+				<mx:bloc id="li">
+					<li><a mXattribut="href:href;hreflang:hreflang;title:title;"><span class="glyphicon glyphicon-user"></span>&nbsp;<mx:text id="label" /></a></li>
+				</mx:bloc id="li">
+			</ul>
+		</mx:bloc id="list_mode">
+		<mx:bloc id="select_mode">
+			<form method="post" mXattribut="action:action">
+				<div class="row">
+					<label for="authorid"><mx:text id="label"/></label>
+					<select name="author" id="authorid">
+						<mx:bloc id="options">
+							<option mXattribut="value:value"><mx:text id="option" /></option>
+						</mx:bloc id="options">
+					</select>
+				</div>
+				<div class="submit">
+					<input type="submit" name="button" mXattribut="value:submit_value" class="btn btn-primary" />
+				</div>
+			</form>
+		</mx:bloc id="select_mode">
+	</div>
+
+	<div class="widgetFooter"></div>
+</div>

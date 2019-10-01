@@ -1,0 +1,73 @@
+<div class="addResource" mxAttribut="class:style;id:elementId">
+	<div class="actions">
+		<mx:bloc id="modif">
+			<a href="javascript:void(0);" class="pubRModif"><span><mx:text id="icone" /><span class="arrowBlack"></span></span></a>
+			<span class="addLabel unhideable"><mx:text id="addLabel" /></span>
+		</mx:bloc id="modif">
+		<mx:bloc id="delete">
+			<a href="javascript:void(0);" class="pubRDelete hideable"><span><mx:text id="icone" /><span class="arrowBlack"></span></span></a>
+		</mx:bloc id="delete">
+	</div>
+	<div class="vignette">
+		<mx:bloc id="vignette">
+			<p class="hideable"><img class="pubRVignette" mxAttribut="src:src;" /></p>
+			<p class="pubRLabel hideable"><mx:text id="label" /></p>
+		</mx:bloc id="vignette">
+	</div>
+	<input type="hidden" class="pubRHidden" mxAttribut="name:name;id:id;value:value" />
+</div>
+
+<script type="text/javascript">
+<!--
+if ($) {
+
+	if (pubRInitNotDone == undefined) {
+		var pubRInitNotDone = true;
+	}
+
+	if (pubRInitNotDone) {
+		var currentURI = window.location.pathname;
+		if(currentURI!=='/') {
+			var pos        = currentURI.lastIndexOf('/');
+				currentURI = currentURI.substr(0,pos+1);
+		}
+
+		$(document).ready(function() {
+			pubRInitNotDone = false;
+
+			$('.pubRContener').each(function() {
+				var gotRess = ($(this).find('.pubRHidden').val() > 0);
+				if (gotRess) {
+					$(this).find('.pubRModif').addClass('modif');
+					$(this).find('.unhideable').hide();
+				} else {
+					$(this).find('.pubRModif').addClass('add');
+					$(this).find('.hideable').hide();
+				}
+			});
+
+			$('.pubRModif').click(function() {
+				window.open(currentURI+'ressourcesCenter-popup.html?insertType=pubR&insertElem=' + $(this).closest('.pubRContener').attr('id'),'ressourcesCenter','resizable=no, location=no, width=700, height=500, menubar=no, status=no, menubar=no');
+				return false;
+			});
+
+			$('.pubRDelete').click(function() {
+				var container = $(this).closest('.pubRContener');
+				container.find('.pubRModif').toggleClass('modif').toggleClass('add');
+				container.find('.hideable').hide();
+				container.find('.unhideable').show();
+				var vignette = $(container).find('.pubRVignette');
+				vignette.attr('src', '');
+
+				var label = $(container).find('.pubRLabel');
+				label.html('');
+
+				$(container).find('.pubRHidden').val('');
+
+				return false;
+			});
+		});
+	}
+}
+//-->
+</script>

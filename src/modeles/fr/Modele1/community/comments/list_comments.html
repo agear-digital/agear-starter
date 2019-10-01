@@ -1,0 +1,49 @@
+<div>
+	<h3><mx:text id="title" /></h3>
+
+	<mx:bloc id="msg_no_comment">
+		<h4><mx:text id="msg" /></h4>
+	</mx:bloc id="msg_no_comment">
+
+	<mx:bloc id="list_comments">
+		<mx:bloc id="moderation_msg">
+			<div class="confirmMsg">
+				Merci d'avoir ajouté un commentaire.
+				Votre message est soumis &agrave; mod&eacute;ration, un e-mail vous sera envoy&eacute; lors de sa publication.
+			</div>
+		</mx:bloc id="moderation_msg">
+
+		<mx:bloc id="confirm_msg">
+			<div class="confirmMsg">
+				Votre commentaire a bien &eacute;t&eacute; enregistr&eacute;.
+			</div>
+		</mx:bloc id="confirm_msg">
+
+		<ul class="list-group">
+			<mx:bloc id="comment">
+				<li class="list-group-item" mXattribut="id:id">
+					<!-- <mx:bloc id="title"><h6><mx:text id="title" /></h6></mx:bloc id="title"> -->
+					<div> <strong><mx:text id="nom" /></strong>&nbsp; - &nbsp;<small class="text-muted"><mx:text id="date" /></small></div>
+					<mx:bloc id="site"><span class="commentSite"><mx:text id="site" /></span></mx:bloc id="site">
+					<div><mx:text id="comment" /></div>
+				</li>
+			</mx:bloc id="comment">
+		</ul>
+
+		<mx:bloc id="pager">
+			<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+			<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+			<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+			<mx:bloc id="next">&gt;</mx:bloc id="next">
+			<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+			<div class="row">
+	          	<ul class="pagination">
+		            <mx:bloc id="items">
+		              <!-- <mx:text id="spacer" />-->
+		              <li mXattribut="href:href;hreflang:hreflang;title:title;class:class"><mx:text id="item" /></a>
+					</mx:bloc id="items">
+				</ul>
+			</div>
+		</mx:bloc id="pager">
+	</mx:bloc id="list_comments">
+</div>

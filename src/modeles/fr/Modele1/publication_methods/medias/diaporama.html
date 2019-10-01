@@ -1,0 +1,82 @@
+<script type="text/javascript">
+	<!--
+	var Diaporamas=new Array();
+	
+	function Diaporama(title, interval, width, height){
+		this.Index=Diaporamas.length;
+		this.Images=new Array();
+		this.ImgIndex=0;
+		this.ID=null;
+		this.interval=interval==undefined ? <mx:text id="delaytime" />*1000 : new Number(interval);
+		this.Add=function(src){
+			var Index=this.Images.length;
+			this.Images[Index]=new Array();
+			this.Images[Index]["image"]=new Image();
+			this.Images[Index]["image"].src=src;
+			this.Images[Index]["rel"]=src;
+		}
+		this.Show=function(Index){
+			if(Index < 0)Index=this.Images.length - 1;
+			if(Index > this.Images.length - 1)Index=0;
+			document.images["disc" + this.Index].src=this.Images[Index]["image"].src;
+			this.ImgIndex=Index;
+		}
+		this.First=function(){
+			this.Show(0);
+		}
+		this.Last=function(){
+			this.Show(this.Images.length - 1);
+		}
+		this.Previous=function(){
+			if(this.ImgIndex > 0)this.Show(this.ImgIndex - 1);
+		}
+		this.Next=function(){
+			if(this.ImgIndex < this.Images.length - 1)this.Show(this.ImgIndex + 1);
+		}
+		this.Play=function(){
+			<mx:bloc id="setInterval">
+			this.interval=(document.getElementById('delay').value)*1000;
+			if(this.interval==0){
+				this.interval=<mx:text id="delaytime" />*1000;
+			}
+			</mx:bloc id="setInterval">
+			this.ID=setInterval("Diaporamas[" + this.Index + "].Show(Diaporamas[" + this.Index + "].ImgIndex + 1);", this.interval);
+		}
+		this.Stop=function(){
+			clearInterval(this.ID);
+			this.ID=null;
+		}
+		this.Click=function(Index){
+			this.Stop();
+			this.Show(Index);
+		}
+		this.Build=function(){
+			document.write('<div id="imagediaporama"><img src="' + this.Images[0]["image"].src +'" name="disc' + this.Index +'"><br />');
+			<mx:bloc id="tools">
+				document.write('<mx:text id="delay" /><input type="text" name="delay" id="delay" value="<mx:text id="delaytime" />" size="2" maxlength="2" /><br />');
+				<mx:bloc id="actions">
+					document.write('<a href="javascript:Diaporamas[' + this.Index + '].<mx:text id="function" />();" mXattribut="hreflang:hreflang;title:title"><img mXattribut="src:src;alt:alt" ></a>&nbsp;');
+				</mx:bloc id="actions">
+			</mx:bloc id="tools">	
+			document.write('</div>');
+		}
+		Diaporamas[this.Index]=this;
+	}
+	-->
+</script>
+<div id="customized_diaporama">
+	<mx:bloc id="title">
+		<h1><mx:text id="title" /></h1>
+	</mx:bloc id="title">
+	<span class="diaporama">
+		<script type="text/javascript">
+			<!--
+			var Diaporama=new Diaporama();
+			<mx:bloc id="images">
+				Diaporama.Add("<mx:text id="imagePath" />");
+			</mx:bloc id="images">
+			Diaporama.Build();
+			-->
+		</script>
+	</span>
+</div>

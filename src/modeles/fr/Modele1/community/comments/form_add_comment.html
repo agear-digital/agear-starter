@@ -1,0 +1,80 @@
+<div id="form_add_comment" class="col-xs-12 margin-bottom bg-gray-light " >
+	<h3><mx:text id="title_add_comment" /></h3>
+	<form mxAttribut="action:action;" method="post" id="product_comments">
+			<!-- Nom -->
+			<mx:bloc id="nom">
+				<div class="form-group row" mXattribut="for:for;class:error2">
+					<label mXattribut="for:for;class:error2" class="col-sm-3 control-label">
+						<mx:text id="nom"/>&nbsp;<span class="obligatory">*</span> :
+					</label>
+					<div mXattribut="class:error2" class="col-sm-9">
+						<span mXattribut="class:error2"><input id="nom" type="text" name="nom" size="30" mXattribut="value:value_nom;" class="form-control"/></span>
+						<mx:bloc id="error_message"><div class="help-block errorForm"><mx:text id="fields_error"/></div></mx:bloc id="error_message">
+					</div>
+				</div>
+			</mx:bloc id="nom">
+			<!-- Pseudo -->
+			<mx:bloc id="pseudo">
+				<div class="form-group row">
+					<label class="col-sm-3" for="pseudo"><mx:text id="pseudo" /> :</label>
+					<div class="col-sm-9">
+						<input id="pseudo" type="text" name="pseudo" size="30" mXattribut="value:value_pseudo;" class="form-control"/>
+					</div>
+				</div>
+			</mx:bloc id="pseudo">
+			<!-- Mail -->
+			<mx:bloc id="mail">
+				<div class="form-group row" mXattribut="for:for;class:error2">
+					<label mXattribut="for:for;class:error2" class="col-sm-3 control-label">
+						<mx:text id="mail"/>&nbsp;<span class="obligatory">*</span> :
+					</label>
+					<div mXattribut="class:error2" class="col-sm-9">
+						<span mXattribut="class:error2"><input id="mail" type="text" name="mail" size="30" mXattribut="value:value_mail;" class="form-control"/></span>
+						<mx:bloc id="error_message"><div class="help-block errorForm"><mx:text id="fields_error"/></div></mx:bloc id="error_message">
+					</div>
+				</div>
+			</mx:bloc id="mail">
+			<!-- Site -->
+			<mx:bloc id="site">
+				<div class="row form-group" mXattribut="for:for;class:error2">
+					<label mXattribut="class:error1" for="site" class="col-sm-3"><mx:text id="site" /> :</label>
+					<div mXattribut="class:error2" class="col-sm-9">
+						<span mXattribut="class:error2"><input id="site" type="text" name="site" size="30" mXattribut="value:value_site;" class="form-control"/></span>
+						<mx:bloc id="error_message"><div class="help-block errorForm"><mx:text id="fields_error"/></div></mx:bloc id="error_message">
+					</div>
+				</div>
+			</mx:bloc id="site">
+			<!-- Titre du commentaire -->
+			<!-- <mx:bloc id="title">
+				<div class="row title">
+					<label for="title"><mx:text id="title" /> :</label>
+					<input id="title" type="text" name="title" size="30" mXattribut="value:value_title;"/>
+				</div>
+			</mx:bloc id="title"> -->
+			<!-- Contenu du commentaire	-->
+			<mx:bloc id="comment">
+				<div class="row form-group">
+					<label mXattribut="for:for;class:error2" class="col-sm-3 control-label">
+						<mx:text id="comment"/>&nbsp;<span class="obligatory">*</span> :
+					</label>
+					<div mXattribut="class:error2" class="col-sm-9">
+						<span mXattribut="class:error2"><textarea name="comment" id="comment" rows="5" cols="10" class="form-control"><mx:text id="value_comment"/></textarea></span>
+						<mx:bloc id="error_message"><div class="help-block errorForm"><mx:text id="fields_error"/></div></mx:bloc id="error_message">
+					</div>
+
+				</div>
+			</mx:bloc id="comment">
+			<!-- Captcha -->
+			<mx:bloc id="captcha">
+				<div class="row col-sm-12 captcha">
+					<label><mx:text id="captcha_label" /></label>
+					<mx:text id="captcha" />
+					<mx:bloc id="error_captcha"><div class="help-block errorForm"><mx:text id="error_captcha" /></div></mx:bloc id="error_captcha">
+				</div>
+			</mx:bloc id="captcha">
+
+
+			<input type="submit" name="submit_comment" mXattribut="value:value_submit" class="btn btn-primary" id="add_submit" />
+
+	</form>
+</div>

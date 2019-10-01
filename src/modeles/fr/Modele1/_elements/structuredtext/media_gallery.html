@@ -1,0 +1,34 @@
+<!-- Affichage de la galerie d'images -->
+<mx:bloc id="gallery">
+	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" mXattribut="class:positionclass;id:divid">
+		<mx:bloc id="media">
+			<mx:bloc id="tag_start">
+				<a mXattribut="href:href;hreflang:hreflang;title:title">
+			</mx:bloc id="tag_start">
+			<mx:text id="media" />
+			<!-- pour la galerie d'image avancée, si on veut afficher des infos complémentaires en dessous de la photo fullsize, mettre ces infos dans un bloc de type <span>...</span> -->
+			<span class="description">
+				<mx:text id="description" />
+			</span>
+			<mx:bloc id="tag_end">
+				</a>
+			</mx:bloc id="tag_end">
+			<!-- Pour afficher le nom et la description des images, vous pouvez utiliser les champs suivants :
+										<mx:text id="nom" />
+										<mx:text id="description" />
+			-->
+		</mx:bloc id="media">
+	</div>
+</mx:bloc id="gallery">
+
+
+<!-- Affichage d'une image en taille r�lle -->
+<mx:bloc id="detail">
+	<mx:text id="media" />
+	<!-- Pour afficher le nom et la description des images, vous pouvez utiliser les champs suivants :
+								<mx:text id="nom" />
+								<mx:text id="description" />
+	-->
+	<!--Lien pour le retour �la gallerie -->
+	<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="back" /></a>
+</mx:bloc id="detail">

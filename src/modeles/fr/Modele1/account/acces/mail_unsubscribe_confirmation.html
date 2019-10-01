@@ -1,0 +1,30 @@
+<!--subject-->{!MAIL_SUBJECT:Désinscription sur le site!}<!--subject-->
+<mx:bloc id="messageHTML"><table border="0" cellpadding="0" cellspacing="0" style="background-color: #85175b" width="100%">
+	<tbody>
+		<tr>
+			<td style="background-color: #414243; color: #fff; font-size: 18px; padding: 10px 20px;">D&eacute;sinscription sur le site&nbsp;<mx:text id="site" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<table bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td style="padding: 30px 20px 10px;">
+			<p style="font-size: 11px; color: #999;"><mx:text id="date" /></p>
+			<p>Bonjour,<br />
+			Nous avons bien re&ccedil;u votre demande de d&eacute;sinscription sur le site <mx:text id="nom_webmaster" />.<br />
+			<br />
+			Cliquez sur le lien suivant pour confirmer votre d&eacute;sinscription : <a mxattribut="href:href"><mx:text id="url" /></a><br />
+			<br />
+			Note : Attention, si le lien est pass&eacute; sur deux lignes, il risque de ne pas fonctionner. Vous devrez alors le recopier en entier dans la barre d&#39;adresse de votre navigateur.</p>
+			<br />
+			<p><span style="line-height: 1.5; font-size: 1.3em;">&Agrave; bient&ocirc;t !</span><br />
+			<mx:text id="nom_webmaster" /></p>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{USE_MAIN_TEMPLATE:1}</mx:bloc id="messageHTML"><mx:bloc id="messageTXT"><!--subject-->{!MAIL_SUBJECT:Désinscription sur le site!}<!--subject--><p><mx:text id="date" /> Bonjour, Nous avons bien re&ccedil;u votre demande de d&eacute;sinscription sur le site <mx:text id="nom_webmaster" />. Cliquez sur le lien suivant pour confirmer votre d&eacute;sinscription : <a mxattribut="href:href"><mx:text id="url" /></a> A tr&egrave;s bient&ocirc;t, <mx:text id="webmaster_name" /></p>
+</mx:bloc id="messageTXT">

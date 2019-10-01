@@ -1,0 +1,34 @@
+<mx:text id="town" /> -
+<mx:bloc id="weather_forecast">
+  <a mXattribut="href:href;hreflang:hreflang;title:title" class="boxweatherLink" ><span><mx:text id="link" /></span></a>
+</mx:bloc id="weather_forecast">
+<mx:bloc id="town_selector">
+<form id="townselectionweather" mXattribut="action:action" method="post">
+  <label for="select_townselectionweather">Sélectionner une ville</label>
+  <select name="select_townselectionweather" id="select_townselectionweather" class="form-control">
+    <mx:bloc id="options"><option mXattribut="value:value;selected:selected"><mx:text id="option" /></option></mx:bloc id="options">
+  </select>
+  <input type="submit" name="submittownselectionweather" class="btn btn-primary" value="Changer" />
+</form>
+</mx:bloc id="town_selector">
+<div>
+  <img mXattribut="src:src;alt:alt" />
+  <mx:text id="temperature" />
+</div>
+<mx:bloc id="forecast">
+<div class="flex-container">
+  <mx:bloc id="item">
+    <div class="item-fluid">
+      <div class="itemPicture"><img mXattribut="src:src;alt:alt" /></div>
+      <div class="pt10">
+        <div class="itemLabel"><strong><mx:text id="label" /></strong></div>
+        <div class="itemTemperature">
+          <span class="minTemperature"><mx:text id="minTemperature" /></span>
+          <strong class="maxTemperature"><mx:text id="maxTemperature" /></strong>
+        </div>
+      </div>
+      <br class="clear" />
+    </div>
+  </mx:bloc id="item">
+</div>
+</mx:bloc id="forecast">

@@ -1,0 +1,27 @@
+<mx:bloc id="select_bloc">
+	<div class="selectWithVisual" mXattribut="id:id;class:style;">
+		<mx:bloc id="visuals">
+    <span>
+			<label mXattribut="for:for" class="visual-label">
+				<mx:text id="visual" />
+				<span class="visual-icon-selected">&#10003;</span>
+			</label>
+			<input hidden="true" mXattribut="type:type;name:name;id:id;value:value;checked:checked;onclick:onclick;class:class;" />
+    </span>
+		</mx:bloc id="visuals">
+	</div>
+	<script type="text/javascript">
+		$('.selectWithVisual label').bind('click', function()
+		{
+			var parent   = $(this).parent();
+
+			if (parent.find('input').prop('checked') == false) {
+				$('img', this).addClass('selected');
+				$('.visual-icon-selected', this).show();
+			} else {
+				$('img', this).removeClass('selected');
+				$('.visual-icon-selected', this).hide();
+			}
+		});
+	</script>
+</mx:bloc id="select_bloc">

@@ -1,0 +1,37 @@
+<div class="widget" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+
+
+	<table mXattribut="class:calendar_class">
+		<caption>
+			<mx:text id="caption" />
+		</caption>
+		<thead>
+			<tr class="calendarNav">
+				<th><a mXattribut="href:hrefpreviousyear;hreflang:hreflangpreviousyear;title:titlepreviousyear">&lt;</a></th>
+				<th><a mXattribut="href:hrefpreviousmonth;hreflang:hreflangpreviousmonth;title:titlepreviousmonth">&lt;&lt;</a></th>
+				<th colspan="3"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="today" /></a></th>
+				<th><a mXattribut="href:hrefnextmonth;hreflang:hreflangnextmonth;title:titlenextmonth">&gt;&gt;</a></th>
+				<th><a mXattribut="href:hrefnextyear;hreflang:hreflangnextyear;title:titlenextyear">&gt;</a></th>
+			</tr>
+			<tr class="calendarDays">
+				<mx:bloc id="days">
+					<th><mx:text id="day_label" /></th>
+				</mx:bloc id="days">
+			</tr>
+		</thead>
+		<tbody>
+			<mx:bloc id="weeks">
+				<tr>
+					<mx:bloc id="days_number">
+						<td mXattribut="class:class">
+							<!-- Bloc affichant un lien si le jour contient des �v�nements -->
+							<mx:bloc id="link"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="day" /></a></mx:bloc id="link">
+							<mx:bloc id="no_link"><mx:text id="day" /></mx:bloc id="no_link">
+						</td>
+					</mx:bloc id="days_number">
+				</tr>
+			</mx:bloc id="weeks">
+		</tbody>
+	</table>
+</div>

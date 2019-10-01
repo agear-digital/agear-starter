@@ -1,0 +1,513 @@
+/*
+ * Styleguide
+ * Layout & mixins
+ * by Alsacréations - 2016-2017
+ */
+
+ // Config things (mêmes imports que pour styles.scss ; contrainte : aucun des 3 ne doit générer de règle CSS => seulement définir des mixins et variables)
+ //
+ // Same variables than for project and KNACSS
+ @import "_config/_variables";
+ // Mixins
+ @import "_config/_mixins";
+
+
+// Variables list for Styleguide (if used)
+$colors: (
+  brand-primary      : $brand-primary,
+  brand-secondary    : $brand-secondary,
+
+  color-base: $color-base,
+  color-link: $link-color,
+  background-base: $background-base,
+
+  gray-light   : $gray-light,
+  gray-lightest: $gray-lightest,
+  gray-a11y    : $gray-a11y,
+
+  color-brand: $color-brand,
+  color-primary: $color-primary,
+  color-success: $color-success,
+  color-info: $color-info,
+  color-warning: $color-warning,
+  color-danger: $color-danger,
+  color-inverse: $color-inverse,
+  color-ghost: $color-ghost,
+  color-muted: $color-muted,
+
+  // color-error: $color-error,
+  // color-success: $color-success,
+);
+
+// Classes on section are compiled from their heading and it can easily change. Let's use some variables for that
+$section-color: '.sg-section-' + 'palette-de-couleurs';
+$section-grid : '.sg-section-' + 'grilles';
+
+/*
+ * Sass Mixins
+ */
+// mixin that displays font-size value
+@mixin fontsize($fontsize) {
+  &::after {
+    content: "#{$fontsize}";
+    @extend .sg-code-inline;
+    margin-left: $spacer-small;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+}
+
+// mixin that displays hexadecimal code of a color
+@mixin hexa($sassvar, $sasscolor) {
+  &::before {
+    background: #{$sasscolor};
+  }
+  &::after {
+    content: "$#{$sassvar}";
+  }
+}
+
+// Mixin that displays font-family
+@mixin font($font) {
+  &::before {
+    content: "#{$font}";
+    font-weight: bold;
+  }
+}
+
+
+/*
+ * Layout
+ */
+
+/* body */
+.sg {
+  position: relative;
+  padding: 0;
+  // font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+  font-family: $font-family-base;
+  background-color: $background-base;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* Header */
+.sg-header {
+  position: relative;
+  padding: $spacer-medium;
+  margin-bottom: $spacer-small;
+  text-align: center;
+  background: #F8F8F8;
+  h1 {
+    font-size: 4.5rem;
+    color: $brand-primary;
+  }
+  h2 {
+    margin-top: 0;
+    color: $gray-a11y;
+    font-size: 2rem;
+  }
+
+  .icon-kiwi-leaf {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+  .icon-pepins {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+
+/* Sidebar/Menu */
+.sg-menu {
+  position: absolute;
+    top: 19rem; left: 2rem;
+  display: none;
+  width: 22rem;
+  padding: $spacer-medium;
+  background: #F8F8F8;
+
+  &.is-fixed {
+    position: fixed;
+      top: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .sg-menu {
+    display: block;
+  }
+}
+
+
+/* Menu with Tocify */
+.tocify-header {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  ul {
+    margin: 0 0 $spacer-small;
+    padding-left: $spacer-medium;
+    list-style-type: none;
+    font-size: 90%;
+  }
+}
+.tocify-item {
+  margin: 0;
+  padding: $spacer-tiny 0;
+
+  a {
+    padding-bottom: .25rem;
+    text-decoration: none;
+    border-bottom: 0 solid;
+
+    &:focus, &:hover {
+      border-bottom-width: 1px;
+    }
+  }
+}
+.tocify-focus {
+  a {
+    font-weight: bold;
+    color: $brand-primary;
+  }
+}
+.tocify-subheader {
+  display: none;
+}
+.tocify-extend-page {
+  display: none !important;
+}
+
+
+/*
+ * Typography
+ */
+/* main title */
+.sg-title {
+  margin-top: $spacer-small;
+  @include font-size(h1);
+}
+/* copyright */
+.sg-copyright {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+/* section title */
+.sg-section {
+  & > h2.sg {
+    padding-bottom: .15em;
+    @include font-size(h1);
+    color: #333;
+    border-bottom: 2px solid #eee;
+  }
+  &:first-child > h2.sg {
+    margin-top: 0;
+  }
+}
+.sg-text h3.sg {
+  color: #333;
+  border-left: 4px solid $brand-primary;
+  padding-left: 10px;
+}
+/* text */
+.sg-text {
+  p {
+    line-height: 2;
+  }
+}
+
+
+/*
+ * Styleguide Content
+ */
+.sg-content {
+  position: relative;
+  padding: $spacer-small-plus;
+
+  @media (min-width: 768px) {
+    margin-left: 24rem;
+    padding: $spacer-medium $spacer-large;
+  }
+
+  @media (min-width: 1580px) {
+    max-width: 1080px;
+    margin: auto;
+    padding: $spacer-medium;
+  }
+}
+
+/* section */
+.sg-section {
+  margin-bottom: $spacer-extra-large;
+}
+
+/* example & canvas */
+.sg-example {
+  margin-top: $spacer-small;
+  margin-bottom: $spacer-medium;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+.sg-canvas {
+  position: relative;
+  padding: $spacer-large 3rem;
+  overflow-x: auto;
+}
+
+
+/*
+ * Code
+ */
+/* inline: <code> */
+code,
+code.sg,
+.sg-code-inline {
+  display: inline-block;
+  padding: .2rem .5rem;
+  font-family: $font-family-monospace;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  border: solid 1px #eaeaea;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+}
+
+/* block: <pre> */
+.sg-code {
+  padding: $spacer-medium;
+  margin-top: 0;
+  font-family: $font-family-monospace;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  border-top: solid 1px #eaeaea;
+  background-color: #f8f8f8;
+}
+/* markup color */
+.sg-code .hljs-tag,
+.sg-code .hljs-title {
+  color: #2f6f9f;
+}
+.sg-code .hljs-attribute {
+  color: #4f9fcf;
+}
+.sg-code .hljs-string,
+.sg-code .hljs-number,
+.sg-code .hljs-value {
+  color: #d44950;
+}
+.sg-code .hljs-comment {
+  color: #999988;
+}
+/* toggle button */
+.sg-code-toggle {
+  position: absolute;
+    right: 0; bottom: 0;
+  width: 100px;
+  padding: $spacer-tiny;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #777;
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  border-width: 1px 0 0 1px;
+  border-top-left-radius: 3px;
+
+  &:focus, &:hover {
+    background-color: #f8f8f8;
+  }
+}
+
+
+/*
+ * Colors section
+ */
+#{ $section-color } {
+  // No need for a "show markup" toggle here
+  .sg-code-toggle {
+    display: none;
+  }
+
+  // <hr> white on white (but we keep its vertical margin and semantics)
+  hr {
+    background-color: $background-base;
+  }
+}
+
+.sg-color {
+  & + & {
+    margin-top: $spacer-large;
+  }
+}
+
+.sg-color-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  border: solid 1px #eaeaea;
+
+  & {
+    margin: $spacer-small;
+  }
+
+  // color example
+  &::before {
+    content: '';
+    display: block;
+    height: 80px;
+  }
+
+  // hexadecimal code
+  &::after {
+    display: block;
+    @extend .sg-code-inline;
+  }
+
+  // Colors
+  $i: 1;
+  @each $var, $col in $colors {
+    &:nth-of-type(#{$i}) {
+      $i : $i + 1;
+      @include hexa($var, $col);
+    }
+  }
+
+}
+
+/*
+ * Icons
+ */
+/*
+.sg-icon {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > [class*="icon-"] {
+    width: calc(100% / 2);
+    margin: 0 0 $spacer-large;
+    text-align: center;
+
+    @include respond-to("small-up") {
+      width: calc(100% / 5);
+    }
+
+    code {
+      font-size: 1.2rem;
+    }
+
+    &:before {
+      display: block;
+      margin-bottom: $spacer-small;
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
+}
+*/
+
+
+/*
+ * Fonts section
+ */
+[class*="sg-font-"] {
+  & + & {
+    margin-top: $spacer-medium;
+  }
+}
+// hides "show markup" button
+.sg-section-fonts {
+  .sg-code-toggle {
+    display: none;
+  }
+}
+.sg-font-common {
+  font-family: $font-family-base;
+  @include font($font-family-base);
+}
+.sg-font-headings {
+  font-family: $font-family-headings;
+  @include font($font-family-headings);
+}
+.sg-font-monospace {
+  font-family: $font-family-monospace;
+  @include font($font-family-monospace);
+}
+
+
+/*
+ * Headings section
+ */
+$eltHeadings: (h1, h2, h3, h4, h5, h6);
+.sg-section-titres {
+  @each $h in $eltHeadings {
+    #{$h}:not(.sg) { @include fontsize(#{$h}-size); }
+  }
+}
+
+
+/*
+ * Grids section
+ */
+#{ $section-grid } {
+  .grid,
+  [class^="grid"] {
+    & + & {
+      margin-top: $spacer-medium;
+    }
+
+    & > * {
+      padding: $spacer-medium;
+      background: #f8f8f8;
+    }
+  }
+}
+
+
+/*
+ * Block alignment section
+ */
+.sg-align-block {
+  padding: $spacer-medium;
+  background: #f8f8f8;
+
+  & + & {
+    margin-top: $spacer-medium;
+  }
+}
+.sg-align-float {
+  padding: $spacer-medium;
+  background: #f8f8f8;
+
+  // @extend .clearfix; @NOTE Sass compilation crashes if styleguide.scss is compiled by itself (without importing KNACSS), thus clearfix :pseudo rule is hard coded here without the help of an @extend
+  // Clearfix
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+    border-collapse: collapse;
+  }
+
+  & + & {
+    margin-top: $spacer-medium;
+  }
+
+  & > div[class*="f"] {
+    padding: $spacer-small;
+    background: #ddd;
+  }
+}

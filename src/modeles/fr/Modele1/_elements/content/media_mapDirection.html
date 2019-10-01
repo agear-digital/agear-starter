@@ -1,0 +1,28 @@
+<div class="map" >
+	<div id="form">
+		<form method="post" mxAttribut="action:action;onsubmit:onsubmit;" name="formpersonnalise" id="formpersonnalise" enctype="multipart/form-data">
+			<fieldset id="directions">
+				<legend> 
+					<mx:text id="label_fieldset" />
+				</legend>
+				<div id="divfrom" class="row">
+					<span class="label"><label for="fromid"><mx:text id="label" />&nbsp;:&nbsp;</label>				</span>
+					<div class="formw">
+						<div>
+							<input mxAttribut="name:name_from;id:id_from"  size="35" type="text">
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<div id="submit">
+				<input name="valid" id="validid" value="Valider" mxAttribut="onclick:onclick"  type="button">
+			</div>
+		</form>
+	</div>
+	
+	<div id="divMap" mxAttribut="id:id" style="width: 400px; height: 300px; margin:1px auto;display:none;"></div>
+	<div id="divDirection" mxAttribut="id:id" style="width: 400px; height: 300px; margin:1px auto;display:none;"></div>
+	<script type="text/javascript">
+		<mx:text id="googleMapJs" />
+	</script>
+</div>

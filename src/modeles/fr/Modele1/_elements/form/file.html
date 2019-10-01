@@ -1,0 +1,34 @@
+<input type="hidden" name="MAX_FILE_SIZE" mXattribut="value:valueMaxFileSize" />
+<input type="file" mXattribut="name:name;id:id;accept:accept;class:style" />
+<mx:bloc id="html5Behaviors">
+	<div class="fileInfos" mXattribut="id:divId">
+		<div class="error" style="display:none"></div>
+		<div class="imagePreview" mXattribut="style:imagePreviewStyle"><mx:text id="imagePreview" /></div>
+		<a href="javascript:void()" onclick="deleteCurrentFile('<mx:text id="elementId" />');return false;"><mx:text id="delete" /></a>
+		<mx:bloc id="crop">
+			<div id="fd_noir"></div>
+			<div class="imagePreviewCropLayer" style="display:none;">
+				<a href="#" class="cancelCrop closeBox relative"><span class="arrowContent">Fermer<span class="arrowBlack"></span></span></a>
+				<div class="imagePreviewCrop"></div>
+				<div class="datasFile" style="display: none">
+					<span class="fileSize">Poids : <strong><mx:text id="fileSize" /></strong></span>
+					<span class="fileType">Type : <strong><mx:text id="fileType" /></strong></span>
+					<span class="imageDimensions">Dimensions : <strong><mx:text id="imageDimensions" /></strong></span>
+				</div>
+				<span onclick="saveImageCrop('<mx:text id="elementId" />');return false;">Valider</span>
+				<span class="cancelCrop">Annuler</span>
+			</div>
+			<input type="hidden" mXattribut="name:name;id:id" class="form-control"/>
+		</mx:bloc id="crop">
+	</div>
+	<script type="text/javascript">
+	<!--
+	var elementId = '<mx:text id="elementId" />';
+	$(function() {
+		$('#' + elementId).change(function() {
+			onFileChange(elementId, <mx:text id="cropActive" />, <mx:text id="cropType" />);
+		});
+	});
+	//-->
+	</script>
+</mx:bloc id="html5Behaviors">

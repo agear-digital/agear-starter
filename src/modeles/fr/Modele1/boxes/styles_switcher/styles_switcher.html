@@ -1,0 +1,26 @@
+<div class="widget widgetStyleSwitcher" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+	
+	<div class="widgetContainer">
+		<mx:bloc id="description"><p><mx:text id="description" /></p></mx:bloc id="description">
+		<form id="style_switcher_form" method="post" mXattribut="action:action">
+			<fieldset>
+				<div class="row">
+					<label for="style_switcher_selection"><mx:text id="label" /></label>
+					<select name="style_switcher_selection" id="style_switcher_selection" mXattribut="onchange:onchange">
+						<mx:bloc id="options">
+							<option mXattribut="value:value;selected:selected"><mx:text id="label" /></option>
+						</mx:bloc id="options">
+					</select>
+				</div>
+			</fieldset>
+			<noscript>
+				<div class="submit">
+					<input type="submit" name="style_switcher_submit" mXattribut="value:value" />
+				</div>
+			</noscript>
+		</form>
+	</div>
+	
+	<div class="widgetFooter"></div>
+</div>

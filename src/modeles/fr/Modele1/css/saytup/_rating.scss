@@ -1,0 +1,22 @@
+/* ----------------------------- */
+/* ==Rating.                     */
+/* ----------------------------- */
+
+.ui-stars-star {
+  width: 20px !important;
+  height: 20px;
+  font-size: 0;
+}
+.ui-stars-star a {
+  margin-left: 0px !important;
+}
+.ui-stars-star a:before {
+  content: "★";
+  font-size: 1.6rem;
+  color: $gray-200;
+}
+.ui-stars-star-on a:before, .ui-stars-star-hover a:before {
+  color: $color-primary;
+}
+.nb_ratings { color: #737373; }
+.rating-value { margin-left: 20px; }

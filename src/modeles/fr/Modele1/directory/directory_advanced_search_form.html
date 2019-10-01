@@ -1,0 +1,48 @@
+<div class="directoryAdvancedSearch">
+	<mx:bloc id="js"><mx:text id="js" /></mx:bloc id="js">
+	<h2><mx:text id="search_title"/></h2>
+	<form class="directorySearchForm" method="post" mXattribut="action:action">
+		<fieldset class="pb30">
+			<div class="row directoryAdvancedSearchTitle form-group">
+				<label mXattribut="for:input_for_id"><mx:text id="input_label"/></label>
+				<input type="text" mXattribut="name:input_name;id:input_id;value:input_value" class="wordsbox form-control" />
+			</div>
+
+			<div class="row directoryAdvancedSearchCategories form-group">
+				<label mXattribut="for:categories_for_id"><mx:text id="categories_label"/></label>
+				<select mXattribut="name:categories_name;id:categories_id" class="form-control">
+					<mx:bloc id="category">
+						<option mXattribut="selected:selected_category;value:value"><mx:text id="label"/></option>
+					</mx:bloc id="category">
+				</select>
+			</div>
+
+			<mx:bloc id="types">
+				<div class="row directoryAdvancedSearchTypes form-group">
+					<label mXattribut="for:types_for_id"><mx:text id="types_label"/></label>
+					<select mXattribut="name:types_name;id:types_id" class="form-control">
+						<mx:bloc id="type">
+							<option mXattribut="selected:selected_type;value:value"><mx:text id="label"/></option>
+						</mx:bloc id="type">
+					</select>
+				</div>
+			</mx:bloc id="types">
+		</fieldset>
+
+		<mx:bloc id="supplementary_fields">
+			<fieldset class="directorySupplementaryFields">
+				<h3><mx:text id="supplementary_fields_label"/></h3>
+				<mx:bloc id="supplementary_field">
+					<div class="row form-group" mXattribut="class:class">
+						<mx:text id="supp_form_element_condition_hidden_field" />
+						<mx:text id="supp_form_element" />
+					</div>
+				</mx:bloc id="supplementary_field">
+			</fieldset>
+		</mx:bloc id="supplementary_fields">
+
+		<div class="submit">
+			<input type="submit" mXattribut="value:submit_value;name:submit_name" class="btn btn-primary" />
+		</div>
+	</form>
+</div>

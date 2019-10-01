@@ -1,0 +1,33 @@
+<!--subject-->{!MAIL_SUBJECT:Votre commentaire a été modéré!}<!--subject--><!-- Bloc qui contient l'objet du mail envoyé au visiteur pour lui dire que son article a été accepté -->
+<p><mx:bloc id="objet1">Votre commentaire a &eacute;t&eacute; publi&eacute;e</mx:bloc id="objet1"> <!-- Bloc qui contient l'objet du mail envoyé au visiteur pour lui dire que son article a été rejeté --> <mx:bloc id="objet2">Votre commentaire a &eacute;t&eacute; refus&eacute;e</mx:bloc id="objet2"></p>
+
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #85175b" width="100%">
+	<tbody>
+		<tr>
+			<td style="background-color: #414243; color: #fff; font-size: 18px; padding: 10px 20px;">{subject}</td>
+		</tr>
+	</tbody>
+</table>
+
+<table bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<td style="padding: 30px 20px 10px;">
+			<p style="font-size: 11px; color: #999;"><mx:text id="date" />,</p>
+			<!-- Bloc qui contient le message qui sera envoyé au visiteur pour lui dire que son commentaire a été accepté --><mx:bloc id="msg1">
+
+			<p>Votre commentaire sur le site <mx:text id="site" /> a &eacute;t&eacute; accept&eacute;.</p>
+			<mx:text id="content" /> </mx:bloc id="msg1"> <!-- Bloc qui contient le message qui sera envoyé au visiteur pour lui dire que son commentaire a été rejeté --> <mx:bloc id="msg2">
+
+			<p>Votre commentaire sur le site <mx:text id="site" /> a &eacute;t&eacute; refus&eacute;.</p>
+			<mx:text id="content" /> </mx:bloc id="msg2">
+
+			<p>&nbsp;</p>
+
+			<p><span style="line-height: 1.5; font-size: 1.3em;">&Agrave; bient&ocirc;t !</span><br />
+			<a href="<mx:text id="site" />"><mx:text id="site" /></a></p><p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{USE_MAIN_TEMPLATE:1}

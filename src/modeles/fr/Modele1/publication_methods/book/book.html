@@ -1,0 +1,82 @@
+<mx:bloc id="javascript">
+<script type="text/javascript">
+<!--
+	function toggletoc(){
+		var visible='<mx:text id="visible" />';
+		var hidden='<mx:text id="hidden" />';
+		var toc=document.getElementById('toc_tree').style;
+		if(toc.display=='none'){
+			toc.display='block';
+			document.getElementById('toc_javascript_link').innerHTML=hidden;
+		}else{
+			toc.display='none';
+			document.getElementById('toc_javascript_link').innerHTML=visible;
+		}
+	}
+//-->
+</script> 
+</mx:bloc id="javascript">
+
+<div class="docbookLinks">
+	<mx:bloc id="header_links">
+		<mx:bloc id="previous">
+			<a mXattribut="href:href;hreflang:hreflang;title:title" class="bookPrevious" ><span class="bookPreviousItemNumber" ><mx:text id="item_number" /></span><span class="bookPreviousItem" ><mx:text id="item" /></span></a>
+		</mx:bloc id="previous">
+		
+		<mx:bloc id="toc">
+			<a mXattribut="href:href;hreflang:hreflang;title:title" class="bookToc"><span><mx:text id="item" /></span></a>
+		</mx:bloc id="toc">
+		
+		<mx:bloc id="next">
+			<a mXattribut="href:href;hreflang:hreflang;title:title" class="bookNext"><span class="bookNextItemNumber" ><mx:text id="item_number" /><span><span class="bookNextItem" ><mx:text id="item" /></span></a>
+		</mx:bloc id="next">
+	</mx:bloc id="header_links">
+</div>
+
+<h2><mx:bloc id="number"><mx:text id="number" /></mx:bloc id="number"><mx:text id="title" /></h2>
+
+<mx:bloc id="author">
+	<mx:text id="author" />
+</mx:bloc id="author">
+
+<mx:bloc id="date">
+	<mx:text id="date" />
+</mx:bloc id="date">
+
+<mx:bloc id="description">
+	<mx:text id="description" />
+</mx:bloc id="description">
+
+
+<!-- toc : Table of contents -->
+
+<mx:bloc id="toc">
+	<div id="toc">
+		<h3><mx:text id="title" /></h3>
+		<mx:bloc id="link"><a href="javascript:toggletoc();" id="toc_javascript_link" mXattribut="hreflang:hreflang;title:title"><mx:text id="label" /></a></mx:bloc id="link">
+		<div id="toc_tree">
+			<mx:text id="toc" />
+		</div>
+	</div>
+</mx:bloc id="toc">
+
+
+<mx:bloc id="articles">
+	<mx:text id="article" />
+</mx:bloc id="articles">
+
+<div class="docbook_links">
+	<mx:bloc id="footer_links">
+		<mx:bloc id="previous">
+			<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item_number" /><mx:text id="item" /></a>
+		</mx:bloc id="previous">
+		
+		<mx:bloc id="toc">
+			<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item" /></a>
+		</mx:bloc id="toc">
+		
+		<mx:bloc id="next">
+			<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="item_number" /><mx:text id="item" /></a>
+		</mx:bloc id="next">
+	</mx:bloc id="footer_links">
+</div>

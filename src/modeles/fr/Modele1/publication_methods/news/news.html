@@ -1,0 +1,115 @@
+<div>
+  <mx:bloc id="news_list">
+    <div>
+    <h1><mx:heading_label /></h1>
+      <div>
+        <mx:bloc id="news">
+          		<div mXattribut="id:idactu" class="thumbnail sm-margin row">
+                <div class="caption">
+                  <div class="row">
+                    <mx:bloc id="picture"><div class="col-sm-4 margin-bottom" ><mx:text id="picture" /></div></mx:bloc id="picture">
+                    <div class= "col-sm-8">
+                      <h2 class="media-heading"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="news_title" /></a></h2>
+                      <mx:bloc id="author"><div class="text"> <mx:text id="author" /></div></mx:bloc id="author">
+                      <mx:bloc id="date"><div class="date"><mx:text id="date" /></div></mx:bloc id="date">
+                      <mx:bloc id="period"><div class="period"><mx:text id="period" /></div></mx:bloc id="period">
+
+                      <mx:bloc id="description"><div class="hidden-xs hidden-sm text margin-top margin-bottom"><mx:text id="description" /></div></mx:bloc id="description">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- description -->
+               <div class="col-xs-12">
+                  <mx:bloc id="description"><div class="hidden-md hidden-lg text margin-bottom"><mx:text id="description" /></div></mx:bloc id="description">
+                </div>
+
+                <!-- Donnees relative aux commentaires -->
+                <div class="">
+                  <mx:bloc id="comments_datas">
+                    <div class="col-sm-6">
+                      <mx:bloc id="link"><div> <a mXattribut="href:href;hreflang:hreflang;title:title" ><mx:text id="label" /></a> </div></mx:bloc id="link">
+                      <!--<mx:bloc id="last_comment_date" ><div><mx:text id="date" /></div></mx:bloc id="last_comment_date">
+                      <mx:bloc id="last_commenter" ><div><mx:text id="name" /></div></mx:bloc id="last_commenter">-->
+                    </div>
+                  </mx:bloc id="comments_datas">
+
+                  <!-- Donnees relative aux notes -->
+                  <mx:bloc id="ratings_datas">
+                    <div class="col-sm-6 ratings" ><mx:text id="content" /></div>
+                  </mx:bloc id="ratings_datas">
+                </div>
+
+                <div class="col-sm-offset-8 col-sm-4">
+                  <div class="pull-right sm-margin list-group"><div class="list-group-item"><a mXattribut="href:href;hreflang:hreflang;title:title" class="newsLink" ><span><mx:text id="en_savoir_plus" /></span></a></div></div>
+                </div>
+          		</div>
+          		<mx:bloc id="separator"></mx:bloc id="separator">
+        </mx:bloc id="news">
+      </div>
+
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <div class="row">
+          <ul class="pagination">
+            <mx:bloc id="items">
+              <!-- <mx:text id="spacer" />-->
+              <li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title;"><mx:text id="item" /></a></li>
+            </mx:bloc id="items">
+          </ul>
+        </div>
+      </mx:bloc id="pager">
+
+    </div>
+  </mx:bloc id="news_list">
+
+  <mx:bloc id="archives_link">
+    <div class="btn btn-primary"><a mXattribut="href:hrefarchive;hreflang:hreflangarchive;title:titlearchive" ><span>Voir les archives</span></a></div>
+  </mx:bloc id="archives_link">
+
+  <mx:bloc id="archives_list">
+    <div id="newsArchives">
+      <table class="table">
+        <caption>Historique</caption>
+        <thead>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>titre</th>
+            <th>date</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <mx:bloc id="archives">
+            <tr mXattribut="class:ligneclass">
+              <td><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="news_archive_title" /></a></td>
+              <td><mx:text id="news_archive_date" /></td>
+            </tr>
+          </mx:bloc id="archives">
+        </tbody>
+      </table>
+
+      <mx:bloc id="pager">
+        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+        <mx:bloc id="next">&gt;</mx:bloc id="next">
+        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+        <ul class="pagination">
+            <mx:bloc id="items">
+              <!-- <mx:text id="spacer" />-->
+              <li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title;"><mx:text id="item" /></a></li>
+            </mx:bloc id="items">
+        </ul>
+      </mx:bloc id="pager">
+    </div>
+  </mx:bloc id="archives_list">
+</div>

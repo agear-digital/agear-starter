@@ -1,0 +1,38 @@
+<div class="widget widgetHighlightPosts" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+		<div class="widgetContainer">
+		<mx:bloc id="highlighted_post">
+			<div class="widgetHighlightPost">
+				<h3><mx:text id="libelle" /></h3>
+				<div class="widgetHighlightDate" ><span class="glyphicon glyphicon-calendar"></span>&nbsp;<mx:text id="date_crea" /></div>
+				<div class="row">
+					<div class="col-sm-6">
+						<mx:bloc id="thumbnail"><div class="widgetHighlightThumbnail" ><mx:text id="thumbnail" /></div></mx:bloc id="thumbnail">
+					</div>
+					<div class="col-sm-6">
+						<mx:bloc id="author"><div class="widgetHighlightAuthor" ><span><mx:text id="author" /></span></div></mx:bloc id="author">
+						<mx:bloc id="description"><div class="widgetHighlightDescription" ><span><mx:text id="description" /></span></div></mx:bloc id="description">
+						<mx:bloc id="nb_char_max_description">100</mx:bloc id="nb_char_max_description"><!-- Nombre max de caracteres pour la description -->
+						<mx:bloc id="extension_description">...</mx:bloc id="extension_description"><!-- Extension utilisee lorsque la description est tronquee -->
+						<div class="linksmore"><a mXattribut="href:href;hreflang:hreflang;title:title;" class="widgetHighlightLink btn btn-primary"><span><mx:text id="label" /></span></a></div>
+						<div class="borderTop">
+							<!-- Donnees relatives aux notes -->
+							<mx:bloc id="ratings_datas">
+								<div class="widgetHighlightRating inbl"><mx:text id="content" /></div>
+							</mx:bloc id="ratings_datas">
+
+							<!-- Donnees relatives aux commentaires -->
+							<mx:bloc id="comments_datas">
+								<mx:bloc id="link">
+									<a mXattribut="href:href;hreflang:hreflang;title:title" class="widgetHighlightCommentsLink posRight"><span><mx:text id="label" /></span></a>
+								</mx:bloc id="link">
+							</mx:bloc id="comments_datas">
+						</div>
+					</div>
+				</div>
+			</div>
+		</mx:bloc id="highlighted_post">
+	</div>
+
+	<div class="widgetFooter"></div>
+</div>

@@ -1,0 +1,53 @@
+<div><mx:text id="title_form"/></div>
+<mx:bloc id="steps"><div class="step inbl bg-info sm-padding">Etape <mx:text id="step" /> sur <mx:text id="steps" /></div></mx:bloc id="steps">
+<mx:bloc id="header"><header><mx:text id="header" /></header></mx:bloc id="header">
+<form method="post" mXattribut="action:Form_action;id:idForm" enctype="multipart/form-data" class="form" role="form">
+	<mx:bloc id="fieldset_bloc">
+		<fieldset mXattribut="id:fieldset_id;class:fieldset_class">
+			<mx:bloc id="legend">
+				<legend><mx:text id="legend" /></legend>
+			</mx:bloc id="legend">
+			<mx:bloc id="description">
+				<p><mx:text id="description" /></p>
+			</mx:bloc id="description">
+
+			<mx:bloc id="fields_form">
+        <mx:bloc id="additionnals_informations">
+          <div><mx:text id="additionnals_informations"/></div>
+        </mx:bloc id="additionnals_informations">
+				<div mXattribut="for:for;class:error1">
+					<label mXattribut="for:for;class:error1">
+						<mx:text id="fields_name"/>
+						<mx:bloc id="obligatory">
+							<span class="obligatory">&nbsp;<mx:text id="fields_obligatory"/></span>
+						</mx:bloc id="obligatory"> <mx:bloc id="separator">:</mx:bloc id="separator">
+					</label>
+          <mx:text id="fields_input"/>
+					<mx:bloc id="error_message"><span mXattribut="class:error2" class="tag--danger"><mx:text id="fields_error"/></span></mx:bloc id="error_message">
+					<mx:bloc id="help">
+						<span class="help-block">
+							<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><img mXattribut="src:src;alt:alt" /></a>
+						</span>
+					</mx:bloc id="help">
+				</div>
+			</mx:bloc id="fields_form">
+		</fieldset>
+	</mx:bloc id="fieldset_bloc">
+
+
+	<mx:bloc id="captcha">
+	<mx:text id="captcha"/>
+	</mx:bloc id="captcha">
+
+	<div>
+		<mx:bloc id="fields_submit">
+			<mx:text id="fields_input"/>
+		</mx:bloc id="fields_submit">
+	</div>
+
+	<!-- utiles -->
+	<mx:bloc id="hidden">
+		<mx:text id="fields_input"/>
+	</mx:bloc id="hidden">
+</form>
+<mx:bloc id="footer"><footer><mx:text id="footer" /></footer></mx:bloc id="footer">

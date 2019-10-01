@@ -1,0 +1,162 @@
+<div class="widget widgetLogin" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+	<div class="widgetContainer">
+		<mx:bloc id="form">
+			<form id="loginboxform" method="post" mXattribut="action:action">
+				<fieldset>
+					<legend><mx:text id="login_legend" /></legend>
+					<div class="row form-group">
+						<label for="username"><mx:text id="username" /></label>
+						<input type="text" name="username" id="username" class="form-control" />
+					</div>
+					<div class="row form-group">
+						<label for="password"><mx:text id="password" /></label>
+						<input type="password" name="password" id="password" class="form-control" />
+					</div>
+					<mx:bloc id="rememberMe">
+						<div class="row rememberMe">
+							<input type="checkbox" name="rememberMe" id="rememberMe" value="1"/>
+							<label for="rememberMe"><mx:text id="rememberMe" /></label>
+						</div>
+					</mx:bloc id="rememberMe">
+					<div class="submit">
+						<input type="submit" value="OK" class="btn btn-primary" />
+					</div>
+					<input type="hidden" name="manageaccount" value="1" />
+				</fieldset>
+			</form>
+			<div class="widgetLoginLinks">
+				<a mXattribut="href:hrefpassword;hreflang:hreflangpassword;title:titlepassword" class="mr20"><mx:text id="lost_password" /></a>
+				<a mXattribut="href:hrefsubscribe;hreflang:hreflangsubscribe;title:titlesubscribe"><mx:text id="subscribe" /></a>
+			</div>
+		</mx:bloc id="form">
+
+		<mx:bloc id="link">
+			<div class="widgetLoginLinks">
+				<a mXattribut="href:hreflogin;hreflang:hreflanglogin;title:titlelogin" class="mr20"><mx:text id="login" /></a>
+				<a mXattribut="href:hrefsubscribe;hreflang:hreflangsubscribe;title:titlesubscribe"><mx:text id="subscribe" /></a>
+				<div class="socialNetworkConnect">
+					<mx:facebookConnect title="Se connecter avec Facebook" content="Se connecter avec Facebook" />
+					<mx:twitterConnect title="Se connecter avec Twitter" content="Se connecter avec Twitter" />
+					<mx:googleplusConnect title="Se connecter avec Google Plus" content="Se connecter avec Google Plus" />
+				</div>
+			</div>
+		</mx:bloc id="link">
+
+
+		<mx:bloc id="manage">
+			<span class="widgetLoginState"><mx:text id="name_label" /></span>
+			<span class="widgetLoginUsername"><mx:text id="name" /></span>
+			<div class="widgetLoginLinks">
+				<a mXattribut="href:hreflogout;hreflang:hreflanglogout;title:titlelogout"><mx:text id="logout" /></a>
+				<a mXattribut="href:hrefmanage;hreflang:hreflangmanage;title:titlemanage"><mx:text id="manage" /></a>
+				<mx:bloc id="update"><a mXattribut="href:href" title="Gérer mon profil">Paramètres</a></mx:bloc id="update">
+			</div>
+		</mx:bloc id="manage">
+	</div>
+
+	<div class="widgetFooter"></div>
+</div>
+<mx:bloc id="newMessageIndicator">
+	<div id="messageWidget">
+		<span id="messagesNew"></span>
+		<mx:bloc id="nbMessageIndicator">
+			<span class="message_number"><mx:text id="newMessageIndicator" /></span>
+		</mx:bloc id="nbMessageIndicator">
+		<span class="c_message_long_text"><mx:text id="MessageLongDesc" /></span>
+		<mx:bloc id="messageList">
+			<div id="messagesResume">
+				<mx:bloc id="messageResume">
+					<div>
+						<span class="person"><mx:bloc id="authorProfile"><mx:text id="profileMin" /></mx:bloc id="authorProfile"></span>
+						<a mxAttribut="href:hrefResume;" class="linkMessage">
+							<mx:text id="longDesc" />
+							<span class="resumeTime">
+								<mx:bloc id="messageDateAdvancedFormat">
+									<mx:text id="label" />
+								</mx:bloc id="messageDateAdvancedFormat">
+								<!--<mx:bloc id="messageDateStandardFormat">
+									<mx:text id="label" />
+								</mx:bloc id="messageDateStandardFormat">-->
+							</span>
+						</a>
+					</div>
+				</mx:bloc id="messageResume">
+				<mx:bloc id="noTalk">
+					<div class="noTalk"><a mxAttribut="href:hrefResume;">Vous n'avez pas encore reçu de message.</a></div>
+				</mx:bloc id="noTalk">
+			</div>
+		</mx:bloc id="messageList">
+	</div>
+</mx:bloc id="newMessageIndicator">
+<mx:bloc id="newNotificationIndicator">
+	<div id="notificationWidget">
+		<span id="notificationsNew"></span>
+		<mx:bloc id="nbNotificationIndicator">
+			<span class="notification_number"><mx:text id="newNotificationIndicator" /></span>
+		</mx:bloc id="nbNotificationIndicator">
+		<span class="c_notification_long_text"><mx:text id="notificationLongDesc" /></span>
+		<mx:bloc id="notificationList">
+			<div id="notificationResume">
+				<mx:bloc id="notificationResume">
+					<div>
+						<span class="person"><mx:bloc id="authorProfile"><mx:text id="profileMin" /></mx:bloc id="authorProfile"></span>
+						<a mxAttribut="href:hrefResume;" class="linkMessage">
+							<span><mx:text id="longDesc" /></span>
+							<span class="resumeTime">
+								<mx:bloc id="notificationDateAdvancedFormat">
+									<mx:text id="label" />
+								</mx:bloc id="notificationDateAdvancedFormat">
+								<mx:bloc id="notificationDateStandardFormat">
+									<mx:text id="label" />
+								</mx:bloc id="notificationDateStandardFormat">
+							</span>
+						</a>
+					</div>
+					<mx:bloc id="newFriendMessage">est maintenant votre ami</mx:bloc id="newFriendMessage">
+				</mx:bloc id="notificationResume">
+
+				<mx:bloc id="noReaction">
+					<div class="noReaction">
+						Vous n'avez pas encore reçu de réaction sur votre mur d'activité.
+					</div>
+				</mx:bloc id="noReaction">
+			</div>
+		</mx:bloc id="notificationList">
+	</div>
+</mx:bloc id="newNotificationIndicator">
+
+<mx:bloc id="newContactsIndicator">
+	<div id="contactsWidget">
+		<span id="contactsNew"></span>
+		<mx:bloc id="nbContactIndicator">
+			<span class="contacts_number"><mx:text id="newContactsIndicator" /></span>
+		</mx:bloc id="nbContactIndicator">
+		<span class="c_contacts_long_text"><mx:text id="contactsLongDesc" /></span>
+		<mx:bloc id="contactsList">
+			<div id="contactsResume">
+				<mx:bloc id="contactsResume">
+					<div class="contact_notification">
+						<span class="person"><mx:bloc id="authorProfile"><mx:text id="profileMin" /></mx:bloc id="authorProfile"></span>
+						<a mxAttribut="href:hrefResume;" class="linkMessage"><span><mx:text id="longDesc" /></span></a>
+					</div>
+				</mx:bloc id="contactsResume">
+				<mx:bloc id="groupsResume">
+				<div class="group_notification">
+					<span class="groupImg"><mx:text id="groupImg" /></span>
+					<a mXattribut="href:hrefGroup" class="linkMessage">
+						<mx:text id="longDesc" />
+						<strong><mx:text id="groupName" /></strong>
+						<br />
+					</a>
+				</div>
+				</mx:bloc id="groupsResume">
+				<mx:bloc id="noContacts">
+					<div class="noContacts">
+						Vous n'avez pas d'invitation pour le moment.
+					</div>
+				</mx:bloc id="noContacts">
+			</div>
+		</mx:bloc id="contactsList">
+	</div>
+</mx:bloc id="newContactsIndicator">

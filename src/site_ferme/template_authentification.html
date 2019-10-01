@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<title>Site en cours de mise &agrave; jour.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+		font-style: normal;
+		text-decoration: none;
+		border: 0;
+	}
+	body {
+		font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;/* IE gère mal les tailles de texte en EM si aucune valeur en % ne les précèdes */
+		line-height: 160%;/*Opéra gère mal les hauteurs de lignes en EM*/
+		background: #2c2c2c url(/common_images/closed/bg-authentification.png) repeat-x top left;
+	}
+	#page {
+		width: 540px;
+		height: auto;
+		margin: 35px auto 0 auto;
+		font-size: 1em;
+		color: #000;
+		overflow: visible;
+	}
+	#page ul { margin-left: 50px; }
+	#signature { text-align: right; }
+	a:link {
+		color: <mx:text id="textColor" />;
+		text-decoration: none;
+	}
+	a:visited { color: <mx:text id="visitedColor" />; }
+	a:hover, a:active {
+		color: <mx:text id="textColor" />;
+		text-decoration: underline;
+	}
+	p { margin: 5px 0; }
+	strong { font-weight: bold; }
+	em { font-style: italic; }
+	h1, h2, h3, h4, h5, h6 {
+		margin: 5px 0;
+		font-weight: bold;
+		line-height: normal;
+	}
+	h1 {
+		color: <mx:text id="titleColor" />;
+		font-size: 2em;
+		font-weight: normal;
+		margin-bottom: 15px;
+	}
+	#loginboxform { margin-bottom: 20px; }
+	h2 {
+		margin: 5px 0;
+		font-size: 14px;
+	}
+	fieldset {
+		display: inline;
+		border: none;
+	}
+	legend {
+		display: none;
+		color: <mx:text id="legendColor" />;
+		padding: 0 5px;
+		font-size: 1.1em;
+		font-weight: bold;
+	}
+	.row { float: left; }
+	label {
+		float: left;
+		display: none;
+		width: 100px;
+	}
+	input, select, textarea {
+		width: 140px;
+		padding: 0 5px;
+		font-size: 13px;
+		line-height: <mx:text id="inputHeight" />;
+		color: <mx:text id="textColor" />;
+		text-align: left!important;
+		background: <mx:text id="submitColor" /> url(/common_images/closed/fd_elt_form.gif) no-repeat top left;
+		border: 1px solid #999;
+	}
+	input:focus, select:focus, textarea:focus {
+		border-color: <mx:text id="inputBorderColor" />;
+		outline: none;
+	}
+	input.champs {
+		width: 200px;
+		margin-right: 10px;
+	}
+	#passwordPlaceholder { color: darkGrey; }
+	.submit {
+		display: inline;
+		text-align: center;
+	}
+	.submit input {
+		width: <mx:text id="buttonWidth" />;
+		height: <mx:text id="buttonHeight" />;
+		padding: <mx:text id="buttonPadding" />;
+		color: <mx:text id="submitColor" />;
+		text-align: center!important;
+		background: <mx:text id="buttonImageNew" /> no-repeat top left;
+		border: none;
+		border-bottom: <mx:text id="buttonBorder" />;
+		border-radius: <mx:text id="buttonRadius" />;
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<h1><mx:text id="title" /></h1>
+		<h2><mx:text id="subtitle" /></h2>
+		<mx:bloc id="log">
+			<p><strong><mx:text id="log" /></strong></p>
+		</mx:bloc id="log">
+		<form id="loginboxform" method="post" mXattribut="action:action">
+			<fieldset>
+				<legend><mx:text id="legendlogin" /></legend>
+					<input type="text" name="username" id="username" class="champs" placeholder="<mx:text id="username" />" />
+					<input type="password" name="password" id="password" class="champs" autocomplete="off" />
+			</fieldset>
+			<div class="submit">
+				<input type="submit" class="valid" mXattribut="value:submitvalue" />
+			</div>
+		</form>
+		<mx:text id="commentaire" />
+	</div>
+	<script type="text/javascript">
+	<!--
+
+		$(document).ready(function() {
+		// cache references to the input elements into variables
+		var passwordField = $('input[name=password]');
+		var emailField = $('input[name=email]');
+		// get the default value for the email address field
+		var emailFieldDefault = emailField.val();
+
+		// add a password placeholder field to the html
+		passwordField.after('<input id="passwordPlaceholder" type="text" value="<mx:text id="password" />" autocomplete="off" class="champs"/>');
+		var passwordPlaceholder = $('#passwordPlaceholder');
+
+		// show the placeholder with the prompt text and hide the actual password field
+		passwordPlaceholder.show();
+		passwordField.hide();
+
+		// when focus is placed on the placeholder hide the placeholder and show the actual password field
+		passwordPlaceholder.focus(function() {
+			passwordPlaceholder.hide();
+			passwordField.show();
+			passwordField.focus();
+		});
+		// and vice versa: hide the actual password field if no password has yet been entered
+		passwordField.blur(function() {
+			if(passwordField.val() == '') {
+				passwordPlaceholder.show();
+				passwordField.hide();
+			}
+		});
+
+		// when focus goes to and moves away from the email field, reset it to blank or restore the default depending if a value is entered
+		emailField.focus(function() {
+			if(emailField.val() == emailFieldDefault) {
+				emailField.val('');
+			}
+		});
+		emailField.blur(function() {
+			if(emailField.val() == '') {
+				emailField.val(emailFieldDefault);
+			}
+		});
+	});
+
+	//-->
+	</script>
+</body>
+</html>

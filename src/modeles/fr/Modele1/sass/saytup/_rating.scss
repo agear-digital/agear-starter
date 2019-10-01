@@ -1,0 +1,29 @@
+/* ----------------------------- */
+/* ==Rating.                     */
+/* ----------------------------- */
+.ratingsDatas .rating-stars{
+}
+.ratingsDatas .rating-stars > div,
+.ui-stars-star{
+  display: inline-block;
+  vertical-align: middle;
+}
+.ratingsDatas .rating-stars > div a,
+.ui-stars-star-disabled a{
+  margin:0;
+  display: block;
+  font-size: 0;
+  color:#888;
+}
+div.ui-stars-star-hover a,
+div.ui-stars-star-on a,
+.ratingsDatas .rating-stars > div.ui-stars-star-hover a,
+.ratingsDatas .rating-stars > div.ui-stars-star-on a{
+  color:#333;
+}
+.ratingsDatas .rating-stars > div a:before,
+.ui-stars-star a:before{
+  content: "★";
+  font-size: 20px;
+  display: block;
+}

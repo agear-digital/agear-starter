@@ -1,0 +1,57 @@
+<div id="mediaDownloads" >
+	 <h2><mx:text id="title" /></h2>
+	 <span><mx:text id="description" /></span>
+
+	<mx:bloc : id="search">
+		<div id="zsearch" class=" bg-gray-light sm-padding margin-bottom">
+			<mx:text id="formulaire" />
+		</div>
+	</mx:bloc id="search">
+
+	<mx:bloc id="liste">
+		<div id="zliste" class="">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th><a mXattribut="href:hreflabel;hreflang:hreflang;title:titlename;class:classnom" class="mediaDownloadsLabel"><span><mx:text id="label"/></span></a></th>
+						<th><a mXattribut="href:hrefdesc;hreflang:hreflang;title:titlename;class:classdescription" class="mediaDownloadsDescription"><span><mx:text id="description"/></span></a></th>
+						<th><a mXattribut="href:hrefcredits;hreflang:hreflang;title:titlename;class:classcredits" class="mediaDownloadsAuthor"><span><mx:text id="autor"/></span></a></th>
+						<th><a mXattribut="href:hrefdate;hreflang:hreflang;title:titlename;class:classdate" class="mediaDownloadsDate"><span><mx:text id="date"/></span></a></th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<mx:bloc id="medias">
+					<tr>
+						<td><mx:text id="visuel" /></td>
+						<td><mx:text id="name"/></td>
+						<td><mx:text id="description"/></td>
+						<td><mx:text id="autor"/></td>
+						<td><mx:text id="date"/></td>
+						<td><a mxAttribut="href:href;title:title;hreflang:hreflang" class="mediaDownloadsLink" ><span><mx:text id="label"/></span></a></td>
+					</tr>
+				</mx:bloc id="medias">
+			</table>
+		</div>
+
+		<!-- pager -->
+			<mx:bloc id="pager">
+	        <mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+	        <mx:bloc id="previous">&lt;</mx:bloc id="previous">
+	        <mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+	        <mx:bloc id="next">&gt;</mx:bloc id="next">
+	        <mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+	        <ul class="pagination">
+	            <mx:bloc id="items">
+	              <!-- <mx:text id="spacer" />-->
+	              <li mXattribut="class:class"><a mXattribut="href:href;hreflang:hreflang;title:title;"><mx:text id="item" /></a></li>
+	            </mx:bloc id="items">
+	        </ul>
+	      </mx:bloc id="pager">
+
+	</mx:bloc id="liste">
+
+	<mx:bloc id="no_result">
+		<div class="noResult" ><mx:text id="message" /></div>
+	</mx:bloc id="no_result">
+</div>

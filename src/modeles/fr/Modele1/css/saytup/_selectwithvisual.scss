@@ -1,0 +1,14 @@
+/* ----------------------------- */
+/* ==Select with visual          */
+/* ----------------------------- */
+.visual-icon-selected {
+  position: absolute;
+  top: 2px;
+  color: $white;
+  font-size: 3rem;
+  display: none;
+  left: 2px;
+}
+.visual-label {
+  position: relative;
+}

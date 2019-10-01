@@ -1,0 +1,24 @@
+<div id="ecard">
+	<h1><mx:text id="title" /></h1>
+
+	<mx:bloc id="description">
+		<div class="ecardGalleryDescription" >
+			<mx:text id="description" />
+		</div>
+	</mx:bloc id="description">
+
+	<div mXattribut="id:divid">
+  	<mx:bloc id="gallery">
+    	<div class="ecardMedia">
+      	<mx:text id="media" />
+      	<!-- pour la galerie d'image avancée, si on veut afficher des infos complémentaires en dessous de la photo fullsize, mettre ces infos dans un bloc de type <span>...</span> -->
+      	<span class="description">
+        	<mx:text id="nom" />
+        	<mx:text id="description" />
+      	</span>
+      	<a mXattribut="href:href;hreflang:hreflang;title:title" class="SelectMediaLink" ><span><mx:text id="select_media" /></span></a>
+    	</div>
+  	</mx:bloc id="gallery">
+	</div>
+	<mx:text id="init_advanced_gallery" />
+</div>

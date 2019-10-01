@@ -1,0 +1,64 @@
+<div id="article" class=" margin-bottom">
+  <mx:bloc id="articles">
+  	<!--
+  		<h1><mx:text id="article_title" /></h1>
+  		<mx:text id="chapo" />
+  		<mx:text id="imgchapo" />
+  	-->
+
+    <div id="text" class="text">
+      <mx:text id="article"/>
+    </div>
+
+      <mx:bloc id="view_more">
+        <div class="row">
+        	<div id="infos col-lg-6">
+          	<h3>En savoir plus : </h3>
+          	<mx:text id="view_more" />
+        	</div>
+        </div>
+    	</mx:bloc id="view_more">
+    	<mx:bloc id="view_more_links">
+        <div class="row">
+          	<h3>Liens connexes : </h3>
+          	<ul>
+            	<mx:bloc id="links">
+              	<li><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="link" /></a></li>
+            	</mx:bloc id="links">
+          	</ul>
+        </div>
+      </mx:bloc id="view_more_links">
+  </mx:bloc id="articles">
+
+	<mx:bloc id="author"><div class="row margin-bottom"><mx:text id="author" /></div></mx:bloc id="author">
+
+  <div class="row margin-top margin-bottom">
+    <div>
+      <!-- Donnees relative aux notes -->
+      <div class="col-sm-6 col-md-4 ">
+        <ul class="articleAction list-group">
+          <!--
+            <li class="list-group-item"><mx:reacttoarticle title="R&eacute;agir &agrave; l'article" content="R&eacute;agir" /></li>
+            <li class="list-group-item"><mx:sendarticle title="Envoyer l'article" content="Envoyer l'article" /></li>-->
+            <mx:bloc id="links_comments">
+              <mx:bloc id="add_comment"><li class="list-group-item"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="add_comment" /></a></li></mx:bloc id="add_comment">
+              <mx:bloc id="view_comments"><li class="list-group-item"><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="view_comments" /></a></li></mx:bloc id="view_comments">
+            </mx:bloc id="links_comments">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+	<!-- Formulaire d'ajout de commentaire -->
+	<mx:bloc id="form_add_comment">
+		<div><mx:text id="content" /></div>
+	</mx:bloc id="form_add_comment">
+
+  <!-- Liste des commentaires -->
+  <mx:bloc id="list_comments">
+    <div class="row" >
+      <div class="col-xs-12"><mx:text id="content" /></div>
+    </div>
+  </mx:bloc id="list_comments">
+
+</div>

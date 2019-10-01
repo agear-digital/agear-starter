@@ -1,0 +1,57 @@
+<article>
+  <!--General entry label-->
+  <mx:bloc id="label">
+  	<h1><span><mx:text id="label" /></span></h1>
+  </mx:bloc id="label">
+
+  <!-- Affichage du nuage de tags de la fiche -->
+  <!-- Affiche les tags d'une fiche -->
+  <mx:bloc id="tags">
+  	<ul>
+  		<mx:bloc id="tag">
+  			<li><a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="tag" /></a></li>
+  		</mx:bloc id="tag">
+  	</ul>
+  </mx:bloc id="tags">
+
+  <!-- Description de la fiche -->
+  <mx:bloc id="description">
+  	<p><mx:text id="description" /></p>
+  </mx:bloc id="description">
+
+  <!-- Propriétés complémentaires -->
+  <mx:bloc id="additionnals_properties">
+  	<div mXattribut="class:class">
+  		<span><mx:text id="label" /> :</span>
+  		<span><mx:text id="value" /></span>
+  	</div>
+  </mx:bloc id="additionnals_properties">
+
+  <!-- Affichage de la map pour la fiche -->
+  <mx:bloc id="map">
+  	<div><mx:Text id="map" /></div>
+  </mx:bloc id="map">
+
+  <!-- Calcul d'itineraire si coordonnées GPS-->
+  <mx:bloc id="direction">
+  	<div><mx:Text id="map" /></div>
+  </mx:bloc id="direction">
+
+  <!-- Lien pour revenir à la liste des fiches -->
+	<a mXattribut="href:href;hreflang:hreflang;title:title" class="directoryEntryBack list-group-item inbl">
+		<span><mx:text id="back" /></span>
+	</a>
+
+  <!-- Pagination Précédent / Suivant -->
+  <mx:bloc id="linkPagination">
+  	<div>
+  		<a mXattribut="href:hrefBefore;hreflang:hreflangBefore;title:titleBefore"><mx:text id="before_label" /></a>
+  		<a mXattribut="href:hrefAfter;hreflang:hreflangAfter;title:titleAfter"><mx:text id="after_label" /></a>
+  	</div>
+  </mx:bloc id="linkPagination">
+
+  <!-- Affichage du lien vers la rubrique qui publie les thèmes -->
+  <mx:bloc id="gmaplink">
+  	<a mXattribut="href:href;hreflang:hreflang;title:title" class="directoryEntryGmapLink"><span><mx:text id="label" /></span></a>
+  </mx:bloc id="gmaplink">
+</article>

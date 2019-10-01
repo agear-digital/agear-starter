@@ -1,0 +1,28 @@
+<h2><mx:text id="box_title" /></h2>
+
+<mx:text id="feed_title" />
+<mx:bloc id="feed_date"><mx:text id="feed_date" /></mx:bloc id="feed_date">
+<mx:bloc id="feed_description"><mx:text id="feed_description" /></mx:bloc id="feed_description">
+<a mXattribut="href:href;hreflang:hreflang;title:title" onclick="window.open(this.href);return false"><mx:text id="link_label" /></a>
+
+<mx:bloc id="items">
+	<mx:text id="item_title" />
+	<mx:bloc id="item_date"><mx:text id="item_date" /></mx:bloc id="item_date">
+	<mx:bloc id="item_author"><mx:text id="item_author" /></mx:bloc id="item_author">
+	<mx:bloc id="item_description"><mx:text id="item_description" /></mx:bloc id="item_description">
+	<!--<mx:bloc id="item_content"><mx:text id="item_content" /></mx:bloc id="item_content">-->
+	<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><mx:text id="link_label" /></a>
+</mx:bloc id="items">
+<!--
+Longueur max du titre du fil
+<mx:bloc id="feed_title_maxlength">500</mx:bloc id="feed_title_maxlength">
+
+Longueur max de la description du fil
+<mx:bloc id="feed_description_maxlength">500</mx:bloc id="feed_description_maxlength">
+
+Longueur max du titre des items
+<mx:bloc id="item_title_maxlength">500</mx:bloc id="item_title_maxlength">
+
+Longueur max de la description des items
+<mx:bloc id="item_description_maxlength">500</mx:bloc id="item_description_maxlength">
+-->

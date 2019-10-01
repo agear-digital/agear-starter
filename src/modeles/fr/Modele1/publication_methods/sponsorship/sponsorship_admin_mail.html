@@ -1,0 +1,26 @@
+<mx:bloc id="subject">{PRENOM} {NOM} a parrain&eacute; sur le site {SITE}</mx:bloc id="subject">
+
+<mx:bloc id="message">
+	<p>Bonjour,</p>
+	<p><mx:text id="firstname" /> <mx:text id="name" /> (<mx:text id="mail" />) a invit&eacute; les personnes suivantes &agrave; visiter et &agrave; s'inscrire sur le site <a mXattribut="href:href;hreflang:hreflang;title:title;class:class"><mx:text id="site" /></a> :</p>
+<p>
+	<mx:bloc id="filleulsList">
+	<ul>
+		<mx:bloc id="filleul">
+		<li>
+			<span class="filleul"><mx:text id="filleul"></span>
+		</li>
+		</mx:bloc id="filleul">
+	</ul>
+	</mx:bloc id="filleulsList">
+</p>
+	<p>&Agrave; bient&ocirc;t sur <mx:text id="label_site" /></p>
+</mx:bloc id="message">
+
+
+<mx:bloc id="sponsor_commentary">
+	<p>Son commentaire : </p>
+	<p>
+		<mx:text id="commentary" />
+	</p>
+</mx:bloc id="sponsor_commentary">
