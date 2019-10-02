@@ -4,10 +4,11 @@
 // Common zone
 // -----------
 
-// Global zero value
-$zero : 0 !default;
-// Global auto value
+// Global value
 $auto : auto !default;
+$none : none !default;
+$zero : 0 !default;
+
 
 // ----------------
 // Breakpoints zone
@@ -32,6 +33,7 @@ $font-family-monospace : consolas, courier, monospace !default; // font for code
 
 // Font sizes (1.6rem value is "16px" equivalent)
 $font-size-base : 1.6rem !default;
+$font-size-2x   : $font-size-base * 2 !default;
 
 $font-sizes: (
   base: (
@@ -96,6 +98,7 @@ $grid-gutters: (
 ) !default;
 
 // Spacings
+$spacer-tiny-less        : .3rem  !default;
 $spacer-tiny             : .5rem  !default;
 $spacer-tiny-plus        : .7rem !default;
 $spacer-small            : 1rem !default;
@@ -282,6 +285,23 @@ $menu-border-base           : $menu-border-width $menu-border-type $menu-border-
 
 // styles
 %unstyled {
-  list-style: none;
+  list-style: $none;
   padding-left: 0;
 }
+
+// ------------
+// Display zone
+// ------------
+
+// display
+$display-none : $none !default;
+
+// -------------
+// Position zone
+// -------------
+
+// position
+$position-absolute  : absolute !default;
+$position-relative  : relative !default;
+$position-sticky    : sticky !default;
+$position-static    : static !default;

@@ -2,13 +2,13 @@
 /* ==Select with visual          */
 /* ----------------------------- */
 .visual-icon-selected {
-  position: absolute;
-  top: 2px;
+  position: $position-absolute;
+  top: $spacer-tiny-less;
   color: $white;
-  font-size: 3rem;
-  display: none;
-  left: 2px;
+  font-size: $font-size-2x;
+  display: $display-none;
+  left: $spacer-tiny-less;
 }
 .visual-label {
-  position: relative;
+  position: $position-relative;
 }
