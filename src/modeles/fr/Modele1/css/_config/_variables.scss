@@ -1,5 +1,12 @@
 // Config file and project variables
 
+// -----------
+// Common zone
+// -----------
+
+// Global zero value
+$zero : 0 !default;
+
 // ----------------
 // Breakpoints zone
 // ----------------
@@ -266,3 +273,13 @@ $menu-border-width          : $border-tiny !default;
 $menu-border-type           : $border-solid !default;
 $menu-border-color          : $white !default;
 $menu-border-base           : $menu-border-width $menu-border-type $menu-border-color !default;
+
+// ---------
+// List zone
+// ---------
+
+// styles
+%unstyled {
+  list-style: none;
+  padding-left: 0;
+}

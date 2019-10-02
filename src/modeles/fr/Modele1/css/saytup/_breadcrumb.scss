@@ -2,11 +2,10 @@
 /* ==Breadcrumb                  */
 /* ----------------------------- */
 .breadcrumb {
-  @extend .unstyled, .flex-container, .main-column;
-  padding: $spacer-tiny 0;
+  @extend %unstyled, .flex-container, .main-column;
+  padding: $spacer-tiny $zero;
 }
 .breadcrumb-item:after {
   content: ">";
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: $zero $spacer-tiny;
 }
