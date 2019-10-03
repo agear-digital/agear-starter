@@ -5,9 +5,17 @@
 // -----------
 
 // Global value
-$auto : auto !default;
-$none : none !default;
-$zero : 0 !default;
+$auto             : auto !default;
+$center           : center !default;
+$empty-string     : '' !default;
+$fifty-percent    : 50% !default;
+$hidden           : hidden !default;
+$inherit          : inherit !default;
+$initial          : initial !default;
+$hundred-percent  : 100% !default;
+$none             : none !default;
+$one              : 1 !default;
+$zero             : 0 !default;
 
 
 // ----------------
@@ -32,8 +40,18 @@ $font-family-headings  : sans-serif !default; // font for h1, h2.. h6
 $font-family-monospace : consolas, courier, monospace !default; // font for code and samples
 
 // Font sizes (1.6rem value is "16px" equivalent)
-$font-size-base : 1.6rem !default;
-$font-size-2x   : $font-size-base * 2 !default;
+$font-size-base             : 1.6rem !default;
+$font-size-tiny             : 0.8rem !default;
+$font-size-tiny-plus        : 1rem !default;
+$font-size-small            : 1.2rem !default;
+$font-size-small-plus       : 1.4rem !default;
+$font-size-medium           : $font-size-base !default;
+$font-size-medium-plus      : 1.8rem !default;
+$font-size-large            : 2rem !default;
+$font-size-large-plus       : 2.2rem !default;
+$font-size-extra-large      : 2.4rem !default;
+$font-size-extra-large-plus : 2.6rem !default;
+$font-size-2x               : $font-size-base * 2 !default;
 
 $font-sizes: (
   base: (
@@ -85,6 +103,16 @@ $weight-bold    : 700 !default;
 
 // Activate hyphenation on small screens
 $hyphens: false !default;
+
+// ----------
+// Texts zone
+// ----------
+
+// Alignement
+$text-align-default : left;
+
+// Modes d'écriture
+$text-direction-ltr : ltr !default;
 
 // ------------
 // Spacing zone
@@ -200,6 +228,7 @@ $border-ultra-large-plus : 30px !default;
 
 // Borders type
 $border-solid            : solid !default;
+$border-type-base        : $border-solid !default;
 
 // ---------------
 // Components zone
@@ -265,6 +294,23 @@ $burger-size              : 2.6rem;
 $burger-weight            : 5px; // size of stripes
 $burger-padding           : 0;
 
+// Component: datepicker
+$datepicker-before-after-position : 22px;
+$datepicker-head-color            : $white;
+$datepicker-head-background       : $blue-500;
+$datepicker-head-day-color        : scale-color($black, $alpha: -46%);
+$datepicker-head-day-height       : 28px !default;
+$datepicker-head-month-height     : 34px !default;
+$datepicker-main-color            : $white;
+$datepicker-border-color          : rgba(72,72,72,0.2) !default;
+$datepicker-max-height            : 640px !default;
+$datepicker-top-base              : 2px !default;
+$datepicker-shadow                : 0 3px 13px rgba(0,0,0,0.08) !default;
+$datepicker-shadow-color          : $datepicker-border-color !default;
+$datepicker-width                 : 307.875px !default;
+$datepicker-footer-border-width   : 4px;
+$datepicker-footer-border-margin  : -4px;
+
 // ---------------
 // Menu zone
 // ---------------
@@ -294,7 +340,16 @@ $menu-border-base           : $menu-border-width $menu-border-type $menu-border-
 // ------------
 
 // display
-$display-none : $none !default;
+$display-block        : block !default;
+$display-flex         : flex !default;
+$display-inline-block : inline-block !default;
+$display-none         : $none !default;
+
+// visibility
+$visibility-visible : visible;
+
+// box-sizing
+$box-sizing-border-box : border-box !default;
 
 // -------------
 // Position zone
@@ -305,3 +360,16 @@ $position-absolute  : absolute !default;
 $position-relative  : relative !default;
 $position-sticky    : sticky !default;
 $position-static    : static !default;
+
+// -----------------
+// Interactions zone
+// -----------------
+
+// cursor
+$cursor-default     : default !default;
+$cursor-not-allowed : not-allowed !default;
+$cursor-pointer     : pointer !default;
+$cursor-text        : text !default;
+
+// touch
+$touch-action-manipulation : manipulation !default;
