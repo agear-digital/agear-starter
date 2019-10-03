@@ -3,53 +3,53 @@
 /* ----------------------------- */
 .nav-button
 {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    display: block;
+    position: $position-absolute;
+    top: $nav-button-top;
+    right: $nav-button-right;
+    display: $display-block;
 
     @include respond-to('medium-up')
     {
-        display: none;
+        display: $display-none;
     }
 }
 
 .main-menu
 {
-    display: none;
+    display: $display-none;
 
     @include respond-to('medium-up')
     {
-        display: block;
+        display: $display-block;
 
         background: $menu-background-base;
     }
     &.is-opened
     {
-        display: block;
+        display: $display-block;
     }
 }
 
 .main-menu-link
 {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 16px;
-    text-decoration: none;
+    display: $display-inline-block;
+    width: $hundred-percent;
+    padding: $menu-padding-base;
+    text-decoration: $none;
     color: $menu-color-base;
     border-bottom: $menu-border-base;
     background: $menu-background-base;
 
     @include respond-to('medium-up')
     {
-        text-align: center;
-        border: none;
-        background: none;
+        text-align: $menu-text-align;
+        border: $none;
+        background: $none;
     }
 
     &:hover
     {
-        text-decoration: none;
+        text-decoration: $none;
         color: $menu-hover-color-base;
         background: $menu-hover-background-base;
     }
@@ -57,7 +57,7 @@
 
 .main-menu-sub-link
 {
-    background: $gray-dark;
+    background: $menu-sublink-background;
 
     @extend .main-menu-link;
     @include respond-to('medium-up')
@@ -69,7 +69,7 @@
 
 .main-menu-list
 {
-    padding: 0;
+    padding: $zero;
 }
 
 .main-menu-nav
@@ -77,30 +77,30 @@
     @extend .flex-column;
     @include respond-to('medium-up')
     {
-        flex-direction: row;
+        flex-direction: $flex-direction-row;
     }
 }
 
 .main-menu-item
 {
-    position: relative;
-    display: block;
-    text-align: left;
+    position: $position-relative;
+    display: $display-block;
+    text-align: $text-align-default;
 
     @include respond-to('medium-up')
     {
-        display: inline-block;
-        text-align: center;
+        display: $display-inline-block;
+        text-align: $menu-text-align;
     }
 }
 
 .main-menu-sub-nav
 {
-    display: block;
+    display: $display-block;
 
     @include respond-to('medium-up')
     {
-        display: none;
+        display: $display-none;
     }
 }
 
@@ -108,7 +108,7 @@
 {
     @include respond-to('medium-up')
     {
-        position: absolute;
-        display: block;
+        position: $position-absolute;
+        display: $display-block;
     }
 }

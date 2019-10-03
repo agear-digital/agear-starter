@@ -228,7 +228,7 @@ $border-ultra-large-plus : 30px !default;
 
 // Borders type
 $border-solid            : solid !default;
-$border-type-base        : $border-solid !default;
+$border-type-base        : $border-solid;
 
 // ---------------
 // Components zone
@@ -306,7 +306,7 @@ $datepicker-border-color          : rgba(72,72,72,0.2) !default;
 $datepicker-max-height            : 640px !default;
 $datepicker-top-base              : 2px !default;
 $datepicker-shadow                : 0 3px 13px rgba(0,0,0,0.08) !default;
-$datepicker-shadow-color          : $datepicker-border-color !default;
+$datepicker-shadow-color          : $datepicker-border-color;
 $datepicker-width                 : 307.875px !default;
 $datepicker-footer-border-width   : 4px;
 $datepicker-footer-border-margin  : -4px;
@@ -316,14 +316,26 @@ $datepicker-footer-border-margin  : -4px;
 // ---------------
 
 // Colors
-$menu-color-base            : $white !default;
-$menu-background-base       : $black !default;
-$menu-hover-color-base      : $black !default;
-$menu-hover-background-base : $white !default;
-$menu-border-width          : $border-tiny !default;
-$menu-border-type           : $border-solid !default;
-$menu-border-color          : $white !default;
-$menu-border-base           : $menu-border-width $menu-border-type $menu-border-color !default;
+$menu-color-base            : $white;
+$menu-background-base       : $black;
+$menu-hover-color-base      : $black;
+$menu-hover-background-base : $white;
+$menu-border-width          : $border-tiny;
+$menu-border-type           : $border-solid;
+$menu-border-color          : $white;
+$menu-border-base           : $menu-border-width $menu-border-type $menu-border-color;
+$menu-sublink-background    : $gray-dark;
+
+// Padding
+$menu-padding-base : 13px !default;
+
+// Align
+$menu-text-align : $center;
+
+// Nav button
+$nav-button-right : 25px !default;
+$nav-button-top   : 10px !default;
+
 
 // ---------
 // List zone
@@ -350,6 +362,9 @@ $visibility-visible : visible;
 
 // box-sizing
 $box-sizing-border-box : border-box !default;
+
+// flex
+$flex-direction-row : row !default;
 
 // -------------
 // Position zone
