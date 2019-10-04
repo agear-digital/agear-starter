@@ -32,6 +32,7 @@
   - Badges
   - Alerts
 4- Saytup :
+  - Utilities
   - Page
   - Menu
   - Breadcrumb
@@ -56,6 +57,7 @@
 
 // Default Saytup Styles
 // -----------------
+@import "saytup/utils";          // utils styles
 @import "saytup/page";           // page styles
 @import "saytup/menu";           // menu styles
 @import "saytup/breadcrumb";     // breadcrumb styles

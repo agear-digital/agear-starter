@@ -59,8 +59,12 @@ class hook_ressources extends \Emajine_Hooks
         $datas = $mx->data;
         // Tableau contenant les blocs images et texte d'un bloc Paragraphe de Saytup
         $blocks = $datas['blocks']['textPicture'][0]['blocks']['oneColumn'][0]['blocks'];
+        // Dans le cas où il s'agit d'un bloc texte sans image
+        if(strlen($config['images']) == 0) {
+          // Ne modifie rien
+          return null;
         // Dans le cas où le bloc possède une image positionnée au dessus du texte
-        if ($this->contains($config['position'], self::PICTURE_TOP_POSITON)) {
+        } elseif ($this->contains($config['position'], self::PICTURE_TOP_POSITON)) {
           // Met à jour les classes des blocs
           return \em_mx::write($this->updateBlockCssClass($mx, self::PICTURE_TOP_BLOCK, $blocks, self::PICTURE_FULL_WIDTH));
         // Dans le cas où le bloc possède une image positionnée au dessous du texte

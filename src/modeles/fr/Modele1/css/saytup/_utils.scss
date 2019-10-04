@@ -1,0 +1,15 @@
+/* ----------------------------- */
+/* ==Utilitaires                 */
+/* ----------------------------- */
+.txtCenter {
+  text-align: $text-align-center;
+}
+.txtLeft {
+  text-align: $text-align-left;
+}
+.txtRight {
+  text-align: $text-align-right;
+}
+.posRight {
+  order: $one;
+}

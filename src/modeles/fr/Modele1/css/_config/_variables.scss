@@ -109,7 +109,10 @@ $hyphens: false !default;
 // ----------
 
 // Alignement
-$text-align-default : left;
+$text-align-left    : left !default;
+$text-align-default : $text-align-left;
+$text-align-center  : $center;
+$text-align-right   : right !default;
 
 // Modes d'écriture
 $text-direction-ltr : ltr !default;
