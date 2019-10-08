@@ -188,10 +188,10 @@ $color-ghost    : transparent;
 $color-muted    : $gray-200;
 
 // (modifié pour bretzel)
-$brand-primary: $black !default;;
+$brand-primary: $black !default;
 // $brand-primary-light : #4F842A !default;
 // $brand-primary-dark : #4F842A !default;
-$brand-secondary: #0B7EB5 !default;;
+$brand-secondary: #0B7EB5 !default;
 // $brand-secondary-light: #0B7EB5 !default;
 // $brand-secondary-dark: #0B7EB5 !default;
 
@@ -232,6 +232,58 @@ $border-ultra-large-plus : 30px !default;
 // Borders type
 $border-solid            : solid !default;
 $border-type-base        : $border-solid;
+
+// ---------
+// List zone
+// ---------
+
+// styles
+%unstyled {
+  list-style: $none;
+  padding-left: 0;
+}
+
+// ------------
+// Display zone
+// ------------
+
+// display
+$display-block        : block !default;
+$display-flex         : flex !default;
+$display-inline-block : inline-block !default;
+$display-none         : $none !default;
+
+// visibility
+$visibility-visible : visible;
+
+// box-sizing
+$box-sizing-border-box : border-box !default;
+
+// flex
+$flex-direction-row : row !default;
+
+// -------------
+// Position zone
+// -------------
+
+// position
+$position-absolute  : absolute !default;
+$position-relative  : relative !default;
+$position-sticky    : sticky !default;
+$position-static    : static !default;
+
+// -----------------
+// Interactions zone
+// -----------------
+
+// cursor
+$cursor-default     : default !default;
+$cursor-not-allowed : not-allowed !default;
+$cursor-pointer     : pointer !default;
+$cursor-text        : text !default;
+
+// touch
+$touch-action-manipulation : manipulation !default;
 
 // ---------------
 // Components zone
@@ -318,6 +370,91 @@ $datepicker-footer-border-margin  : -4px;
 $star-default-size  : 20px !default;
 $star-content       : "★" !default;
 
+// Component: slideshow
+$slideshow-container-margin : 20px 0 !default;
+
+$slideshow-control-background         : rgba(0,0,0,.4) !default;
+$slideshow-control-background-hover   : rgba(0,0,0,.7) !default;
+$slideshow-control-border-radius      : 0 8px 8px 0 !default;
+$slideshow-control-cursor             : pointer !default;
+$slideshow-control-line-height        : $one;
+$slideshow-control-margin             : 30px !default;
+$slideshow-control-padding            : 20px !default;
+$slideshow-control-transition         : all .2s ease-out !default;
+
+$slideshow-control-arrow-border-style   : $border-solid !default;
+$slideshow-control-arrow-border-width   : 0.25em 0.25em 0 0 !default;
+$slideshow-control-arrow-color          : $white !default;
+$slideshow-control-arrow-content        : $empty-string;
+$slideshow-control-arrow-display        : inline-block !default;
+$slideshow-control-arrow-font-size      : 2.5rem !default;
+$slideshow-control-arrow-height         : 0.45em !default;
+$slideshow-control-arrow-position       : $position-relative;
+$slideshow-control-arrow-position-left  : $zero;
+$slideshow-control-arrow-position-top   : 0.15em !default;
+$slideshow-control-arrow-transform      : rotate(-45deg) !default;
+$slideshow-control-arrow-vertical-align : top !default;
+$slideshow-control-arrow-width          : 0.45em;
+
+$slideshow-control-arrow-next-transform : rotate(45deg) !default;
+$slideshow-control-arrow-prev-transform : rotate(-135deg) !default;
+
+$slideshow-control-next-border-radius : 8px 0 0 8px !default;
+$slideshow-control-next-padding : 30px !default;
+$slideshow-control-prev-padding : 30px !default;
+
+$slideshow-control-text-display : $display-none;
+$slideshow-control-text-height  : 40px !default;
+$slideshow-control-text-indent  : -9999px !default;
+$slideshow-control-text-width   : $slideshow-control-text-height;
+
+$slideshow-dot-background : rgba(150,150,150,.6) !default;
+$slideshow-dot-border : 1px solid rgb(150,150,150) !default;
+$slideshow-dot-border-radius : 5px !default;
+$slideshow-dot-cursor : $cursor-pointer;
+$slideshow-dot-display : $display-inline-block;
+$slideshow-dot-margin : 0 3px !default;
+$slideshow-dot-size : 10px !default;
+$slideshow-dot-text-indent : -9999px !default;
+$slideshow-dot-transition : all .2s ease-out !default;
+
+$slideshow-dots-container-background : $white;
+$slideshow-dots-container-display : $display-inline-block;
+$slideshow-dots-container-line-height : 9px !default;
+$slideshow-dots-container-padding : 10px 0 !default;
+$slideshow-dots-container-position : $position-relative;
+
+$slideshow-dots-container-inner-border-left   : 20px solid transparent !default;
+$slideshow-dots-container-inner-border-bottom : 30px solid #fff !default;
+$slideshow-dots-container-inner-bottom        : $zero;
+$slideshow-dots-container-inner-content       : $empty-string;
+$slideshow-dots-container-inner-display       : $display-block;
+$slideshow-dots-container-inner-height        : $zero;
+$slideshow-dots-container-inner-left          : -20px !default;
+$slideshow-dots-container-inner-position      : $position-absolute;
+$slideshow-dots-container-inner-width         : $zero;
+
+$slideshow-dots-container-inner-after-border-left   : $none;
+$slideshow-dots-container-inner-after-border-right  : 20px solid transparent !default;
+$slideshow-dots-container-inner-after-left          : $auto;
+$slideshow-dots-container-inner-after-right         : -20px;
+
+$slideshow-extra-background : rgba(255,255,255,.8) !default;
+$slideshow-extra-color : #222 !default;
+$slideshow-extra-display : $display-inline-block;
+$slideshow-extra-padding : 10px !default;
+$slideshow-extra-text-align : $text-align-left;
+
+$slideshow-extra-bottom-all-padding : 10px 10px 40px !default;
+$slideshow-extra-center-text-align : $text-align-center;
+$slideshow-extra-middle-padding : 0 70px !default;
+$slideshow-extra-middle-transform : translateY(-50%) !default;
+$slideshow-extra-right-text-align : $text-align-right;
+$slideshow-extra-top-all-padding : 10px !default;
+
+$slideshow-slide-background : #eee !default;
+
+
 // ---------------
 // Menu zone
 // ---------------
@@ -342,56 +479,3 @@ $menu-text-align : $center;
 // Nav button
 $nav-button-right : 25px !default;
 $nav-button-top   : 10px !default;
-
-
-// ---------
-// List zone
-// ---------
-
-// styles
-%unstyled {
-  list-style: $none;
-  padding-left: 0;
-}
-
-// ------------
-// Display zone
-// ------------
-
-// display
-$display-block        : block !default;
-$display-flex         : flex !default;
-$display-inline-block : inline-block !default;
-$display-none         : $none !default;
-
-// visibility
-$visibility-visible : visible;
-
-// box-sizing
-$box-sizing-border-box : border-box !default;
-
-// flex
-$flex-direction-row : row !default;
-
-// -------------
-// Position zone
-// -------------
-
-// position
-$position-absolute  : absolute !default;
-$position-relative  : relative !default;
-$position-sticky    : sticky !default;
-$position-static    : static !default;
-
-// -----------------
-// Interactions zone
-// -----------------
-
-// cursor
-$cursor-default     : default !default;
-$cursor-not-allowed : not-allowed !default;
-$cursor-pointer     : pointer !default;
-$cursor-text        : text !default;
-
-// touch
-$touch-action-manipulation : manipulation !default;
