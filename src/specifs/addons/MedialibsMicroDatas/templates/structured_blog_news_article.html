@@ -1,0 +1,34 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "<mx:text id="url" />"
+    },
+    "headline": "<mx:text id="headline" />",
+    "dateModified": "<mx:text id="dateModified" />",
+    "datePublished": "<mx:text id="datePublished" />",
+    "publisher": {
+      "@type": "Organization",
+			"name": "<mx:text id="publisherName" />",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "<mx:text id="publisherLogoUrl" />",
+				"width": "<mx:text id="publisherLogoWidth" />",
+				"height": "<mx:text id="publisherLogoHeight" />"
+			}
+    },
+    "description": <mx:text id="description" />,
+    "author": [{
+			"@type": "Person",
+			"name": "<mx:text id="authorName" />"
+    }],
+    "image": {
+			"@type": "ImageObject",
+			"url": "<mx:text id="imageUrl" />",
+			"width": "<mx:text id="imageWidth" />",
+			"height": "<mx:text id="imageHeight" />"
+		}
+  }
+</script>

@@ -1,4 +1,4 @@
-<article itemscope itemtype="http://schema.org/BlogPosting">
+<article itemscope itemtype="http://schema.org/NewsArticle">
   <header>
     <h2><a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitle" itemprop="mainEntityOfPage"><span itemprop="name headline"><mx:text id="post_title" /></span></a></h2>
   </header>
@@ -6,10 +6,15 @@
   <section><mx:text id="post_picture" /></section>
   </mx:bloc id="picture">
   <mx:bloc id="authorBlog">
-  <section itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><mx:bloc id="prenom"><mx:text id="prenom"></mx:bloc id="prenom">&nbsp;<mx:bloc id="nom"><mx:text id="nom"></mx:bloc id="nom"></span></section>
+  <section itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span itemprop="name"><mx:bloc id="prenom"><mx:text id="prenom"></mx:bloc id="prenom">&nbsp;<mx:bloc id="nom"><mx:text id="nom"></mx:bloc id="nom"></span>
+  </section>
   </mx:bloc id="authorBlog">
   <mx:bloc id="date">
-  <section itemprop="datePublished"><mx:text id="post_date" /></section>
+  <section>
+    <mx:specifs id="microDatas" addon="MedialibsMicroDatas" type="date" value="<mx:text id="post_date" />" elementid="<mx:text id="post_element_id" />" context="blog" />
+    <meta itemprop="dateModified" content="<mx:text id="post_modified_date" />" />
+  </section>
   </mx:bloc id="date">
   <mx:bloc id="categorie">
   <section>Catégorie(s) : <span itemprop="articleSection"><mx:text id="post_categorie" /></span></section>
@@ -30,7 +35,7 @@
 
   <!-- Donnees relative aux notes -->
   <mx:bloc id="ratings_datas">
-    <section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><mx:text id="content" /></section>
+    <section><mx:text id="content" /></section>
   </mx:bloc id="ratings_datas">
   <!-- Lien vers le billet -->
   <mx:bloc id="more">

@@ -1,22 +1,24 @@
-<article itemscope itemtype="http://schema.org/BlogPosting">
+<article>
   <header>
-    <h1><a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitle"><span itemprop="name headline"><mx:text id="post_title" /></span></a></h1>
+    <h1><a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitle"><mx:text id="post_title" /></a></h1>
   </header>
   <mx:bloc id="picture">
   <section><mx:text id="post_picture" /></section>
   <!--<mx:bloc id="imageSize">normal</mx:bloc id="imageSize">-->
   </mx:bloc id="picture">
   <mx:bloc id="author">
-  <section itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><mx:text id="post_author" /></span></section>
+  <section><mx:text id="post_author" /></section>
   </mx:bloc id="author">
   <mx:bloc id="date">
-  <section itemprop="datePublished"><mx:text id="post_date" /></section>
+  <section>
+    <mx:specifs id="microDatas" addon="MedialibsMicroDatas" type="date" value="<mx:text id="post_date" />" elementid="<mx:text id="post_element_id" />" context="blog" />
+  </section>
   </mx:bloc id="date">
   <mx:bloc id="categorie">
-  <section>Catégorie(s) : <span itemprop="articleSection"><mx:text id="post_categorie" /></span></section>
+  <section>Catégorie(s) : <span><mx:text id="post_categorie" /></span></section>
   </mx:bloc id="categorie">
-  <section itemprop="keywords"><mx:bloc id="tags"><mx:text id="tag" />,&nbsp;</mx:bloc id="tags"></section>
-  <section itemprop="articleBody"><mx:text id="post_detail" /><section>
+  <section><mx:bloc id="tags"><mx:text id="tag" />,&nbsp;</mx:bloc id="tags"></section>
+  <section><mx:text id="post_detail" /><section>
 <!-- Pagination Précédent / Suivant -->
 <mx:bloc id="linkPagination">
 	<div class="postNavigation mt20 mb20 clearfix borderTop borderBottom">
@@ -90,3 +92,5 @@
 		<div class="listComments col-xs-12"><mx:text id="content" /></div>
 	</mx:bloc id="list_comments">
 </article>
+<!-- Données structurées du billet de blog -->
+<mx:text id="jsonld" />

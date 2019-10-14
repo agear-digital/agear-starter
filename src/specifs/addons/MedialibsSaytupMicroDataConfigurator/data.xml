@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <title>Configuration des données structurées</title>
+    <name>MedialibsSaytupMicroDataConfigurator</name>
+    <version>
+        <num date="2019-10-09">1.0</num>
+    </version>
+    <emajine_compatibility>
+        <min_version>2.06b</min_version>
+    </emajine_compatibility>
+    <webo_shop_info>
+        <key></key>
+        <url></url>
+        <author>
+            <name><!CDATA[Medialibs]]></name>
+            <email>prestation@medialibs.com</email>
+        </author>
+    </webo_shop_info>
+    <description>
+    <!CDATA[
+      L'add-on permet d'ajouter un écran de configuration des données structurées dans Référencement > Configuration globale
+    ]]>
+    </description>
+    <compatibility>
+    <!CDATA[
+      Information de compatibilité (modules ou librairies nécessaires, ?)
+    ]]>
+    </compatibility>
+</data>
+

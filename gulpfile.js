@@ -76,8 +76,8 @@ var project = {
 /**
  * Configuration FTP du projet
  */
-var user = 'saytupstarter.s24422.com',
-    password = 'llecHs7',
+var user = 'ftp26820_ageardigital',
+    password = 'YA3BTqB21f900d0V5xDn',
     host = '151.80.219.240',
     port = 21,
     localFilesGlob = ['./html/**/*'],

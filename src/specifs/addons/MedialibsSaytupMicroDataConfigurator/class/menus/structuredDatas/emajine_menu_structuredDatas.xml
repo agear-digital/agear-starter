@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emajine_specif>
+  <libelle>Données structurées</libelle>
+  <parent>10</parent>
+  <script>addons/MedialibsSaytupMicroDataConfigurator/class/menus/structuredDatas/menuStructuredDatas.class.php</script>
+</emajine_specif>
