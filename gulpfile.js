@@ -244,7 +244,7 @@ function build() {
  * Tâche MONITOR : surveillance HTML, PHP, JS, SASS + UPLOAD FTP
  */
 function monitor() {
-  watch([paths.html.allFiles, paths.html.siteClosed.allFiles, paths.php.allFiles, paths.scripts.files, paths.styles.sass.files], {cwd: paths.src}, series('html', 'htmlSiteClosed', 'php', 'js', 'css', 'ftpUpload'));
+  watch([paths.html.allFiles, paths.html.siteClosed.allFiles, paths.php.allFiles, paths.scripts.files, paths.styles.sass.files], {cwd: paths.src}, series('html', 'htmlSiteClosed', 'php', 'js', 'css'/*, 'ftpUpload'*/));
 }
 
 /*

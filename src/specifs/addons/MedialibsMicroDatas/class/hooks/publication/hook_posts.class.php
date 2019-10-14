@@ -26,7 +26,7 @@ class hook_posts extends \Emajine_Hooks
 	public function beforeDisplayPostDetail($mx, $idArticle)
 	{
     $this->newsArticle = new StructuredData_Blog_NewsArticle($idArticle);
-    $this->writeDatas($mx, $idArticle);
+    \em_mx::text($mx, 'jsonld', $this->newsArticle->getJSONLD());
 	}
 
 	/**
@@ -40,44 +40,6 @@ class hook_posts extends \Emajine_Hooks
 	 */
 	public function beforeDisplayPostResume($mx, $idArticle, $mxPrefix = null)
 	{
-    //$this->writeDatas($mx, $idArticle);   
-	}
-
-	/**
-	 * Modification des billets à mettre en avant dans le widget blog
-	 *
-	 * @param array $post Identifiants des billets mis en avant
-	 *
-	 * @return null
-	 */
-	/*public function changeHighlightedPosts(&$post)
-	{
-
-  }*/
-  
-  /**
-   * Retourne la date de modification d'un billet de blog
-   *
-   * @param int $id
-   * @return string La date de modification au format 2019-10-08
-   */
-  protected function getModifiedDate($id)
-  {
-    $query = 'SELECT date_modi FROM blog_posts WHERE article_id = ' . $id;
-    return date('Y-m-d', \em_db::one($query));
-  }
-
-  /**
-   * Ecrit les données dans le template
-   *
-   * @param modeliXe $mx
-   * @param int $idArticle
-   * @return void
-   */
-  protected function writeDatas($mx, $idArticle)
-  {
     \em_mx::text($mx, 'date.post_element_id', $idArticle);
-    \em_mx::text($mx, 'date.post_modified_date', $this->getModifiedDate($idArticle));
-    \em_mx::text($mx, 'jsonld', $this->newsArticle->getJSONLD());
-  }
+	}
 }

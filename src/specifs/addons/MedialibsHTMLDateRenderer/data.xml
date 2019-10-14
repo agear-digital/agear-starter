@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <title>Rendu HTML des dates</title>
+    <name>MedialibsHTMLDateRenderer</name>
+    <version>
+        <num date="2019-10-14">1.0</num>
+    </version>
+    <emajine_compatibility>
+        <min_version>2.06b</min_version>
+    </emajine_compatibility>
+    <webo_shop_info>
+        <key></key>
+        <url></url>
+        <author>
+            <name><!CDATA[Medialibs]]></name>
+            <email>prestation@medialibs.com</email>
+        </author>
+    </webo_shop_info>
+    <description>
+    <!CDATA[
+      L'add-on permet de modifier le rendu HTML des dates utilisées dans les modules d'e-majine ou de saytup
+    ]]>
+    </description>
+    <compatibility>
+    <!CDATA[
+      Information de compatibilité (modules ou librairies nécessaires, ?)
+    ]]>
+    </compatibility>
+</data>
+

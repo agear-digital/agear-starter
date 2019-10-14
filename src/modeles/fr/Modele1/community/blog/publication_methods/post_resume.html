@@ -1,26 +1,25 @@
-<article itemscope itemtype="http://schema.org/NewsArticle">
+<article>
   <header>
-    <h2><a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitle" itemprop="mainEntityOfPage"><span itemprop="name headline"><mx:text id="post_title" /></span></a></h2>
+    <h2><a mXattribut="href:hreftitle;hreflang:hreflangtitle;title:titletitle"><mx:text id="post_title" /></a></h2>
   </header>
   <mx:bloc id="picture">
   <section><mx:text id="post_picture" /></section>
   </mx:bloc id="picture">
   <mx:bloc id="authorBlog">
-  <section itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <span itemprop="name"><mx:bloc id="prenom"><mx:text id="prenom"></mx:bloc id="prenom">&nbsp;<mx:bloc id="nom"><mx:text id="nom"></mx:bloc id="nom"></span>
+  <section>
+    <mx:bloc id="prenom"><mx:text id="prenom"></mx:bloc id="prenom">&nbsp;<mx:bloc id="nom"><mx:text id="nom"></mx:bloc id="nom">
   </section>
   </mx:bloc id="authorBlog">
   <mx:bloc id="date">
   <section>
-    <mx:specifs id="microDatas" addon="MedialibsMicroDatas" type="date" value="<mx:text id="post_date" />" elementid="<mx:text id="post_element_id" />" context="blog" />
-    <meta itemprop="dateModified" content="<mx:text id="post_modified_date" />" />
+    <mx:specifs id="dateRenderer" addon="MedialibsHTMLDateRenderer" type="date" value="<mx:text id="post_date" />" elementid="<mx:text id="post_element_id" />" context="blog" />
   </section>
   </mx:bloc id="date">
   <mx:bloc id="categorie">
-  <section>Catégorie(s) : <span itemprop="articleSection"><mx:text id="post_categorie" /></span></section>
+  <section>Catégorie(s) : <span><mx:text id="post_categorie" /></span></section>
   </mx:bloc id="categorie">
-  <section itemprop="keywords"><mx:bloc id="tags"><mx:text id="tag" />,&nbsp;</mx:bloc id="tags"></section>
-  <section itemprop="description"><mx:text id="post_resume" /></section>
+  <section><mx:bloc id="tags"><mx:text id="tag" />,&nbsp;</mx:bloc id="tags"></section>
+  <section><mx:text id="post_resume" /></section>
   <mx:bloc id="nb_char_max_description">300</mx:bloc id="nb_char_max_description"><!-- Nombre max de caracteres pour la description -->
   <mx:bloc id="extension_description">...</mx:bloc id="extension_description"><!-- Extension utilisee lorsque la description est tronquee -->
 
