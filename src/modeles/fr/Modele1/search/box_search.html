@@ -1,7 +1,7 @@
 <!-- Template utilisé par le widget de recherche et le bloc de contenu recherche -->
 <div mXattribut="class:box_class">
   <mx:bloc id="widgetTitle"><div><mx:text id="widgetTitle" /></div></mx:bloc id="widgetTitle">
-		<form id="searchform" method="post" mXattribut="action:action" role="form">
+		<form id="search" method="post" mXattribut="action:action" role="search">
 				<input type="search" id="search_input_box" name="q" placeholder="mot clé..." /> <input type="submit" class="btn btn--primary" name="searchbutton" mXattribut="value:searchsubmitvalue" />
 				<mx:bloc id="hidden_configuration"><input type="hidden" mXattribut="name:name;value:value" /></mx:bloc id="hidden_configuration">
 		</form>
