@@ -10,23 +10,31 @@
 
     @include respond-to('medium-up')
     {
-        display: $display-none;
+      display: $display-none;
     }
 }
 
 .main-menu
 {
-    display: $display-none;
+    @include respond-to('medium')
+    {
+      position: $position-absolute;
+      z-index: $zindex-navigation;
+      width: $hundred-percent;
+      transform: $menu-transform-from;
+      transition: $menu-transforma-animation;
+
+      &.is-opened
+      {
+        transform: $menu-transform-to;
+      }
+    }
 
     @include respond-to('medium-up')
     {
-        display: $display-block;
+      display: $display-block;
 
-        background: $menu-background-base;
-    }
-    &.is-opened
-    {
-        display: $display-block;
+      background: $menu-background-base;
     }
 }
 

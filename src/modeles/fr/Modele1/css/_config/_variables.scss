@@ -482,6 +482,11 @@ $menu-padding-base : 13px !default;
 // Align
 $menu-text-align : $center;
 
+// Animation
+$menu-transforma-animation : transform .25s ease-in;
+$menu-transform-from       : translateX(-100%);
+$menu-transform-to         : translateX(0%);
+
 // Nav button
 $nav-button-right : 25px !default;
 $nav-button-top   : 10px !default;
