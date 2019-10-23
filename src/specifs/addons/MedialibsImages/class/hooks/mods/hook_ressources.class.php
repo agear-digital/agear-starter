@@ -23,7 +23,11 @@ class hook_ressources extends \Emajine_Hooks
    */
   public function replaceImgTag($mediaId, $path, $name, &$img, $isThumbnail)
   {
+    /* Récupère les informations de taille de l'image. La variable $attr
+       contient la chaîne HTML de la largeur et de la hauteur */
+    list($width, $height, $type, $attr) = getimagesize(\em_misc::getUrlWithDomain($path));
+
     // Ajoute l'attribut itemprop="image"
-    return str_replace('>', ' itemprop="image">', $img);
+    return str_replace('>', ' itemprop="image" ' . $attr . '>', $img);
   }
 }
