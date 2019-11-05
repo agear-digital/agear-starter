@@ -48,82 +48,33 @@
 
 //
 // Variables
-@import "_config/_variables";
+@import "abstracts/_variables";
 
 // Mixins
-@import "_config/_mixins";
+@import "abstracts/_mixins";
 
 // KNACSS imports
 @import "knacss";
 
-// Default Saytup Styles
-// -----------------
-@import "saytup/utils";          // utils styles
-@import "saytup/page";           // page styles
-@import "saytup/header";         // header styles
-@import "saytup/menu";           // menu styles
-@import "saytup/breadcrumb";     // breadcrumb styles
-@import "saytup/rating";         // rating styles
-@import "saytup/footer";         // footer styles
-@import "saytup/slideshow";      // slideshow styles
-@import "saytup/datepicker";     // DatePicker styles
-@import "saytup/selectwithvisual"// Select with visual styles
+// Base
+@import 'base/fonts';
+@import "base/utils";            // utils styles
 
-//
-// Common things
-//
-// Extend
-// @import "_global/_extend";
-
-// Header
-// @import "_global/_header";
-
-// Navigation
-// @import "_global/_navigation";
-
-// Footer
-// @import "_global/_footer";
-
-// Footer
-// @import "_global/_footer";
-
-// Icons
-// @import "_global/_font-icons";
-
-// Fonts
-// @import "_global/_fonts";
-
-// Helpers
-// @import "_global/_helpers";
-
-// Buttons
-//@import "_global/_buttons";
-
-// Typographic stuff
-//@import "_global/_type";
-
-// Forms
-// @import "_global/_forms";
-
-//
 // Layout
-//
-// Layout
-// @import "_template/_layout";
+@import "layout/page";           // page styles
+@import "layout/header";         // header styles
+@import "layout/footer";         // footer styles
+@import "layout/menu";           // menu styles
 
-// Page {name of page 1}
-// @import "_template/_page-1";
+// Components
+@import "components/breadcrumb";        // breadcrumb styles
+@import "components/rating";            // rating styles
+@import "components/slideshow";         // slideshow styles
+@import "components/datepicker";        // DatePicker styles
+@import "components/selectwithvisual";  // Select with visual styles
+@import "components/buttons";
+@import "components/type";
 
+// Pages (ex: home)
 
-//
-// Page {name of page 1} - components
-//
-// Component {name of component}
-// @import "_components/_component-name";
-
-
-//
-// Global
-// CSS styles applied after all other ones
-//
-// @import "_global/_global";
+// Vendors (CSS externes)
