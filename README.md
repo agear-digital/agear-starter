@@ -1,8 +1,8 @@
-# Saytup Starter
+# Agear Starter
 
-**Saytup Starter** *(Saytup Starter)* est une base de départ pour des projets Saytup créés par l'agence Agear Digital.
+**Agear Starter** *(Agear Starter)* est une base de départ pour des projets saytup et e-majine créés par l'agence Agear Digital.
 
-**Saytup Starter** est configuré pour fonctionner dans un environnement axé sur les outils Gulp, Sass et [KNACSS](http://knacss.com) (v7). Des connaissances minimales de ces outils sont un pré-requis.
+**Agear Starter** est configuré pour fonctionner dans un environnement axé sur les outils Gulp, Sass et [KNACSS](http://knacss.com) (v7). Des connaissances minimales de ces outils sont un pré-requis.
 
 ## Fonctionnalités
 
@@ -12,7 +12,7 @@
   - réordonnement des propriétés (csscomb)
   - réindentation du code (beautify)
 - HTML :
-  - Templates de base pour saytup
+  - Templates de base pour saytup et e-majine
 - images :
   - optimisation des images .png, .jpg, .gif, .svg (imagemin)
 - scripts :
@@ -27,11 +27,11 @@
 
 ## Par où commencer
 
-### Choisissez un distributeur pour Saytup Starter
+### Choisissez un distributeur pour Agear Starter
 
 Récupérez ce repo, :
 
-- avec le plugin npm [saytup-starter-launch](https://github.com/agear-digital/saytup-starter-launch) ❤
+- avec le plugin npm [agear-starter-launch](https://github.com/agear-digital/agear-starter-launch) ❤
 
 ### Configurez le projet
 
@@ -64,7 +64,7 @@ Pour qu'elles s'appliquent, il suffit généralement de télécharger le plugin 
 
 ## CSS / SCSS Lint
 
-Les fichiers Sass (`.scss`) de Saytup Starter sont rendus corrigés à l'aide d'un "linter" (outil de correction  et bonnes pratiques) dont les règles sont configurées via le fichier `.sass-lint.yml` à la racine du projet.
+Les fichiers Sass (`.scss`) d'Agear Starter sont rendus corrigés à l'aide d'un "linter" (outil de correction  et bonnes pratiques) dont les règles sont configurées via le fichier `.sass-lint.yml` à la racine du projet.
 
 L'action de correction se fera à l'aide de plugins au sein de votre éditeur HTML, ou bien d'une tâche Gulp. Par exemple, sur l'éditeur Atom, les plugins nécessaires sont [Atom Linter](https://atom.io/packages/linter) et  [Atom Sass Lint](https://atom.io/packages/linter-sass-lint).
 
@@ -74,7 +74,7 @@ Note : les  _warning_ subsistants dans le *linter*, sont connus et éventuelleme
 
 - Modifiez le fichier `_variables.scss` dans votre dossier `src/modeles/fr/Modele1/css/_config` (c'est une copie modifiée de `./node_modules/knacss/sass/_config/_variables.scss`. Ce dernier n'est pas utlisé car il est écrasé à chaque mise à jour de KNACSS)
 - Choisissez les fichiers KNACSS à importer au sein du fichier `src/modeles/fr/Modele1/css/knacss.scss`
-- Votre fichier de travail est `src/modeles/fr/Modele1/css/styles.scss` et commencera par l'import des 2 fichiers de configuration de KNACSS `_config/_variables` et `_config/_mixins` puis par `@import "knacss";` (ce dernier ne réimporte pas les 2 premiers _partials ; ils y sont commentés), puis suivront vos styles personnalisés.
+- Votre fichier de travail est `src/modeles/fr/Modele1/css/styles.scss` et commencera par l'import des 3 fichiers de configuration de KNACSS `_config/_variables`, `_config/_placeholders` et `_config/_mixins` puis par `@import "knacss";` (ce dernier ne réimporte pas les 2 premiers _partials ; ils y sont commentés), puis suivront vos styles personnalisés.
 
 ## Changelog
 
