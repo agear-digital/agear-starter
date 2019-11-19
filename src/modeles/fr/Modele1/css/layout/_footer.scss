@@ -1,6 +1,6 @@
 /* ----------------------------- */
-/* ==Footer.                     */
+/* ==Pied de pag                 */
 /* ----------------------------- */
 .footer-content {
-  @extend .main-column, .has-gutter;
+  @extend %main-column, .has-gutter;
 }

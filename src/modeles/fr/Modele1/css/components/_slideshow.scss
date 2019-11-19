@@ -1,5 +1,5 @@
 /* ----------------------------- */
-/* ==Slideshow.                  */
+/* ==Diaporama                   */
 /* ----------------------------- */
 .slideshow-container {
   margin: $slideshow-container-margin;
@@ -7,39 +7,6 @@
 
 .diaporamaSlide { 
   background: $slideshow-slide-background; 
-}
-
-%slideshow-control {
-  padding: $slideshow-control-padding;
-  margin-top: $slideshow-control-margin;
-  cursor: $slideshow-control-cursor;
-  line-height: $slideshow-control-line-height;
-  background: $slideshow-control-background;
-  border-radius: $slideshow-control-border-radius;
-  transition: $slideshow-control-transition;
-}
-
-%slideshow-control-before {
-  border-style: $slideshow-control-arrow-border-style;
-  border-width: $slideshow-control-arrow-border-width;
-  content: $slideshow-control-arrow-content;
-  display: $slideshow-control-arrow-display;
-  height: $slideshow-control-arrow-height;
-  left: $slideshow-control-arrow-position-left;
-  position: $slideshow-control-arrow-position;
-  top: $slideshow-control-arrow-position-top;
-  transform: $slideshow-control-arrow-transform;
-  vertical-align: $slideshow-control-arrow-vertical-align;
-  width: $slideshow-control-arrow-width;
-  color: $slideshow-control-arrow-color;
-  font-size: $slideshow-control-arrow-font-size;
-}
-
-%slideshow-control-text {
-  display: $slideshow-control-text-display;
-  width: $slideshow-control-text-width;
-  height: $slideshow-control-text-height;
-  text-indent: $slideshow-control-text-indent;
 }
 
 .diaporamaControlPrev {
@@ -86,18 +53,6 @@
   & :first-child {
     @extend %slideshow-control-text;
   }
-}
-
-%slideshow-dots-inner {
-  content: $slideshow-dots-container-inner-content;
-  position: $slideshow-dots-container-inner-position;
-  bottom: $slideshow-dots-container-inner-bottom;
-  left: $slideshow-dots-container-inner-left;
-  display: $slideshow-dots-container-inner-display;
-  width: $slideshow-dots-container-inner-width;
-  height: $slideshow-dots-container-inner-height;
-  border-left: $slideshow-dots-container-inner-border-left;
-  border-bottom: $slideshow-dots-container-inner-border-bottom;
 }
 
 .diaporamaDots {

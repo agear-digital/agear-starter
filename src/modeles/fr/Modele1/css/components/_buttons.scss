@@ -1,11 +1,6 @@
-/*
- * Buttons
- * Styles for buttons
- *
- * @author: Alsacreations
- */
-
-// KNACSS v7 defines 7 buttons .btn--primary and alike (also .button--7variants). Mapping them to .btn-primary, .btn-secondary, etc
+/* ----------------------------- */
+/* ==Boutons                     */
+/* ----------------------------- */
 .btn {
   @each $name, $background-color, $color, $border in $variants-list {
     &-#{$name} {

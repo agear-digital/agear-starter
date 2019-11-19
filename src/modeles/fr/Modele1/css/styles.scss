@@ -1,46 +1,27 @@
-/*
- * Saytup Starter
- * by Medialibs
- *
- * @author: Medialibs
- * @created: 2019-10-01
- */
-
 /* ----------------------------- */
 /* ==Table Of Content            */
 /* ----------------------------- */
 
 /*
-1- Reboot (basic reset)
-2- Libraries  :
-  - Base
-  - Print
-  - Layout (alignment, modules, positionning)
-  - Utilities (width and spacers helpers)
-  - Responsive helpers
-  - WordPress reset (disabled by default)
-  - Grillade (Grid System)
-3- Components :
-  - Media object
-  - Skip Links for accessibility
-  - Tables
-  - Forms
-  - Buttons
-  - Checkbox
-  - Tabs
-  - Tags
-  - Badges
-  - Alerts
-4- Saytup :
-  - Utilities
+1- Knacss
+2- Librairies  :
+  - Polices
+  - Typographie
+  - Utilitaires
+3- Mise en page :
   - Page
+  - En-tête
   - Menu
-  - Breadcrumb
-  - Rating
-  - Footer
-  - Slideshow
-  - DatePicker
-  - Select with visual
+  - Pied de page
+4- Composant :
+  - Boutons
+  - Fil d'Ariane
+  - Diaporama
+  - Votes
+  - Sélecteur de date 
+  - Champ de sélection de formulaire avec choix d'images
+5- Pages :
+6- Librairies externes :
 */
 
 //
@@ -48,32 +29,35 @@
 
 //
 // Variables
-@import "abstracts/_variables";
+@import "abstracts/variables";
 
 // Mixins
-@import "abstracts/_mixins";
+@import "abstracts/mixins";
+
+// Placeholders
+@import "abstracts/placeholders";
 
 // KNACSS imports
 @import "knacss";
 
 // Base
 @import 'base/fonts';
-@import "base/utils";            // utils styles
+@import 'base/typography';
+@import "base/utils";
 
 // Layout
-@import "layout/page";           // page styles
-@import "layout/header";         // header styles
-@import "layout/footer";         // footer styles
-@import "layout/menu";           // menu styles
+@import "layout/page";
+@import "layout/header";
+@import "layout/menu";
+@import "layout/footer";
 
 // Components
-@import "components/breadcrumb";        // breadcrumb styles
-@import "components/rating";            // rating styles
-@import "components/slideshow";         // slideshow styles
-@import "components/datepicker";        // DatePicker styles
-@import "components/selectwithvisual";  // Select with visual styles
 @import "components/buttons";
-@import "components/type";
+@import "components/breadcrumb";
+@import "components/slideshow";
+@import "components/rating";
+@import "components/datepicker";
+@import "components/selectwithvisual";
 
 // Pages (ex: home)
 

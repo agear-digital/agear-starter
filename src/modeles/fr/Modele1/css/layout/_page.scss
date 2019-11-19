@@ -1,13 +1,3 @@
 /* ----------------------------- */
 /* ==Page                        */
 /* ----------------------------- */
-.main-column {
-  max-width: $extra-large;
-  margin: $zero $auto;
-  padding: $main-column-padding;
-
-  @include respond-to('extra-large-up')
-  {
-    padding: $main-column-extra-large-padding;
-  }
-}

@@ -238,16 +238,6 @@ $border-ultra-large-plus : 30px !default;
 $border-solid            : solid !default;
 $border-type-base        : $border-solid;
 
-// ---------
-// List zone
-// ---------
-
-// styles
-%unstyled {
-  list-style: $none;
-  padding-left: 0;
-}
-
 // ------------
 // Display zone
 // ------------
