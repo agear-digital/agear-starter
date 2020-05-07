@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <title>Gestion des placeholder sur les formulaires</title>
+    <name>MedialibsPlaceholderManager</name>
+    <version>
+        <num date="2019-11-28">1.0</num>
+    </version>
+    <emajine_compatibility>
+        <min_version>2.06b</min_version>
+    </emajine_compatibility>
+    <webo_shop_info>
+        <key></key>
+        <url></url>
+        <author>
+            <name><!CDATA[Medialibs]]></name>
+            <email>prestation@medialibs.com</email>
+        </author>
+    </webo_shop_info>
+    <description>
+    <!CDATA[
+       L'add-on permet d'afficher les placeholder sur les formulaires basiques, les formulaires de création de compte, ...
+    ]]>
+    </description>
+    <compatibility>
+    <!CDATA[
+      Information de compatibilit� (modules ou librairies n�cessaires, ?)
+    ]]>
+    </compatibility>
+</data>
+
