@@ -1,0 +1,34 @@
+<div class="widget widgetCoupon" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+
+		<div class="widgetContainer">
+			<!-- Texte affiché si un coupon a déjà été saisi -->
+			<mx:bloc id="couponValid">
+				<div id="boxcoupon-valid">
+					<div><mx:text id="couponLibelle" /> : <strong><mx:text id="couponLabel" /></strong></div>
+					<a id="boxCouponUndoLink" href="coupon-undo.html" onclick="return confirm('Êtes-vous sûr de vouloir annuler ce coupon ?');">Annuler ce coupon</a><br />
+					<mx:text id="text" />
+				</div>
+			</mx:bloc id="couponValid">
+			<!-- Formulaire de saisie d'un coupon -->
+			<mx:bloc id="couponForm">
+				<div id="boxcoupon-text">
+					<mx:text id="formText" />
+				</div>
+				<div id="boxcoupon-formdiv">
+					<mx:text id="form" />
+				</div>
+			</mx:bloc id="couponForm">
+
+			<!-- Lien vers la page de saisie d'un coupon -->
+			<mx:bloc id="couponLink>
+				<div id="boxcoupon-link">
+					<a href="<mx:text id="linkUrl"/>">
+						<mx:text id="linkText"/>
+					</a>
+				</div>
+			</mx:bloc id="couponLink">
+		</div>
+
+	<div class="widgetFooter"></div>
+</div>

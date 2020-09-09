@@ -1,0 +1,47 @@
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tbody>
+		<tr>
+			<td align="center">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+					<thead>
+							<tr>
+								<th style="background: #eee; padding: 5px 20px; font-weight: bold; text-align: left; border-radius: 5px 0 0 0; border: 1px solid #ccc; border-right: none;"><mx:text id="labelProduit" /></th>
+								<th style="background: #eee; padding: 5px 20px; font-weight: bold; text-align: left; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;"><mx:text id="labelRef" /></th>
+								<th style="background: #eee; padding: 5px 20px; font-weight: bold; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; width: 80px;"><mx:text id="labelPrice" /></th>
+								<th style="background: #eee; padding: 5px 20px; font-weight: bold; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;"><mx:text id="labelQuantity" /></th>
+								<th style="background: #eee; padding: 5px 20px; font-weight: bold; border-radius: 0 5px 0 0; width: 60px; border: 1px solid #ccc; border-left: none;"><mx:text id="labelTotalPrice" /></th>
+							</tr>
+					</thead>
+					<tbody>
+						<mx:bloc id="listProducts">
+							<tr>
+								<td style="background: #fff; padding: 10px 20px;border-left: 1px solid #ccc; border-bottom: 1px solid #eee;"><a mXattribut="href:href;hreflang:hreflang;title:title" ><mx:text id="produit" /></a><mx:bloc id="alternatives">
+									<mx:bloc id="alternative_1"><br><mx:text id="value" /></mx:bloc id="alternative_1">
+									<mx:bloc id="alternative_2"><br><mx:text id="value" /></mx:bloc id="alternative_2">
+								</mx:bloc id="alternatives"></td>
+								<td style="background: #fff; padding: 10px 20px; border-bottom: 1px solid #eee;"><mx:text id="ref" /></td>
+								<td style="background: #fff; padding: 10px 20px; border-bottom: 1px solid #eee; text-align:right;"><mx:text id="price" /></td>
+								<td style="background: #fff; padding: 10px 20px; border-bottom: 1px solid #eee; text-align:center;"><mx:text id="quantity" /></td>
+								<td style="background: #fff; padding: 10px 20px; border-bottom: 1px solid #eee; border-right: 1px solid #ccc; text-align:right;"><mx:text id="totalPrice" /></td>
+							</tr>
+						</mx:bloc id="listProducts">
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td align="center">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tbody>
+						<tr>
+							<td style="background: #555; font-weight: bold; color: #fff; padding: 10px 20px; border-radius: 0 0 0 5px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc;">Montant du panier</td>
+							<td style="background: #555; font-weight: bold; font-size: 12pt; color: #fff; padding: 10px 20px; text-align: right; border-radius: 0 0 5px; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;"><mx:text id="totalPrice" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tfoot>
+</table>

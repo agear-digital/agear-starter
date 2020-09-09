@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<style>
+			.commanderef{
+			text-align: left;
+			font-weight: bold;
+			}
+			.coordonneescatalogue{
+			text-align: right;
+			font-weight: bold;
+			}
+			.designation{
+			font-weight: bold;
+			}
+			.libelle{
+			font-weight: bold;
+			}
+			.var1{
+			font-weight: bold;
+			}
+			.var2{
+			font-weight: bold;
+			}
+			.option{
+			font-weight: bold;
+			}
+		</style>
+	</head>
+	<body style="font-family: arial,helvetica,sans-serif">
+		<table width="100%">
+			<tr>
+				<td width="50%">
+				<div class="commanderef">
+					<h1><mx:text id="title" /></h1>	<br />
+					<h2><mx:text id="reference_client_libelle" /> : <mx:text id="reference_client" /></h2> <br />
+					<p>A St Florent le viel, le <mx:text id="date" /></p> <br />
+					<p>
+						<mx:text id="coordonnee_catalogue" />
+					</p>
+				</div>
+				</td>
+				<td width="50%">
+					<p>
+						<mx:text id="adresse_facturation" />
+					<p> <br />
+					<p>
+						<mx:text id="adresse_livraison_libelle" /> : <br />
+						<mx:text id="adresse_livraison" />
+					<p>
+				</td>
+			</tr>
+		</table>
+
+		<table width="100%" border="1">
+			<thead>
+				<tr>
+					<th width="15%"><mx:text id="reflibelle" /></th>
+					<th width="50%"><mx:text id="namelibelle" /></th>
+					<th width="12%"><mx:text id="prixunitlibelle" /></th>			
+					<th width="9%"><mx:text id="quantitylibelle" /></th>
+					<th width="15%"><mx:text id="prixtotallibelle" /></th>
+				</tr>
+			</thead>
+			<tbody>
+				<mx:bloc id="products">
+					<tr>
+						<td><mx:text id="ref" /></td>
+						<td>
+							<div class="designation">
+								<span class="libelle"><mx:text id="name" /></span>
+								<mx:bloc id="variantes">
+									<mx:bloc id="variante1">
+										<br /><span class="var1"><mx:text id="value" /></span>
+									</mx:bloc id="variante1">
+									<mx:bloc id="variante2">
+										<br /><span class="var2"><mx:text id="value" /></span>
+									</mx:bloc id="variante2">
+								</mx:bloc id="variantes">
+								<mx:bloc id="options">
+									<br /><span class="option"><strong><mx:text id="optionlabel" /></strong> : <mx:text id="value" /></span>
+								</mx:bloc id="options">
+							</div>
+						</td>
+						<td><mx:text id="prix_unitaire" /></td>
+						<td><mx:text id="quantity" /></td>
+						<td><mx:text id="prix_total" /></td>
+					</tr>
+				</mx:bloc id="products">
+				<tr>
+					<td colspan="4"><mx:text id="montanttotallib" /></td>
+					<td><mx:text id="montanttotalvalue" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<mx:text id="coordonnee_catalogue_footer" />
+	</body>
+</table>

@@ -1,0 +1,34 @@
+<div id="cart_payment_confirmation" class="cart_tableau cart">
+	<style type="text/css">
+		#paymentWaitingOverlay {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:5000px;
+			border:0;
+			padding:0;
+			margin:0;
+			background:white;
+			color: #333;
+			font-size: 32px;
+			padding: 100px 30px;
+			text-align: center;
+			z-index: 100000;
+			line-height: 48px;
+		}
+	</style>
+	<div id="paymentWaitingOverlay">
+		Merci de patienter pendant le traitement de votre demande
+	</div>
+
+	<mx:bloc id="payment_method">
+		<div id="payment_actions">
+			<h2><mx:text id="title" /></h2>
+			<mx:text id="payment_method" />
+		</div>
+	</mx:bloc id="payment_method">
+
+</div>
+<mx:text id="iAdvizeTag">
+<mx:text id="js" />

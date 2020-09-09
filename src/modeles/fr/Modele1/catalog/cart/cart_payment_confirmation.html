@@ -1,0 +1,566 @@
+<div id="cart_payment_confirmation" class="cart_tableau cart">
+	<h2><mx:text id="title" /></h2>
+
+	<mx:text id="steps" />
+
+	<div class="block_row">
+		<span class="label"><mx:text id="date_label" />&nbsp;:&nbsp;</span>
+		<span class="value"><mx:text id="date" /></span>
+	</div>
+
+	<div class="block_row">
+		<span class="label"><mx:text id="order_reference_label" />&nbsp;:&nbsp;</span>
+		<span class="value"><mx:text id="order_reference" /></span>
+	</div>
+
+	<mx:bloc id="payment">
+		<div id="payment_infos"><mx:text id="payment_infos" /></div>
+	</mx:bloc id="payment">
+
+	<mx:bloc id="invoicing">
+		<div class="address invoicing_address">
+			<h3><mx:text id="invoicing_title" /></h3>
+			<address><mx:text id="address" /></address>
+		</div>
+	</mx:bloc id="invoicing">
+
+	<mx:bloc id="delivery">
+		<div class="address delivery_address">
+			<h3><mx:text id="delivery_title" /></h3>
+			<mx:bloc id="mode"><div class="deliveryMode"><mx:text id="mode" /></div></mx:bloc id="mode">
+			<address><mx:text id="address" /></address>
+		</div>
+	</mx:bloc id="delivery">
+
+	<div id="cart_detail">
+		<h3><mx:text id="order_title" /></h3>
+		<table>
+			<thead>
+				<tr>
+					<!--<th><mx:text id="label_picture" /></th>-->
+					<th><mx:text id="name_label" /></th>
+					<th><mx:text id="reference_label" /></th>
+					<mx:bloc id="alternatives_label">
+						<th><mx:text id="alternatives_label" /></th>
+					</mx:bloc id="alternatives_label">
+					<th><mx:text id="taxe_rate" /></th>
+					<th><mx:text id="quantity_label" /></th>
+					<th><mx:text id="unit_price_label" /></th>
+					<th><mx:text id="total_price_label" /></th>
+				</tr>
+			</thead>
+			<tbody>
+				<mx:bloc id="products">
+					<tr mXattribut="class:trclass">
+						<!--<td><mx:text id="picture" /></td>-->
+						<td>
+							<mx:text id="name" /><br />
+							<mx:bloc id="options">
+								<strong><mx:text id="option_label" /></strong>: <mx:text id="value" />
+							</mx:bloc id="options">
+
+							<!-- Affichage du texte de personnalisation -->
+							<mx:bloc id="customised_text">
+								<br />
+								<strong><mx:text id="customised_text_label" />: </strong>
+								<br />
+								<mx:text id="customised_text_message" />
+							</mx:bloc id="customised_text">
+
+							<!-- Affichage des images de personnalisation -->
+							<mx:bloc id="product_customization">
+								<br />
+								<strong><mx:text id="product_customization_label" />: </strong>
+								<br />
+								<mx:text id="product_customization" />
+							</mx:bloc id="product_customization">
+
+							<!-- Affichage des fichiers uploadés -->
+							<mx:bloc id="attachedFiles">
+								<mx:bloc id="file">
+									<div class="file">
+										<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="file" /></a>
+									</div>
+								</mx:bloc id="file">
+							</mx:bloc id="attachedFiles">
+
+							<mx:bloc id="reservation">
+								<br />
+								<mx:text id="detail" />
+								<br />
+								<mx:text id="season" />
+							</mx:bloc id="reservation">
+						</td>
+						<td><mx:text id="reference" /></td>
+						<mx:bloc id="alternatives">
+							<td><mx:bloc id="alternative_1">
+								<mx:text id="value" />
+								<!--
+								<mx:text id="label_alternative_1" />
+								<mx:text id="value_alternative_1" />
+								-->
+							</mx:bloc id="alternative_1"> <mx:bloc id="alternative_2">
+								<mx:text id="value" />
+								<!--
+								<mx:text id="label_alternative_2" />
+								<mx:text id="value_alternative_2" />
+								-->
+							</mx:bloc id="alternative_2"></td>
+						</mx:bloc id="alternatives">
+						<td><mx:text id="taxe_rate" /></td>
+						<td><mx:text id="quantity" /></td>
+						<td>
+							<mx:text id="unit_price" /> <!--Affichage du prix avant application d'éventuelles promotions-->
+							<mx:bloc id="normal_price">
+								<span class="normalPrice"><mx:text id="normal_price" /></span>
+							</mx:bloc id="normal_price">
+							<!-- Affichage des différentes balises de prix pour l'unité d'un produit -->
+							<!-- <mx:bloc id="detailPriceUnite">
+								<div class="detailPriceUnite" >
+									<mx:bloc id="priceHtBeforeRate"><div class="priceHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtBeforeRate" /></span></div></mx:bloc id="priceHtBeforeRate">
+									<mx:bloc id="priceHtAfterRate"><div class="priceHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtAfterRate" /></span></div></mx:bloc id="priceHtAfterRate">
+									<mx:bloc id="rateHt"><div class="rateHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateHt" /></span></div></mx:bloc id="rateHt">
+									<mx:bloc id="rateTtc"><div class="rateTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateTtc" /></span></div></mx:bloc id="rateTtc">
+									<mx:bloc id="priceTtcBeforeRate"><div class="priceTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcBeforeRate" /></span></div></mx:bloc id="priceTtcBeforeRate">
+									<mx:bloc id="priceTtcAfterRate"><div class="priceTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcAfterRate" /></span></div></mx:bloc id="priceTtcAfterRate">
+									<mx:bloc id="ecoTaxeHt"><div class="ecoTaxeHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeHt" /></span></div></mx:bloc id="ecoTaxeHt">
+									<mx:bloc id="ecoTaxeTtc"><div class="ecoTaxeTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeTtc" /></span></div></mx:bloc id="ecoTaxeTtc">
+									<mx:bloc id="tvaOnEcoTaxe"><div class="tvaOnEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="tvaOnEcoTaxe" /></span></div></mx:bloc id="tvaOnEcoTaxe">
+									<mx:bloc id="priceTotHtBeforeRate"><div class="priceTotHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtBeforeRate" /></span></div></mx:bloc id="priceTotHtBeforeRate">
+									<mx:bloc id="priceTotHtAfterRate"><div class="priceTotHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtAfterRate" /></span></div></mx:bloc id="priceTotHtAfterRate">
+									<mx:bloc id="priceTotTtcBeforeRate"><div class="priceTotTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcBeforeRate" /></span></div></mx:bloc id="priceTotTtcBeforeRate">
+									<mx:bloc id="priceTotTtcAfterRate"><div class="priceTotTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcAfterRate" /></span></div></mx:bloc id="priceTotTtcAfterRate">
+									<mx:bloc id="amountTvaBeforeRate"><div class="amountTvaBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaBeforeRate" /></span></div></mx:bloc id="amountTvaBeforeRate">
+									<mx:bloc id="amountTvaAfterRate"><div class="amountTvaAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaAfterRate" /></span></div></mx:bloc id="amountTvaAfterRate">
+									<mx:bloc id="amountTvaEcoTaxe"><div class="amountTvaEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaEcoTaxe" /></span></div></mx:bloc id="amountTvaEcoTaxe">
+									<mx:bloc id="amountTvaTotBeforeRate"><div class="amountTvaTotBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotBeforeRate" /></span></div></mx:bloc id="amountTvaTotBeforeRate">
+									<mx:bloc id="amountTvaTotAfterRate"><div class="amountTvaTotAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotAfterRate" /></span></div></mx:bloc id="amountTvaTotAfterRate">
+									<mx:bloc id="ecoHtWEcoTaxe"><div class="ecoHtWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWEcoTaxe" /></span></div></mx:bloc id="ecoHtWEcoTaxe">
+									<mx:bloc id="ecoTtcWEcoTaxe"><div class="ecoTtcWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWEcoTaxe" /></span></div></mx:bloc id="ecoTtcWEcoTaxe">
+									<mx:bloc id="ecoHtWoEcoTaxe"><div class="ecoHtWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWoEcoTaxe" /></span></div></mx:bloc id="ecoHtWoEcoTaxe">
+									<mx:bloc id="ecoTtcWoEcoTaxe"><div class="ecoTtcWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWoEcoTaxe" /></span></div></mx:bloc id="ecoTtcWoEcoTaxe">
+								</div>
+							</mx:bloc id="detailPriceUnite">  -->
+						</td>
+						<td><mx:text id="total_price" />
+							<!-- Affichage des différentes balises de prix pour produit total -->
+							<!-- <mx:bloc id="detailPriceTotal">
+								<div class="detailPriceTotal">
+									<mx:bloc id="priceHtBeforeRate"><div class="priceHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtBeforeRate" /></span></div></mx:bloc id="priceHtBeforeRate">
+									<mx:bloc id="priceHtAfterRate"><div class="priceHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtAfterRate" /></span></div></mx:bloc id="priceHtAfterRate">
+									<mx:bloc id="rateHt"><div class="rateHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateHt" /></span></div></mx:bloc id="rateHt">
+									<mx:bloc id="rateTtc"><div class="rateTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateTtc" /></span></div></mx:bloc id="rateTtc">
+									<mx:bloc id="priceTtcBeforeRate"><div class="priceTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcBeforeRate" /></span></div></mx:bloc id="priceTtcBeforeRate">
+									<mx:bloc id="priceTtcAfterRate"><div class="priceTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcAfterRate" /></span></div></mx:bloc id="priceTtcAfterRate">
+									<mx:bloc id="ecoTaxeHt"><div class="ecoTaxeHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeHt" /></span></div></mx:bloc id="ecoTaxeHt">
+									<mx:bloc id="ecoTaxeTtc"><div class="ecoTaxeTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeTtc" /></span></div></mx:bloc id="ecoTaxeTtc">
+									<mx:bloc id="tvaOnEcoTaxe"><div class="tvaOnEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="tvaOnEcoTaxe" /></span></div></mx:bloc id="tvaOnEcoTaxe">
+									<mx:bloc id="priceTotHtBeforeRate"><div class="priceTotHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtBeforeRate" /></span></div></mx:bloc id="priceTotHtBeforeRate">
+									<mx:bloc id="priceTotHtAfterRate"><div class="priceTotHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtAfterRate" /></span></div></mx:bloc id="priceTotHtAfterRate">
+									<mx:bloc id="priceTotTtcBeforeRate"><div class="priceTotTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcBeforeRate" /></span></div></mx:bloc id="priceTotTtcBeforeRate">
+									<mx:bloc id="priceTotTtcAfterRate"><div class="priceTotTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcAfterRate" /></span></div></mx:bloc id="priceTotTtcAfterRate">
+									<mx:bloc id="amountTvaBeforeRate"><div class="amountTvaBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaBeforeRate" /></span></div></mx:bloc id="amountTvaBeforeRate">
+									<mx:bloc id="amountTvaAfterRate"><div class="amountTvaAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaAfterRate" /></span></div></mx:bloc id="amountTvaAfterRate">
+									<mx:bloc id="amountTvaEcoTaxe"><div class="amountTvaEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaEcoTaxe" /></span></div></mx:bloc id="amountTvaEcoTaxe">
+									<mx:bloc id="amountTvaTotBeforeRate"><div class="amountTvaTotBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotBeforeRate" /></span></div></mx:bloc id="amountTvaTotBeforeRate">
+									<mx:bloc id="amountTvaTotAfterRate"><div class="amountTvaTotAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotAfterRate" /></span></div></mx:bloc id="amountTvaTotAfterRate">
+									<mx:bloc id="ecoHtWEcoTaxe"><div class="ecoHtWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWEcoTaxe" /></span></div></mx:bloc id="ecoHtWEcoTaxe">
+									<mx:bloc id="ecoTtcWEcoTaxe"><div class="ecoTtcWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWEcoTaxe" /></span></div></mx:bloc id="ecoTtcWEcoTaxe">
+									<mx:bloc id="ecoHtWoEcoTaxe"><div class="ecoHtWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWoEcoTaxe" /></span></div></mx:bloc id="ecoHtWoEcoTaxe">
+									<mx:bloc id="ecoTtcWoEcoTaxe"><div class="ecoTtcWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWoEcoTaxe" /></span></div></mx:bloc id="ecoTtcWoEcoTaxe">
+								</div>
+							</mx:bloc id="detailPriceTotal">  -->
+						</td>
+					</tr>
+					<mx:bloc id="product_associated">
+						<tr>
+							<td mxAttribut="colspan:colspan"><mx:text id="pack" /></td>
+						</tr>
+					</mx:bloc id="product_associated">
+				</mx:bloc id="products">
+
+				<!--Affichage des actions de type Réduction sur la commande-->
+				<mx:bloc id="orders_actions">
+					<mx:bloc id="item">
+						<tr class="orders_actions">
+							<td mxAttribut="colspan:colspan"><mx:text id="label" />
+								<mx:bloc id="description">
+									<mx:text id="description">
+								</mx:bloc id="description">
+							</td>
+							<td><mx:text id="value" /></td>
+						</tr>
+					</mx:bloc id="item">
+				</mx:bloc id="orders_actions">
+
+				<!-- Gestion des coupons-->
+				<mx:bloc id="coupon">
+					<tr class="coupon">
+						<mx:bloc id="current_coupon">
+							<td mxAttribut="colspan:colspan">
+								<mx:text id="label" />
+								<mx:text id="descriptionText" />
+								<mx:bloc id="descriptionLink">
+									<a href="<mx:text id="descriptionUrl" />">Plus d'informations</a>
+								</mx:bloc id="descriptionLink">
+							</td>
+							<td><mx:text id="value" /></td>
+						</mx:bloc id="current_coupon">
+					</tr>
+				</mx:bloc id="coupon">
+
+				<!-- Frais de port -->
+				<mx:bloc id="shipping">
+					<tr class="shipping">
+						<td mXattribut="colspan:colspan"><mx:text id="shipping_label" />
+							<mx:text id="ruleLabel" />
+						</td>
+						<td><mx:text id="shipping_amount" /></td>
+					</tr>
+				</mx:bloc id="shipping">
+
+				<!--
+					<tr class="amount">
+						<td colspan="5"><mx:text id="amount_label" /></td>
+						<td><mx:text id="amount_value" /></td>
+					</tr>
+				-->
+				<mx:bloc id="amount_detail">
+					<mx:bloc id="HT_amount">
+						<tr class="amount">
+							<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+							<td><mx:text id="value" /></td>
+						</tr>
+					</mx:bloc id="HT_amount">
+
+					<mx:bloc id="taxe_amount">
+						<tr class="amount">
+							<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+							<td><mx:text id="value" /></td>
+						</tr>
+					</mx:bloc id="taxe_amount">
+
+					<mx:bloc id="total_amount">
+						<tr class="amount">
+							<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+							<td><mx:text id="value" /></td>
+						</tr>
+					</mx:bloc id="total_amount">
+
+
+					<!-- Gestion de l'affichage des balise pour le total du panier -->
+  					<!-- <mx:bloc id="detailPriceTotal">
+						<div class="detailPriceTotal">
+							<mx:bloc id="priceHtBeforeRate">
+									<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceHtBeforeRate" /></td>
+									</tr>
+							</mx:bloc id="priceHtBeforeRate">
+
+							<mx:bloc id="priceHtAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceHtAfterRate" /></td>
+								</tr>
+							</mx:bloc id="priceHtAfterRate">
+
+							<mx:bloc id="rateHt">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="rateHt" /></td>
+								</tr>
+							</mx:bloc id="rateHt">
+
+							<mx:bloc id="rateTtc">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="rateTtc" /></td>
+								</tr>
+							</mx:bloc id="rateTtc">
+
+							<mx:bloc id="priceTtcBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceTtcBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="priceTtcBeforeRate">
+
+							<mx:bloc id="priceTtcAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceTtcAfterRate" /></td>
+								</tr>
+							</mx:bloc id="priceTtcAfterRate">
+
+							<mx:bloc id="ecoTaxeHt">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="ecoTaxeHt" /></td>
+								</tr>
+							</mx:bloc id="ecoTaxeHt">
+
+							<mx:bloc id="ecoTaxeTtc">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="ecoTaxeTtc" /></td>
+								</tr>
+							</mx:bloc id="ecoTaxeTtc">
+
+							<mx:bloc id="tvaOnEcoTaxe">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="tvaOnEcoTaxe" /></td>
+								</tr>
+							</mx:bloc id="tvaOnEcoTaxe">
+
+							<mx:bloc id="priceTotHtBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceTotHtBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotHtBeforeRate">
+
+							<mx:bloc id="priceTotHtAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceTotHtAfterRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotHtAfterRate">
+
+							<mx:bloc id="priceTotTtcBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceTotTtcBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotTtcBeforeRate">
+
+							<mx:bloc id="priceTotTtcAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="priceTotTtcAfterRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotTtcAfterRate">
+
+							<mx:bloc id="amountTvaBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="amountTvaBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="amountTvaBeforeRate">
+
+							<mx:bloc id="amountTvaAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="amountTvaAfterRate" /></td>
+								</tr>
+							</mx:bloc id="amountTvaAfterRate">
+
+							<mx:bloc id="amountTvaEcoTaxe">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="amountTvaEcoTaxe" /></td>
+								</tr>
+							</mx:bloc id="amountTvaEcoTaxe">
+
+							<mx:bloc id="amountTvaTotBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="amountTvaTotBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="amountTvaTotBeforeRate">
+
+							<mx:bloc id="amountTvaTotAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="amountTvaTotAfterRate" /></td>
+								</tr>
+							</mx:bloc id="amountTvaTotAfterRate">
+
+							<mx:bloc id="ecoHtWEcoTaxe">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="ecoHtWEcoTaxe" /></td>
+								</tr>
+							</mx:bloc id="ecoHtWEcoTaxe">
+
+							<mx:bloc id="ecoTtcWEcoTaxe">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="ecoTtcWEcoTaxe" /></td>
+								</tr>
+							</mx:bloc id="ecoTtcWEcoTaxe">
+
+							<mx:bloc id="ecoHtWoEcoTaxe">
+									<tr class="amount">
+										<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+										<td> <mx:text id="ecoHtWoEcoTaxe" /></td>
+								</tr>
+							</mx:bloc id="ecoHtWoEcoTaxe">
+
+							<mx:bloc id="ecoTtcWoEcoTaxe">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td> <mx:text id="ecoTtcWoEcoTaxe" /></td>
+								</tr>
+							</mx:bloc id="ecoTtcWoEcoTaxe">
+
+							<mx:bloc id="shippingHt">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="shippingHt" /></td>
+								</tr>
+							</mx:bloc id="shippingHt">
+
+							<mx:bloc id="shippingTtc">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="shippingTtc" /></td>
+								</tr>
+							</mx:bloc id="shippingTtc">
+
+							<mx:bloc id="priceHtWoShippingBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceHtWoShippingBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="priceHtWoShippingBeforeRate">
+
+							<mx:bloc id="priceHtWoShippingAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceHtWoShippingAfterRate" /></td>
+								</tr>
+							</mx:bloc id="priceHtWoShippingAfterRate">
+
+							<mx:bloc id="priceTtcWoShippingBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceTtcWoShippingBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="priceTtcWoShippingBeforeRate">
+
+							<mx:bloc id="priceTtcWoShippingAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceTtcWoShippingAfterRate" /></span>
+								</div>
+							</mx:bloc id="priceTtcWoShippingAfterRate">
+
+							<mx:bloc id="priceTotHtWoShippingBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceTotHtWoShippingBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotHtWoShippingBeforeRate">
+
+							<mx:bloc id="priceTotHtWoShippingAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceTotHtWoShippingAfterRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotHtWoShippingAfterRate">
+
+							<mx:bloc id="priceTotTtcWoShippingBeforeRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceTotTtcWoShippingBeforeRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotTtcWoShippingBeforeRate">
+
+							<mx:bloc id="priceTotTtcWoShippingAfterRate">
+								<tr class="amount">
+									<td mxAttribut="colspan:colspan"><mx:text id="label" /></td>
+									<td><mx:text id="priceTotTtcWoShippingAfterRate" /></td>
+								</tr>
+							</mx:bloc id="priceTotTtcWoShippingAfterRate">
+						</div>
+					</mx:bloc id="detailPriceTotal">   -->
+					<mx:bloc id="acompte">
+						<tr class="amount">
+							<td mxAttribut="colspan:colspan">
+								<mx:text id="label" />: <mx:text id="description" />
+							</td>
+							<td><mx:text id="value" /></td>
+						</tr>
+					</mx:bloc id="acompte">
+				</mx:bloc id="amount_detail">
+			</tbody>
+		</table>
+
+		<!-- Affichage de l'éco-participation -->
+		<mx:bloc id="eco_participation">
+			<mx:text id="label" />
+			<mx:text id="price" />
+		</mx:bloc id="eco_participation">
+	</div>
+
+	<!-- Affichage du message personnel du client-->
+	<mx:bloc id="customer_message">
+		<div id="customer_message">
+			<h3><mx:text id="title" /></h3>
+			<mx:text id="catalog_customer_message" />
+		</div>
+	</mx:bloc id="customer_message">
+
+	<!-- Gestion d'ajout d'un fichier du client-->
+	<mx:bloc id="customer_file">
+		<div id="customer_file">
+			<h3><mx:text id="title" /></h3>
+			<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="label" /></a>
+		</div>
+	</mx:bloc id="customer_file">
+
+	<mx:bloc id="payment_method">
+		<div id="payment_actions">
+			<a name="paymentmethod"></a>
+			<h2><mx:text id="title" /></h2>
+			<mx:text id="payment_method" />
+			<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="change_payment_method" /></a>
+		</div>
+	</mx:bloc id="payment_method">
+
+	<mx:bloc id="trustedShopsRate">
+		<div id="trustedShopsRate">
+			<a mXattribut="href:href;hreflang:hreflang;title:title" onclick="window.open(this.href);return false;">
+				<mx:text id="label" />
+			</a>
+		</div>
+	</mx:bloc id="trustedShopsRate">
+
+	<mx:bloc id="trustedShopsProtectionClassic">
+		<div id="trustedShopsProtectionClassic">
+			<h4><mx:text id="classicTitle" /></h4>
+			<div>
+				<mx:text id="sealForm" />
+			</div>
+			<div>
+				<p><mx:text id="guaranteeText" /></p>
+				<p><mx:text id="guaranteeForm" /></p>
+			</div>
+		</div>
+	</mx:bloc id="trustedShopsProtectionClassic">
+
+	<mx:bloc id="footer">
+		<div id="cart_footer">
+			<p><mx:text id="thanks" /></p>
+			<mx:bloc id="form">
+				<form mxAttribut="name:id;action:action" method="post" >
+					<mx:bloc id="hidden">
+						<input type="hidden" mxAttribut="name:name;value:value" />
+					</mx:bloc id="hidden">
+				</form>
+			</mx:bloc id="form">
+			<a mXattribut="href:hrefsuivicommande;hreflang:hreflangsuivicommande;title:titlesuivicommande;onclick:onclick"><mx:text id="follow_up_order" /></a>
+			<mx:bloc id="pdf_order">
+				&nbsp;<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="label" /></a>
+			</mx:bloc id="pdf_order">
+			<a mXattribut="href:hrefsite;hreflang:hreflangsite;title:titlesite"><mx:text id="site" /></a><br />
+		</div>
+	</mx:bloc id="footer">
+</div>
+<!--
+<mx:bloc id="colspanValueIfTableWithAlternatives">4</mx:bloc id="colspanValueIfTableWithAlternatives">
+<mx:bloc id="colspanValueIfTableWithoutAlternatives">5</mx:bloc id="colspanValueIfTableWithoutAlternatives">
+-->
+<mx:text id="iAdvizeTag">

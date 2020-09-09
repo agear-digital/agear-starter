@@ -1,0 +1,93 @@
+<mx:bloc id="objet">{PRENOM} {NOM} vous envoie son panier provenant du site {SITENAME}</mx:bloc id="objet">
+
+<p>Bonjour,</p>
+
+<p><mx:text id="prenom" /> <mx:text id="nom" /> vous envoie son panier provenant du site <mx:text id="site" /></p>
+
+<mx:bloc id="msg">
+	<p><mx:text id="msg" /></p>
+</mx:bloc id="msg">
+
+<div>
+    <h4>Votre panier</h4>
+    <div class="block_row">
+        <span class="label"><mx:text id="date_label" />&nbsp;:&nbsp;</span><span class="value"><mx:text id="date" /></span>
+    </div>
+    <div id="cart_detail">
+        <h3><mx:text id="order_title" /></h3>
+        <table cellpadding="5">
+            <thead>
+                <tr>
+                    <th><mx:text id="name_label" /></th>
+                    <th><mx:text id="reference_label" /></th>
+                    <mx:bloc id="alternatives_label">
+                        <th><mx:text id="alternatives_label" /></th>
+                    </mx:bloc id="alternatives_label">
+                    <th><mx:text id="quantity_label" /></th>
+                    <th><mx:text id="unit_price_label" /></th>
+                    <th><mx:text id="total_price_label" /></th>
+                </tr>
+            </thead>
+            <tbody>
+                <mx:bloc id="products">
+                    <tr mXattribut="class:trclass">
+                        <td>
+                            <mx:text id="name" />
+                            <br/>
+                            <mx:bloc id="options">
+                                <strong><mx:text id="option_label" /></strong>: <mx:text id="value" />
+                            </mx:bloc id="options"><!-- Affichage du texte de personnalisation -->
+                            <mx:bloc id="customised_text">
+                                <br/>
+                                <strong><mx:text id="customised_text_label" />: </strong>
+                                <br/>
+                                <mx:text id="customised_text_message" />
+                            </mx:bloc id="customised_text"><!-- Affichage des images de personnalisation -->
+                            <mx:bloc id="product_customization">
+                                <br/>
+                                <strong><mx:text id="product_customization_label" />: </strong>
+                                <br/>
+                                <mx:text id="product_customization" />
+                            </mx:bloc id="product_customization">
+                            <mx:bloc id="reservation">
+                                <br/>
+                                <mx:text id="detail" />
+                                <br/>
+                                <mx:text id="season" />
+                            </mx:bloc id="reservation">
+                        </td>
+                        <td>
+                            <mx:text id="reference" />
+                        </td>
+                        <mx:bloc id="alternatives">
+                            <td>
+                                <mx:bloc id="alternative_1">
+                                    <mx:text id="value" />
+                                </mx:bloc id="alternative_1">
+                                <mx:bloc id="alternative_2">
+                                    <mx:text id="value" />
+                                </mx:bloc id="alternative_2">
+                            </td>
+                        </mx:bloc id="alternatives">
+                        <td>
+                            <mx:text id="quantity" />
+                        </td>
+                        <td>
+                            <mx:text id="unit_price" />
+                        </td>
+                        <td>
+                            <mx:text id="total_price" />
+                        </td>
+                    </tr>
+                    <mx:bloc id="product_associated">
+                        <tr>
+                            <td mxAttribut="colspan:colspan">
+                                <mx:text id="pack" />
+                            </td>
+                        </tr>
+                    </mx:bloc id="product_associated">
+                </mx:bloc id="products"><!--Affichage des actions de type Réduction sur la commande-->
+            </tbody>
+        </table>
+    </div>
+</div>

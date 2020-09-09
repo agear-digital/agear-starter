@@ -1,0 +1,53 @@
+<div class="simpleCatalogSearch" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+
+	<div class="widgetContainer">
+  		<form class="catalog_search_form" method="post" mXattribut="action:action">
+    		<fieldset>
+      		<div class="block_row simpleCatalogSearchInput">
+      			<label mXattribut="for:input_for_id"><mx:text id="input_label"/></label>
+      			<input type="text" mXattribut="name:input_name;id:input_id;value:input_value" class="wordsbox"/>
+      		</div>
+      		<mx:bloc id="select_fields">
+      		<div class="block_row selectFields">
+        		<label mXattribut="for:for_id"><mx:text id="select_fields_label"/></label>
+        		<select size="1" mXattribut="name:name;id:id">
+          		<mx:bloc id="select_field">
+            		<option mXattribut="value:option_value;selected:option_selected"><mx:text id="option_text"/></option>
+          		</mx:bloc id="select_field">
+        		</select>
+        		</div>
+      		</mx:bloc id="select_fields">
+      
+      		<mx:bloc id="contextual_search">
+        		<div class="block_row contextualSearch">
+        			<label mXattribut="for:for_id"><mx:text id="contextual_search_label"/></label>
+        			<input type="checkbox" mXattribut="name:name;id:id;value:value;checked:checked"/>
+        		</div>
+      		</mx:bloc id="contextual_search">
+    
+      		<mx:bloc id="supplementary_fields">
+        		<fieldset class="supplementaryFields" >
+          		<legend><mx:text id="supplementary_fields_label"/></legend>
+          		<mx:bloc id="supplementary_field">
+            		<div class="block_row">
+              		<mx:text id="supp_form_element_condition" />
+              		<mx:text id="supp_form_element_condition_hidden_field" />
+              		<mx:text id="supp_form_element" />
+            		</div>
+          		</mx:bloc id="supplementary_field">
+        		</fieldset>
+      		</mx:bloc id="supplementary_fields">
+      
+      		<div class="submit">
+      			<input type="submit" name="button" mXattribut="value:submit_value" class="validation" />
+      		</div>
+    		</fieldset>
+  		</form>
+  		<mx:bloc id="advanced_search">
+    		<a mXattribut="href:href;hreflang:hreflang:title:title" class="advancedSearch"><span><mx:text id="advanced_search"/></span></a>
+  		</mx:bloc id="advanced_search">
+  	</div>
+  	
+	<div class="widgetFooter"></div>  	
+</div>

@@ -1,0 +1,48 @@
+<mx:bloc id="noResults">
+	<mx:text id="message" />
+</mx:bloc id="noResults">
+<mx:bloc id="results">
+	<div class="predefinedCatSearchResults">
+		<div class="head">
+			<mx:text id="numResults" /><br />
+			<mx:text id="numResultsMessage" />
+		</div>
+		<mx:bloc id="sort">
+			<div class="sortOptions">
+				<form mxAttribut="id:formId;method:method;action:action">
+					<select mxAttribut="name:name;id:id">
+						<mx:bloc id="options">
+							<option mxAttribut="value:value;selected:selected"><mx:text id="label" /></option>
+						</mx:bloc id="options">
+					</select>
+					ASC<input type="radio" value="ASC" mxAttribut="name:radioName;checked:radioAscChecked" />
+					DESC<input type="radio" value="DESC" mxAttribut="name:radioName;checked:radioDescChecked" />
+				</form>
+			</div>
+			<mx:text id="js" />
+		</mx:bloc id="sort">
+		<mx:bloc id="pager">
+			<div class="pager">
+				<select mxAttribut="id:id">
+					<mx:bloc id="options">
+						<option mxAttribut="value:value;selected:selected"><mx:text id="optionLabel" /></option>
+					</mx:bloc id="options">
+				</select>
+				<mx:text id="js" />
+			</div>
+		</mx:bloc id="pager">
+		<mx:bloc id="result">
+			<table class="predefinedCatSearchResultsContent">
+				<mx:bloc id="line">
+					<tr>
+						<mx:bloc id="product">
+							<td>
+								<mx:text id="productSummary" />
+							</td>
+						</mx:bloc id="product">
+					</tr>
+				</mx:bloc id="line">
+			</table>
+		</mx:bloc id="result">
+	</div>
+</mx:bloc id="results">

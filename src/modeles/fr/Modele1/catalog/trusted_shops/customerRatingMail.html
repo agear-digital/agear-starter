@@ -1,0 +1,22 @@
+<mx:bloc id="mail_subject">{site_name} : évaluation de votre commande n° {orderReference}</mx:bloc id="mail_subject">
+<h2><mx:text id="mail_title" /></h2><mx:text id="date_label" /> : <mx:text id="date" />
+<br/>
+<mx:text id="order_reference_label" /> : <mx:text id="order_reference" />
+<br/>
+
+<p>Nous vous invitons à déposer une évaluation au sujet du déroulement de votre
+commande <mx:text id="order_reference" />, passée <mx:text id="date" /> sur notre site.</p>
+
+	<mx:bloc id="trustedShopsRate">
+		<p id="trustedShopsRate">
+			<a mXattribut="href:href;hreflang:hreflang;title:title" onclick="window.open(this.href);return false;">
+				<mx:text id="label" />
+			</a>
+		</p>
+	</mx:bloc id="trustedShopsRate">
+
+<p>
+    <mx:text id="thanks" />
+</p><a mXattribut="href:hrefsite;hreflang:hreflangsite;title:titlesite"><mx:text id="site" /></a>
+<br/>
+

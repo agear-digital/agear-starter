@@ -1,0 +1,148 @@
+<!-- <div class="catalog"> -->
+  <h1><mx:text id="title" /><mx:pagerCurrentPage format=" - Page %s" /></h1>
+
+  <!--
+    Permet l'affichage du nombre de produits disponible dans la famille.
+    Ce bloc peut être placé dans n'importe quel template du site.
+    Il ne sera complété que si un nombre de produit est disponible (navigation dans les familles)
+
+    <mx:products_number unique_label="%s produit disponible" multiple_label="%s produits disponibles" />
+  -->
+
+	<div id="famillyPresentation">
+ 		<mx:bloc id="picture"><div id="famillyPicture"><mx:text id="picture" /></div></mx:bloc id="picture">
+ 		<mx:bloc id="description"><div id="famillyDescription"><mx:text id="description" /></div></mx:bloc id="description">
+ 		<mx:bloc id="article"><div id="famillyArticle"><mx:text id="article" /></div></mx:bloc id="article">
+	</div>
+
+  <mx:bloc id="tree">
+    <div id="childrenSelector">
+      <ul>
+        <mx:bloc id="links">
+          <li><a mXattribut="href:href;hreflang:hreflang;title:title"><span><mx:text id="link"/></span></a></li>
+        </mx:bloc id="links">
+      </ul>
+    </div>
+  </mx:bloc id="tree">
+
+<div class="sort_block">
+<!--  Bloc qui affiche un formulaire pour sélectionner le nombre de produits à afficher  -->
+<mx:bloc id="nb_products">
+	<form id="nb_products_form" method="post" mXattribut="action:action">
+
+      <label for="nb_products"><mx:text id="label" /></label>
+      
+      <select name="nb_products_selector" id="nb_products" onchange="submit();">
+				<mx:bloc id="options">
+					<option mXattribut="value:value;selected:selected;"><mx:text id="option" /></option>
+				</mx:bloc id="options">
+			</select>
+
+		<noscript>
+			<div class="submit">
+				<input type="submit" value="OK" name="submit_nb_products" />
+			</div>
+		</noscript>
+	</form>
+</mx:bloc id="nb_products">
+<!--  Fin  -->
+
+  <mx:bloc id="familly_selection_list">
+    <div mXattribut="id:id;class:class">
+      <mx:bloc id="familly">
+        <div mXattribut="id:id;class:class">
+          <div class="familly" mXattribut="class:classFamilly">
+          	 <div class="famillyContainer">
+            		<h3><mx:text id="name" /></h3>
+            		<mx:bloc id="counterProduct">
+						<div class="counterProduct"><mx:text id="counterProduct" /></div>
+					</mx:bloc id="counterProduct">
+            		<mx:text id="picture" />
+            		<a mXattribut="href:href;hreflang:hreflang;title:title"><span><mx:text id="link"/></span></a>
+          	</div>
+          </div>
+        </div>
+      </mx:bloc id="familly">
+    </div>
+    <!--Choix du nombre de familles de produit par lignes. Attention, cette configuration est différente du nombre de produits par lignes
+    <mx:bloc id="familly_number_per_line">3</mx:bloc id="familly_number_per_line">-->
+  </mx:bloc id="familly_selection_list">
+
+  <!-- Affichage d'un formulaire permettant le tri des resultats-->
+  <mx:bloc id="sort">
+    <!-- <fieldset class="sortResults"> -->
+      <!-- <legend>Trier</legend> -->
+    	<form id="sort_form" class="sortResults" method="post" mXattribut="action:action">
+        	<!-- <div class="block_row"> -->
+        	<label for="sort_value"><mx:text id="sort_label" /></label>
+        	<select name="sort_value" id="sort_value" onchange="document.getElementById('sort_form').submit();">
+          	<mx:bloc id="options">
+            	<option mXattribut="value:value;selected:selected"><mx:text id="label" /></option>
+          	</mx:bloc id="options">
+        	</select>
+        	<!-- </div> -->
+        	<!-- <div class="block_row"> -->
+        	<label for="asc">ASC</label><input type="radio" name="sort_way" value="ASC" id="asc" mXattribut="checked:checked_asc" class="radio" onchange="document.getElementById('sort_form').submit();" onclick="document.getElementById('sort_form').submit();"/>
+        	<!-- </div> -->
+        	<!-- <div class="block_row"> -->
+        	<label for="desc">DESC</label><input type="radio" name="sort_way" value="DESC" id="desc" mXattribut="checked:checked_desc" class="radio" onchange="document.getElementById('sort_form').submit();" onclick="document.getElementById('sort_form').submit();"/>
+        	<!-- </div> -->
+        	<noscript>
+          	<div class="submit">
+          	<input type="submit" value="Sort" name="sort_sbt" />
+          	</div>
+        	</noscript>
+    	</form>
+    <!-- </fieldset> -->
+  </mx:bloc id="sort">
+
+  <!-- Affiche du nombre total de produits -->
+  <mx:bloc id="product_counter">
+    <span class="counter_products">
+      <mx:text id="counter" /> produit(s)
+    </span>
+  </mx:bloc id="product_counter">
+</div>
+
+  <mx:bloc id="products">
+    <div mXattribut="id:id;class:class">
+      <mx:bloc id="product">
+        <div mXattribut="id:id;class:class">
+          <mx:text id="short_product" /><!-- template catalog/product/short_product.html -->
+        </div>
+      </mx:bloc id="product">
+    </div>
+  </mx:bloc id="products">
+
+  <mx:bloc id="no_product_found">
+    <div id="noProductFound"><mx:text id="no_product_found" /></div>
+  </mx:bloc id="no_product_found">
+
+    <!--<mx:bloc id="selection_tree">
+    <form id="formArboSelect" method="post" mXattribut="action:action">
+      <fieldset>
+        <legend>Acc&eacute;der directement aux familles</legend>
+        <div class="block_row">
+        <label for="arboselect">Choix de la famille :</label>
+        <select name="arboselect" id="arboselect" onchange="submit();">
+          <mx:bloc id="options"><mx:text id="option" /></mx:bloc id="options">
+        </select>
+        </div>
+      </fieldset>
+      <div class="submit">
+        <input type="submit" name="valid" mXattribut="value:value" />
+      </div>
+    </form>
+  </mx:bloc id="selection_tree">-->
+
+<mx:bloc id="pager">
+	<hr class="separator" />
+	<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+	<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+	<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+	<mx:bloc id="next">&gt;</mx:bloc id="next">
+	<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+	<div class="pager"><mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title;class:class"><span><mx:text id="item" /></span></a></mx:bloc id="items"></div>
+</mx:bloc id="pager">
+
+<!-- </div> -->

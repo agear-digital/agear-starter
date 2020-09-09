@@ -1,0 +1,21 @@
+<div class="widget widgetCurrencies" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+	
+	<div class="widgetContainer">
+		<mx:bloc id="description"><p><mx:text id="description" /></p></mx:bloc id="description">
+		<form method="post" id="currencies_selection_form" mXattribut="action:action">
+			<fieldset>
+				<select name="currencies_selection" id="currencies_selection" onchange="javascript:submit();">
+					<mx:bloc id="options">
+						<option mXattribut="value:value;selected:selected"><mx:text id="label" /></option>
+					</mx:bloc id="options">
+				</select>
+				<noscript>
+					<div><input type="submit" name="submit_currencies" mXattribut="value:value_noscript" /></div>
+				</noscript>
+			</fieldset>
+		</form>
+	</div>
+	
+	<div class="widgetFooter"></div>
+</div>

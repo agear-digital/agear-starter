@@ -1,0 +1,70 @@
+<div>
+	<h3><mx:text id="product_name"/></h3>
+
+	<mx:bloc id="novelty">
+		<!--Affichage de l'image définie dans la configuration du catalogue-->
+		<mx:text id="novelty_img" />
+	</mx:bloc id="novelty">
+	
+	<mx:text id="reference"/>
+	<mx:text id="picture"/>
+	<mx:text id="description"/>
+	
+	<p><a mXattribut="href:href;hreflang:hreflang;title:title">Voir la fiche</a></p>
+	<div><mx:bloc id="from_price"><mx:text id="from_price" /></mx:bloc id="from_price"> <span class="prix"><mx:text id="price"/></span></div>
+	
+	<!-- Affichage du taux de taxation -->
+	<mx:bloc id="rate_taxation">
+		<mx:text id="label" />  <mx:text id="rate" />
+	</mx:bloc id="rate_taxation">
+	
+	<!-- Affichage de l'éco-participation -->
+	<mx:bloc id="eco_participation">
+		<mx:text id="label" />  <mx:text id="price" />
+		<!--<mx:bloc id="code"><mx:text id="code" /></mx:bloc id="code">
+		<mx:bloc id="category"><mx:text id="category" /></mx:bloc id="category">-->
+	</mx:bloc id="eco_participation">
+	
+	<!-- affichage du prix avec promotion-->
+	<mx:bloc id="special_price">
+		<span class="special_price"><mx:bloc id="from_price"><mx:text id="from_price" /></mx:bloc id="from_price"> <mx:text id="price" /></span>
+	</mx:bloc id="special_price">
+	
+	<!-- Gestion des promotions -->
+	<mx:bloc id="special_rate">
+		<!--Affichage du taux de réduction-->
+		<mx:text id="rate" />
+	</mx:bloc id="special_rate">
+	
+	<mx:bloc id="special_rate_alternatives">
+		<!--Affichage du taux de réduction-->
+		<mx:bloc id="alternative_1">
+				<mx:text id="label" /> :
+				<mx:bloc id="alt1"><mx:text id="rate" /></mx:bloc id="alt1">
+				<mx:bloc id="alt2">
+					<ul>
+						<mx:bloc id="alternative_2"><li><mx:text id="label" /> : <mx:text id="rate" /></li></mx:bloc id="alternative_2">
+					</ul>
+				</mx:bloc id="alt2">
+		</mx:bloc id="alternative_1">
+	</mx:bloc id="special_rate_alternatives">
+	
+	<mx:bloc id="special_icon">
+		<!--Affichage de l'icône de la réduction-->
+		<mx:text id="icon" />
+	</mx:bloc id="special_icon">
+	
+	<!-- Gestion du stock -->
+	<mx:bloc id="stock_detail">
+		<!--Affichage du nombre de produit en stock-->
+		<mx:text id="detail" />
+	</mx:bloc id="stock_detail">
+	<mx:bloc id="stock_icon">
+		<!--Affichage de l\'icône (En stock ou Pas en stock)-->
+		<mx:text id="icon" />
+	</mx:bloc id="stock_icon">
+	<mx:bloc id="stock_availability_date">
+		<!--Affichage de la date de disponibilité-->
+		<mx:text id="date" />
+	</mx:bloc id="stock_availability_date">
+</div>

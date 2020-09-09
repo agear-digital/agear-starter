@@ -1,0 +1,46 @@
+<mx:bloc id="widget">
+	<div class="widget widgetCatalogShortcut" mXattribut="class:box_class">
+		<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+		<div class="widgetContainer">
+			<mx:bloc id="select">
+				<!-- Affichage en mode select -->
+				<form method="post" mXattribut="action:action;id:id_form">
+					<fieldset>
+						<select mXattribut="name:name;id:id" onchange="javascript:submit();">
+							<option value="0" selected="selected"><mx:text id="label" /></option>
+							<mx:bloc id="options">
+								<option mXattribut="value:value"><mx:text id="label" /></option>
+							</mx:bloc id="options">
+						</select>
+						<noscript>
+							<div><input type="submit" name="submit_catalog_shortcut" mXattribut="value:value_noscript" /></div>
+						</noscript>
+					</fieldset>
+				</form>
+				<!--Séparateur utilisé pour indenter les familles-->
+				<mx:bloc id="spacer">&nbsp;&nbsp;</mx:bloc id="spacer">
+			</mx:bloc id="select">
+
+			<mx:bloc id="list">
+				<!--Affichage en mode list. Utilisation du bloc list_items-->
+				<mx:text id="list" />
+			</mx:bloc id="list">
+		</div>
+		<div class="widgetFooter"></div>
+	</div>
+</mx:bloc id="widget">
+<!--
+	Bloc utilisé pour afficher les sous niveau d'une liste
+-->
+<mx:bloc id="list_items">
+	<ul>
+		<mx:bloc id="items">
+			<li mXattribut="class:class">
+				<a mXattribut="href:href;hreflang:hreflang;title:title"><span><mx:text id="label" /></span></a>
+				<mx:bloc id="children">
+					<mx:text id="children" />
+				</mx:bloc id="children">
+			</li>
+		</mx:bloc id="items">
+	</ul>
+</mx:bloc id="list_items">

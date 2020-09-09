@@ -1,0 +1,18 @@
+<mx:bloc id="form_declaration_begin"><!-- délaration de formulaire pour les fiches résumée--></mx:bloc id="form_declaration_begin">
+	<mx:bloc id="quantity">
+		<label mXattribut="for:for_quantity"><mx:text id="quantity_label" /></label>&nbsp;:&nbsp;<mx:text id="quantity_input" />
+	</mx:bloc id="quantity">
+	<input type="hidden" name="id_product" mXattribut="value:id_product_value" />
+	<input type="hidden" name="addtocartsubmission" value="1" />
+	<div mXattribut="id:add_to_cart_active_js" style="display:none;">
+		<a mXattribut="href:href_js;hreflang:hreflang_js;title:title_js" onclick="javascript:add_to_cart('<mx:text id="id_product" />');"><mx:text id="label_add_to_cart_active_js" /></a>
+	</div>
+	<noscript>
+		<input type="submit" name="add2cart" mXattribut="value:add_to_cart_noscript" />
+	</noscript>
+<mx:bloc id="form_declaration_end"><!-- délaration de fin formulaire pour les fiches résumée--></mx:bloc id="form_declaration_end">
+<script type="text/javascript">
+	<!--
+	document.getElementById('<mx:text id="add_to_cart_active_js" />').style.display='block';
+	//-->
+</script>

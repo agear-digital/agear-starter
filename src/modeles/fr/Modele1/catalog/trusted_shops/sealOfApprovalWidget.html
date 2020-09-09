@@ -1,0 +1,17 @@
+<div class="widget widgetTrustedShops sealOfApproval" mXattribut="class:widgetClass">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+
+	<div class="widgetContainer">
+		<form name="formSiegel" method="post" mXattribut="action:action" target="_blank">
+			<fieldset>
+				<input name="shop_id" type="hidden" mXattribut="value:tsId" />
+				<input type="image" mXattribut="src:src;title:imgTitle" />
+			</fieldset>
+		</form>
+		<a mXattribut="href:href;title:title;hreflang:hreflang" onclick="window.open(this.href);return false;">
+			<mx:text id="label" />
+		</a>
+	</div>
+
+	<div class="widgetFooter"></div>
+</div>

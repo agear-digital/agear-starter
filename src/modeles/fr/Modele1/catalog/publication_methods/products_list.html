@@ -1,0 +1,64 @@
+<div class="productsListPublication">
+<h1><mx:text id="title" /><mx:pagerCurrentPage format=" - Page %s" /></h1>
+
+<mx:bloc id="description">
+	<div class="description"><mx:text id="description" /></div>
+</mx:bloc id="description">
+
+<!-- Affichage d'un formulaire permettant le tri des resultats-->
+<mx:bloc id="sort">
+ <div id="sort">
+   <form id="sort_form" method="post" mXattribut="action:action">
+     <fieldset>
+       <legend><mx:text id="legend" /></legend>
+       <!-- <div class="block_row"> -->
+       	<label for="sort_value"><mx:text id="sort_label" /></label>
+        <select name="sort_value" id="sort_value" onchange="document.getElementById('sort_form').submit();">
+          <mx:bloc id="options">
+            <option mXattribut="value:value;selected:selected"><mx:text id="label" /></option>
+          </mx:bloc id="options">
+        </select>
+       <!-- </div> -->
+       <!-- <div class="block_row"> -->
+       	<label for="asc"><mx:text id="asc" /></label>
+       	<input type="radio" name="sort_way" value="ASC" id="asc" mXattribut="checked:checked_asc" class="radio" onchange="document.getElementById('sort_form').submit();" onclick="document.getElementById('sort_form').submit();"/>
+      <!-- </div> -->
+      <!-- <div class="block_row"> -->
+      	<label for="desc"><mx:text id="desc" /></label><input type="radio" name="sort_way" value="DESC" id="desc" mXattribut="checked:checked_desc" class="radio" onchange="document.getElementById('sort_form').submit();" onclick="document.getElementById('sort_form').submit();"/>
+      <!-- </div> -->
+     </fieldset>
+       <noscript>
+         <div class="submit">
+         <input type="submit" value="Sort" name="sort_sbt" />
+         </div>
+       </noscript>
+   </form>
+  </div>
+</mx:bloc id="sort">
+
+<div class="productsList" >
+	<mx:bloc id="products">
+			<mx:text id="product" />
+	</mx:bloc id="products">
+</div>
+
+<!-- Affiche du nombre total de produits -->
+  <mx:bloc id="product_counter">
+  <mx:text id="counter" /> produit(s)
+  </mx:bloc id="product_counter">
+
+<mx:bloc id="pager">
+	<hr class="separator" />
+	<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+	<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+	<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+	<mx:bloc id="next">&gt;</mx:bloc id="next">
+	<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+	<div class="pager"><mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title;id:id;class:class"><span><mx:text id="item" /></span></a></mx:bloc id="items"></div>
+</mx:bloc id="pager">
+
+<mx:bloc id="no_product_found">
+	<div id="noProductFound">Aucun produit</div>
+</mx:bloc id="no_product_found">
+
+</div>

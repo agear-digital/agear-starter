@@ -1,0 +1,35 @@
+<div class="catalog">
+
+	<h2><mx:text id="title" /><mx:pagerCurrentPage format=" - Page %s" /></h2>
+	
+	<div id="famillyPresentation">
+ 		<div id="famillyPicture"><mx:text id="picture" /></div>
+ 		<div id="famillyDescription"><mx:text id="description" /></div>
+ 		<mx:bloc id="article"><div id="famillyArticle"><mx:text id="article" /></div></mx:bloc id="article">
+	</div>
+	
+	<mx:bloc id="families">
+		<div class="family">
+		
+			<h3><mx:text id="label" /></h3>
+			<mx:text id="picture" />
+			<mx:text id="description" />
+			
+			<mx:bloc id="products_list">
+				<mx:text id="product_summary" />
+			</mx:bloc id="products_list">
+			
+		</div>
+	</mx:bloc id="families">
+	
+<mx:bloc id="pager">
+	<hr class="separator" />
+	<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+	<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+	<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+	<mx:bloc id="next">&gt;</mx:bloc id="next">
+	<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+	<div class="pager"><mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title;id:id"><span><mx:text id="item" /></span></a></mx:bloc id="items"></div>
+</mx:bloc id="pager">
+	
+</div>

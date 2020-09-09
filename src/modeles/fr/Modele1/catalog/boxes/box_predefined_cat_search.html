@@ -1,0 +1,85 @@
+<mx:bloc id="box">
+	<div class="widget box_predefined_cat_search" mXattribut="class:box_class">
+		<h4><mx:text id="box_title"></h4>
+
+			<div class="widgetContainer">
+				<mx:bloc id="filters">
+					<span class="selectedFilters"><mx:text id="title" /></span>
+					<ul>
+						<mx:bloc id="filter">
+							<li class="selectedFilter">
+								<mx:text id="libelle" /> - <mx:text id="values" /><mx:bloc id="delete"><a mXattribut="href:href;title:title;" class="deleteFilter"><span><mx:text id="label" /></span></a></mx:bloc id="delete">
+							</li>
+						</mx:bloc id="filter">
+					</ul>
+
+					<mx:bloc id="delete">
+						<a mXattribut="href:href;title:title;" class="deleteAllFilter"><span><mx:text id="label" /></span></a>
+					</mx:bloc id="delete">
+				</mx:bloc id="filters">
+
+				<div class="box_predefined_cat_search_form">
+					<mx:text id="form" />
+				</div>
+				<script type="text/javascript">
+				$(function() {
+					var initFormEvent = function(eventName, eventFunction)
+					{
+						if (typeof $.fn.on === 'function') {
+							$(document).on(eventName, '#<mx:text id="formId" />', eventFunction);
+						} else {
+							$('#<mx:text id="formId" />').live(eventName, eventFunction);
+						}
+					}
+					// Préchargement de l'image
+					var img = new Image();
+					img.src = '/common_images/ajax-loader.gif';
+					initFormEvent('startCatalogAjaxFilter', function() {
+						/*
+						 * Le code ici sera exécuté au démarrage du filtrage ajax
+						 */
+						$('#catalogFilterLoad').remove();
+						var div = $('<div style="width:200px;height:200px;padding:67px;position:absolute;z-index:999;" id="catalogFilterLoad" />');
+						div.css("top", (($(window).height() - div.outerHeight()) / 2) + $(window).scrollTop() + "px");
+						div.css("left", (($(window).width() - div.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+						$('body').append(div);
+						$(div).append($('<img style="border:1px solid black;" src="/common_images/ajax-loader.gif" />'));
+					});
+					initFormEvent('endCatalogAjaxFilter', function() {
+						/*
+						 * Le code ici sera exécuté à la fin du filtrage ajax
+						 */
+						$('#catalogFilterLoad').remove();
+					});
+					initFormEvent('startCatalogAjaxContentFilter', function() {
+						/*
+						 * Le code ici sera exécuté au démarrage du rechargement de la zone de contenu
+						 */
+					});
+					initFormEvent('endCatalogAjaxContentFilter', function() {
+						/*
+						 * Le code ici sera exécuté à la fin du rechargement de la zone de contenu
+						 */
+					});
+					initFormEvent('startCatalogAjaxFormFilter', function() {
+						/*
+						 * Le code ici sera exécuté au début du rechargement du formulaire
+						 */
+					});
+					initFormEvent('endCatalogAjaxFormFilter', function() {
+						/*
+						 * Le code ici sera exécuté à la fin du rechargement du formulaire
+						 */
+					});
+					initFormEvent('afterPushContent', function() {
+						/*
+						 * Le code ici sera exécuté après l'ajout du contenu
+						 */
+					});
+				});
+				</script>
+			</div>
+
+		<div class="widgetFooter"></div>
+	</div>
+</mx:bloc id="box">

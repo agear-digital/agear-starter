@@ -1,0 +1,100 @@
+<div class="widget widgetCatalogSearch" mXattribut="class:box_class">
+	<mx:bloc id="widgetTitle"><h4><mx:text id="widgetTitle" /></h4></mx:bloc id="widgetTitle">
+	
+	<div class="widgetContainer">
+		<form class="catalog_search_form" method="post" mXattribut="action:action">
+			<fieldset>
+				<div class="block_row widgetCatalogSearchRow">
+					<label mXattribut="for:input_for_id"><mx:text id="input_label"/></label>
+					<input type="text" mXattribut="name:input_name;id:input_id;value:input_value" class="wordsbox"/>
+				</div>
+				<mx:bloc id="select_fields">
+					<div class="block_row widgetCatalogSearchSelect">
+						<label mXattribut="for:for_id"><mx:text id="select_fields_label"/></label>
+						<select size="1" mXattribut="name:name;id:id">
+							<mx:bloc id="select_field">
+								<option mXattribut="value:option_value;selected:option_selected"><mx:text id="option_text"/></option>
+							</mx:bloc id="select_field">
+						</select>
+					</div>
+				</mx:bloc id="select_fields">
+			
+				<mx:bloc id="contextual_search">
+					<div class="block_row contextualSearch">
+						<label mXattribut="for:for_id"><mx:text id="contextual_search_label"/></label>
+						<input type="checkbox" mXattribut="name:name;id:id;value:value;checked:checked" class="checkbox"/>
+					</div>
+				</mx:bloc id="contextual_search">
+
+				<mx:bloc id="availability_fields">
+					<div class="availabilityFields" >
+						<fieldset>
+							<legend><mx:text id="availability_fields_label"/></legend>
+							<mx:bloc id="begin">
+								<label for="availibilityBegin"><mx:text id="labelBegin"/></label>
+								<input type="input" id="availabilityBegin" name="availabilityBegin" mXattribut="value:valueBegin" />
+								<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><img src="/common_images/calendar.jpg" /></a>
+							</mx:bloc id="begin">
+							<mx:bloc id="end">
+								<label for="availabilityEnd"><mx:text id="labelEnd"/></label>
+								<input type="input" id="availabilityEnd" name="availabilityEnd" mXattribut="value:valueEnd" />
+								<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><img src="/common_images/calendar.jpg" /></a>
+							</mx:bloc id="end">
+							<mx:bloc id="units">
+								<label for="availabilityUnits"><mx:text id="labelUnits"/></label>
+								<select id="availabilityUnits" name="availabilityUnits">
+									<option value="">&nbsp;</option>
+									<mx:bloc id="options">
+										<option mXattribut="value:value;selected:selected"><mx:text id="label" /></option>
+									</mx:bloc id="options">
+								</select>
+							</mx:bloc id="units">
+							<mx:bloc id="nbPlaces">
+								<label for="availabilityNbPlaces"><mx:text id="labelNbPlaces"/></label>
+								<select id="availabilityNbPlaces" name="availabilityNbPlaces">
+									<option value="">&nbsp;</option>
+									<option value="1" mXattribut="selected:selected1">1</option>
+									<option value="2" mXattribut="selected:selected2">2</option>
+									<option value="3" mXattribut="selected:selected3">3</option>
+									<option value="4" mXattribut="selected:selected4">4</option>
+									<option value="5" mXattribut="selected:selected5">5</option>
+									<option value="6" mXattribut="selected:selected6">6</option>
+									<option value="7" mXattribut="selected:selected7">7</option>
+									<option value="8" mXattribut="selected:selected8">8</option>
+									<option value="9" mXattribut="selected:selected9">9</option>
+								</select>
+							</mx:bloc id="nbPlaces">
+						</fieldset>
+					</div>
+				</mx:bloc id="availability_fields">
+
+				<mx:bloc id="supplementary_fields">
+					<div class="supplementaryFields" >
+						<fieldset>
+							<legend><mx:text id="supplementary_fields_label"/></legend>
+							<mx:bloc id="supplementary_field">
+								<div class="block_row">
+									<mx:text id="supp_form_element_condition" />
+									<mx:text id="supp_form_element_condition_hidden_field" />
+									<mx:text id="supp_form_element" />
+								</div>
+							</mx:bloc id="supplementary_field">
+						</fieldset>
+					</div>
+				</mx:bloc id="supplementary_fields">
+			
+			</fieldset>
+				<div class="submit">
+					<input type="submit" name="button" mXattribut="value:submit_value" />
+				</div>
+		</form>
+		<mx:bloc id="last_search">
+			<a mXattribut="href:href;hreflang:hreflang:title:title"><mx:text id="last_search"/></a>
+		</mx:bloc id="last_search">
+		<mx:bloc id="advanced_search">
+			<a mXattribut="href:href;hreflang:hreflang:title:title"><mx:text id="advanced_search"/></a>
+		</mx:bloc id="advanced_search">
+	</div>
+	
+	<div class="widgetFooter"></div>
+</div>

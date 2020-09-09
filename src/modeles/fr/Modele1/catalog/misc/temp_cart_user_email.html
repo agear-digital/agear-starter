@@ -1,0 +1,32 @@
+<mx:bloc id="subject">Votre panier sur le site <mx:text id="siteName" /></mx:bloc id="subject">
+<mx:bloc id="text">
+	Bonjour,
+
+	Vous avez demandé la sauvegarde de votre panier pour le site <mx:text id="siteName" /> (<mx:text id="siteUrl" />).
+
+	Pour récupérer le contenu de votre panier et finaliser votre commande, veuillez
+	utiliser le lien suivant :
+
+	<mx:text id="cartUrl" />
+</mx:bloc id="text">
+<mx:bloc id="html">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<p>
+			Bonjour,<br />
+			Vous avez demandé la sauvegarde de votre panier sur le site
+			<a mxAttribut="href:siteHref"><mx:text id="siteName" /></a>.
+
+			Pour récupérer le contenu de votre panier et finaliser votre commande, veuillez
+			utiliser le lien suivant :
+		</p>
+		<p>
+			<a mxAttribut="href:cartHref"><mx:text id="cartLabel" /></a>
+		</p>
+	</body>
+</html>
+</mx:bloc id="html">

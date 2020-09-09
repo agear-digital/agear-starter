@@ -1,47 +1,28 @@
-<mx:bloc id="subject">Bienvenue dans la communauté !</mx:bloc id="subject">
-<mx:bloc id="messageHTML"><table border="0" cellpadding="0" cellspacing="0" style="background-color: #85175b" width="100%">
+<mx:bloc id="subject">Votre inscription sur le site</mx:bloc id="subject"><mx:bloc id="messageHTML"><center><mx:bloc id="confirmation_message"><mx:text id="message" /></mx:bloc id="confirmation_message">
+<p>Bienvenue, vous venez de vous inscrire sur le site {SITENAME}.</p>
+
+<p>&nbsp;</p>
+
+<p>Vos identifiants pour acc&eacute;der &agrave; votre compte sont les suivants :</p>
+&nbsp;
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" style="font-size:11px;" width="300">
 	<tbody>
 		<tr>
-			<td style="background-color: #414243; color: #fff; font-size: 18px; padding: 10px 20px;">{subject}</td>
+			<td style="text-align:right; padding:10px; background:#e7eaed;">LOGIN</td>
+			<td style="text-align:left; padding:10px; background:#e7eaed;"><mx:text id="login" /></td>
+		</tr>
+		<tr>
+			<td style="text-align:right; padding:10px; border-bottom:1px solid #111f4e;">MOT DE PASSE</td>
+			<td style="text-align:left; padding:10px; border-bottom:1px solid #111f4e;">Celui que vous avez saisi &agrave; l&#39;inscription</td>
 		</tr>
 	</tbody>
 </table>
 
-<table bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="100%">
-	<tbody>
-		<tr>
-			<td style="padding: 30px 20px 10px;">
-			<p style="font-size: 11px; color: #999;"><mx:text id="date" />,</p>
-			<mx:bloc id="confirmation_message"><mx:text id="message" /></mx:bloc id="confirmation_message">
+<p><span style="line-height: 1.5; font-size: 1.3em;">&Agrave; bient&ocirc;t !</span><br />
+<a href="<mx:text id="site_url" />" style="text-decoration:none; color: #111f4e; font-size:15px; ">{SITENAME}</a></p>
 
-			<p>Bienvenue, vous venez de vous inscrire sur le site {SITENAME}.<p>
-			<p>Vos identifiants pour acc&eacute;der &agrave; votre compte sont les suivants :</p>
-			&nbsp;
-
-			<table border="0" cellpadding="0" cellspacing="0" tbody="" width="100%">
-				<tbody>
-					<tr>
-						<td align="center">
-						<table border="0" cellpadding="0" cellspacing="0" width="80%">
-							<tbody>
-								<tr>
-									<td style="background: #eee; padding: 20px; text-align: left;">Identifiant : <mx:text id="login" /><br />
-									Mot de passe : <mx:text id="password" /></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			&nbsp;
-
-			<p><span style="line-height: 1.5; font-size: 1.3em;">&Agrave; bient&ocirc;t !</span><br />
-			<a href="<mx:text id="site_url" />">{SITENAME}</a></p>
-			<p>&nbsp;</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
-{USE_MAIN_TEMPLATE:1}</mx:bloc id="messageHTML"><mx:bloc id="messageTXT"><mx:bloc id="subject">Bienvenue dans la communauté !</mx:bloc id="subject"><p>{subject} <mx:text id="date" /> <mx:bloc id="confirmation_message"><mx:text id="message" /></mx:bloc id="confirmation_message"> Bienvenue, vous venez de vous inscrire sur le site {SITENAME}. Vos identifiants pour acc&eacute;der &agrave; votre compte sont les suivants : Identifiant : <mx:text id="login" /> Mot de passe : <mx:text id="password" /> Pour consulter le site : <mx:text id="site_url" /> Pour des questions : <mx:text id="mail_contact" /> &Agrave; bientot</p>
-</mx:bloc id="messageTXT">
+<p>&nbsp;</p>
+</center>
+{USE_MAIN_TEMPLATE:1}</mx:bloc id="messageHTML"><mx:bloc id="messageTXT"><p>{subject} <mx:text id="date" /> <mx:bloc id="confirmation_message"><mx:text id="message" /></mx:bloc id="confirmation_message"> Bienvenue, vous venez de vous inscrire sur le site {SITENAME}. Vos identifiants pour accéder à votre compte sont les suivants : Identifiant : <mx:text id="login" /> Mot de passe : <mx:text id="password" /> Pour consulter le site : <mx:text id="site_url" /> Pour des questions : <mx:text id="mail_contact" /> À bientot</p>
+	</mx:bloc id="messageTXT">

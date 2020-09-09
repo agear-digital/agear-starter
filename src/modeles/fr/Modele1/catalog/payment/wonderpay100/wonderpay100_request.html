@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<title>Order payment</title>
+		<link  rel="stylesheet" type="text/css" mxAttribut="href:css_link" media="screen" title="Normal" />
+	</head>
+	<body>
+		<h1>Order payment</h1>
+		
+		Order reference : <mx:text id="order_id" /><br />
+		Order amount : <mx:text id="order_amount" />
+		
+		<mx:bloc id="log">
+			<div class="log">
+				<mx:text id="log"	/>
+			</div>
+		</mx:bloc id="log">
+		
+		<div class="formulaire">
+			<form mXattribut="action:action" method="post">
+				<fieldset>
+					<div class="block_row">
+						<span class="label">
+							<label for="ccname">Exact Name on Card :</label>
+						</span> 
+						<div class="field">
+							<input type="text" id="ccname" name="ccname" size="27" />
+						</div>
+					</div>
+					<div class="block_row">
+						<span class="label">
+							<label for="ccnum">Card Number :</label>
+						</span> 
+						<div class="field">
+							<input type="text" id="ccnum" name="ccnum" size="24" />
+						</div>
+					</div>
+					<div class="block_row">
+						<span class="label">
+							<label for="expmon">Expiration Date :</label>
+						</span> 
+						<div class="field">
+							<SELECT name="expmon" id="expmon">
+								<option selected value=1>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</SELECT> Month
+							<SELECT name="expyear"  id="expyear">
+								<option selected="selected" value="2005">2005</option>
+								<option value="2006">2006</option>
+								<option value="2007">2007</option>
+								<option value="2008">2008</option>
+								<option value="2009">2009</option>
+								<option value="2010">2010</option>
+								<option value="2011">2011</option>
+								<option value="2012">2012</option>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+							</SELECT> Year
+						</div>
+					</div>
+					<div class="block_row">
+						<span class="label">
+							<label for="cvv2">CVV2/CCV2/CID number (3 or 4 digit # on back of card) :</label>
+						</span> 
+						<div class="field">
+							<input type="text" id="cvv2" name="cvv2" size="4" />
+						</div>
+					</div>
+					<input type="submit" value="Submit" />
+				</fieldset>
+				<mx:bloc id="hidden">
+					<input type=hidden mXattribut="name:name;value:value" />
+				</mx:bloc id="hidden">
+			</form>
+		</div>
+		
+		<a mXattribut="href:href_back" hreflang="en" title="Back">Back to commerce</a>
+	</body>
+</html>

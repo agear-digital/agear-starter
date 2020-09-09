@@ -1,0 +1,71 @@
+<form id="productReservation" method="post" mXattribut="action:action">
+	
+	<mx:bloc id="firstStep">
+		<fieldset>
+			<legend><mx:text id="legend" /></legend>
+			<div class="block_row">
+				<mx:bloc id="date">
+					<label for="reservationDate"><mx:text id="label"/> * </label>
+					<input type="input" id="reservationDate" name="reservationDate" mXattribut="value:value" />
+					<a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><img src="/common_images/calendar.jpg" /></a>
+				</mx:bloc id="date">
+			</div>
+			<div class="block_row">
+				<mx:bloc id="units">
+					<label for="reservationUnits"><mx:text id="label"/></label>
+					<select id="reservationUnits" name="reservationUnits">
+						<option value="">&nbsp;</option>
+						<mx:bloc id="options">
+							<option mXattribut="value:value;selected:selected"><mx:text id="label" /></option>
+						</mx:bloc id="options">
+					</select>
+				</mx:bloc id="units">
+			</div>
+			<div class="submit">
+				<input type="submit" name="submit" mXattribut="value:value" />
+			</div>
+		</fieldset>
+	</mx:bloc id="firstStep">
+
+	<mx:bloc id="secondStep">
+		<fieldset>
+			<legend><mx:text id="legend" /></legend>
+			<table>
+				<tr>
+					<th><mx:text id="detail" /></th>
+					<th><mx:text id="season" /></th>
+					<th><mx:text id="price" /></th>
+					<th><mx:text id="selection" /></th>
+				</tr>
+				<mx:bloc id="rows">
+					<tr>
+						<td><mx:text id="detail" /></td>
+						<td><mx:text id="season" /></td>
+                        <td>
+                            <mx:bloc id="normalPrice">
+                                <span class="normalPrice"><mx:text id="normalPrice" /></span>
+                            </mx:bloc id="normalPrice">
+							<mx:text id="price" />
+                        </td>
+						<td><mx:text id="selection" /></td>
+					</tr>
+				</mx:bloc id="rows">
+			</table>
+			
+			<!--  Gestion des produits associés (selon option du site)  -->
+			<mx:bloc id="associated_product">
+				<mx:bloc id="associated_products">
+					<mx:text id="associated_products" />
+				</mx:bloc id="associated_products">
+			</mx:bloc id="associated_product">
+			
+			<div class="submit">
+				<input type="submit" name="submit" mXattribut="value:value" />
+			</div>
+		</fieldset>
+	</mx:bloc id="secondStep">
+
+	<mx:bloc id="no_match_found">
+		<div class="no_match_found"><mx:text id="no_match_found" /></div>
+	</mx:bloc id="no_match_found">
+</form>

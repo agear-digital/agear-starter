@@ -1,0 +1,60 @@
+<div class="nav">
+		<div id="previous">
+			<mx:bloc id="previous"><a mXattribut="href:href;onclick:onclick;hreflang:hreflang;title:title"><mx:text id="label"/></a></mx:bloc id="previous">
+		</div>
+		<div id="next">
+			<mx:bloc id="next"><a mXattribut="href:href;onclick:onclick;hreflang:hreflang;title:title"><mx:text id="label"/></a></mx:bloc id="next">
+		</div>
+	</div>
+
+	<table>
+		<caption><mx:text id="caption" /></caption>
+		<thead>
+			<tr>
+				<mx:bloc id="days">
+					<th class="days"><mx:text id="day_label" /></th>
+				</mx:bloc id="days">
+			</tr>
+		</thead>
+		<tbody>
+			<mx:bloc id="weeks">
+				<tr>
+					<mx:bloc id="days_number">
+						<td mXattribut="class:class">
+							<mx:bloc id="active">
+								<span><mx:text id="label" /></span>
+								<div class="season" mxAttribut="style:styleseason">&nbsp;</div>
+							</mx:bloc id="active">
+							<mx:bloc id="inactive">&nbsp;</mx:bloc id="inactive">
+						</td>
+					</mx:bloc id="days_number">
+				</tr>
+			</mx:bloc id="weeks">
+		</tbody>
+	</table>
+
+<!-- Legend  -->
+<div id="legend">
+<!-- Saison -->
+<mx:bloc id="seasons">
+<div class="zonesaisons">
+	<h1><mx:text id="title"/></h1>
+	<ul>
+		<mx:bloc id="element">
+			<li><span class="legend_element"><div mxAttribut="id:id;cass:class;style:style">&nbsp;</div><span><mx:text id="label" /></span></span></li>
+		</mx:bloc id="element">
+	</ul>
+</div>
+</mx:bloc id="seasons">
+<!-- Etats -->
+<mx:bloc id="states">
+<div class="zoneetats">
+	<h1><mx:text id="title"/></h1>
+	<ul>
+		<mx:bloc id="element">
+			<li><div mxAttribut="id:id;cass:class">&nbsp;</div><span><mx:text id="label" /></span></li>
+		</mx:bloc id="element">
+	</ul>
+</div>
+</mx:bloc id="states">
+</div>

@@ -1,0 +1,35 @@
+<script type="text/javascript">
+<!--
+function text_counter<mx:text id="id" />(text_zone){
+	var max=<mx:text id="max_enabled_letters" />;
+  var counter=document.getElementById(text_zone.id+'_counter');
+  var text_zone_length=text_zone.value.replace(<mx:text id="regexp" />,'').length;
+  if (text_zone_length > max) {
+    var text_length=text_zone.value.length;
+    text_zone.value = text_zone.value.substring(0,text_length-1);
+    alert('<mx:text id="error_msg" />');
+  }else{
+	   counter.value=(max-text_zone_length);
+    <mx:bloc id="letter_price_js">
+      document.getElementById(text_zone.id+'_price').innerHTML=text_zone_length*<mx:text id="letter_price" />;
+    </mx:bloc id="letter_price_js">
+  }
+}
+//-->
+</script>
+<fieldset>
+<legend>Texte personnalis&eacute;</legend>
+<div class="block_row">
+<label>Texte personnalis&eacute;</label>
+<textarea name="customised_text" mXattribut="id:id_ta" cols="32" rows="4" onkeydown="text_counter<mx:text id="id" />(this);" onkeyup="text_counter<mx:text id="id" />(this);"></textarea>
+</div>
+
+<div class="block_row">
+<label><mx:text id="counter_label" /></label>
+<input type="text" name="customised_text_counter" disabled="disabled" class="disabled" mxAttribut="id:id_counter;value:value;size:size" />
+</div>
+</fieldset>
+
+<mx:bloc id="letter_price">
+  Surcoût <span mXattribut="id:id_price"><mx:text id="amount" /></span> €
+</mx:bloc id="letter_price">

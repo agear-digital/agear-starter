@@ -1,0 +1,52 @@
+<div id="cartAuthentification" class="cart">
+	<h2><mx:text id="title" /></h2>
+
+	<mx:text id="steps" />
+
+	<h3>Vous &ecirc;tes d&eacute;j&agrave; client ?</h3>
+	<p>Si vous disposez d&eacute;j&agrave; d'un compte, indiquez le login et le mot de passe avec lesquels vous &ecirc;tes inscrit :</p>
+	<form id="loginform" method="post" mXattribut="action:actionlogin">
+		<mx:bloc id="authentificationError">
+			<div class="error">
+				<mx:text id="errorMessage" />
+			</div>
+		</mx:bloc id="authentificationError">
+		<fieldset>
+			<legend><mx:text id="login_legend" /></legend>
+			<div class="block_row">
+				<label for="username"><mx:text id="username" /></label>
+				<input type="text" name="username" id="username" />
+			</div>
+			<div class="block_row">
+				<label for="password"><mx:text id="password" /></label>
+				<input type="password" name="password" id="password" />
+			</div>
+			<a mXattribut="href:hrefpassword;hreflang:hreflangpassword;title:titlepassword"><mx:text id="lost_password" /></a><br />
+			<input type="hidden" name="manageaccount" value="1" />
+		</fieldset>
+
+		<div class="submit">
+ 			<input type="submit" mXattribut="value:submitvaluelogin" />
+		</div>
+	</form>
+
+  <h3>Vous &ecirc;tes un nouveau client ?</h3>
+  <form id="subscribeform" method="post" mXattribut="action:actionsubscribe">
+	 <fieldset>
+		<legend><mx:text id="subscription_legend" /></legend>
+			<div class="block_row" mXattribut="class:classError">
+				<label for="mail" mXattribut="class:classError"><mx:text id="mail" /></label>
+				<div mXattribut="class:classError">
+					<input type="email" name="mail" id="mail" />
+				</div>
+				<mx:bloc id="errorMessage">
+					<div class="errorMessage"><mx:text id="error" /></div>
+				</mx:bloc id="errorMessage">
+			</div>
+			<input type="hidden" name="subscriptionformcart" value="1" />
+			</fieldset>
+			<div class="submit">
+				<input type="submit" mXattribut="value:submitvaluesubscribe" />
+			</div>
+  </form>
+</div>

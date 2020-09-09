@@ -1,0 +1,521 @@
+﻿<!--
+Il est important que tout le contenu de la fiche produit soit wrappé dans un div unique pour le
+rafraîchissement ajax du widget filtre. S'il est utilisé, veuillez conserver ce div.
+-->
+<div class="refreshAjax_nepassupprimer">
+
+	<div id="product" mXattribut="class:product_class">
+		<mx:bloc id="update_price_js"></mx:bloc id="update_price_js">
+		
+		<h1>
+			<mx:text id="product_name" />
+		</h1>
+
+		<!--
+		  gestion des nouveauté
+		  Il est possible d'utiliser le mXattribut "class:novelty_class" afin de contextualiser un élément
+		-->
+		<mx:bloc id="novelty">
+			<!--Affichage de l'image définie dans la configuration du catalogue-->
+			<div class="new">
+				<mx:text id="novelty_img" />
+			</div>
+		</mx:bloc id="novelty">
+
+		<!--Affichage de l'icône de la réduction-->
+		<mx:bloc id="special_icon">
+			<div class="specialIcon">
+				<mx:text id="icon" />
+			</div>
+		</mx:bloc id="special_icon">
+
+		<!-- Affichage du taux de réduction -->
+		<mx:bloc id="special_rate">
+			<div class="specialRate">
+	  			<mx:text id="rate" />
+	  		</div>
+		</mx:bloc id="special_rate">
+
+		<div id="product_images">
+
+			<div class="productPictures">
+				<mx:bloc id="picture">
+					<div class="productPicture">
+						<mx:text id="picture" />
+						<!--Type d'affichage : fullsize ou thumbnail-->
+						<mx:bloc id="display_type">fullsize</mx:bloc id="display_type">
+					</div>
+				</mx:bloc id="picture">
+				<!--
+				Gestion de l'affichage de visuels suppl�entaires directement dans ce template
+				Attention : Veuillez supprimer ce bloc si vous ne voulez pas de cette option
+				-->
+				<mx:bloc id="additionnals_pictures">
+					<div class="additionnals_pictures">
+						<!-- <h2>Visuels additionnels</h2> -->
+							<mx:bloc id="pictures">
+									<mx:text id="picture" />
+							</mx:bloc id="pictures">
+						<!--Type d'affichage : fullsize ou thumbnail-->
+						<mx:bloc id="display_type">thumbnail</mx:bloc id="display_type">
+					</div>
+				</mx:bloc id="additionnals_pictures">
+			</div>
+
+
+			<!-- DEBUT Éléments correspondant à un produit du type vente flash -->
+			<div class="flashSale">
+				<!-- Si fin de vente flash -->
+				<mx:bloc id="flash_sale_end_text">
+					<div class="flashSaleEndText">
+						<mx:text id="end_text" />
+					</div>
+				</mx:bloc id="flash_sale_end_text">
+
+				<!-- Icone de la vente flash définie dans configuration du catalogue -->
+				<mx:bloc id="flash_sale_icon">
+					<div class="flashSaleIcon">
+						<mx:text id="icon" />
+					</div>
+				</mx:bloc id="flash_sale_icon">
+
+				<div class="flashSaleDetails">
+					<!-- Stock restant de la vente flash -->
+					<mx:bloc id="flash_sale_stock">
+						<div class="flashSaleStock">
+							Plus que
+							<strong>
+								<mx:text id="stock" />
+							</strong>en stock !
+						</div>
+					</mx:bloc id="flash_sale_stock">
+
+					<!-- Texte affiché si une vente flash est terminée -->
+					<mx:bloc id="flash_sale_text">
+						<div class="flashSaleText">
+							<mx:text id="text" />
+						</div>
+					</mx:bloc id="flash_sale_text">
+
+					<!-- Pourcentage de la réduction -->
+					<mx:bloc id="flash_sale_rate">
+						<div class="flashSaleRate">
+							<span mXattribut="class:class">
+								<mx:text id="rate" />
+							</span>de remise !
+						</div>
+					</mx:bloc id="flash_sale_rate">
+
+					<!-- Prix du produit (avec la réduction %, ou prix remisé) -->
+					<mx:bloc id="flash_sale_price">
+						<div class="flashSalePrice">
+							Prix spécial vente flash :
+							<mx:text id="price" />
+						</div>
+					</mx:bloc id="flash_sale_price">
+
+					<!-- Date de fin de la vente flash -->
+					<mx:bloc id="flash_sale_date">
+						<div class="flashSaleFate">
+							Jusqu'au
+							<strong>
+								<mx:text id="date" />
+							</strong>!!!
+						</div>
+					</mx:bloc id="flash_sale_date">
+				</div>
+
+				<!-- Compte à rebours de la vente flash -->
+				<!-- Javascript permettant de personnaliser les intitulés du compte à rebours -->
+				<!--<script type="text/javascript">
+				var specifsOption = {
+					labels: ['Années', 'Mois', 'Semaines', 'Jours', 'Heures', 'Minutes', 'Secondes'],
+					labels1: ['Année', 'Mois', 'Semaine', 'Jour', 'Heure', 'Minute', 'Seconde']
+				};
+			</script>-->
+				<mx:bloc id="flash_sale_countdown">
+					<!-- affichage du décompte javascript -->
+					<div mXattribut="id:divID">
+						<!-- div utilisé par le javascript pour afficher le compte à rebours -->
+					</div>
+					<mx:text id="js" />
+				</mx:bloc id="flash_sale_countdown">
+
+			</div>
+			<!-- FIN - Éléments correspondant à un produit du type vente flash -->
+
+		</div>
+
+
+		<div id="product_infos">
+
+			<mx:bloc id="description">
+				<div class="description">
+					<mx:text id="description" />
+				</div>
+			</mx:bloc id="description">
+
+			<!-- affichage du prix avant promotion -->
+			<mx:bloc id="price">
+
+				<mx:bloc id="from_price">
+					<div class="fromPrice">
+						<mx:text id="from_price" />
+					</div>
+				</mx:bloc id="from_price">
+
+				<div class="price">
+					<div mXattribut="id:id;class:class">
+						<!-- <span class="prix"> -->
+							<mx:text id="price" />
+						<!-- </span> -->
+					</div>
+				</div>
+			</mx:bloc id="price">
+
+			<!-- Affichage du taux de réduction -->
+			<mx:bloc id="special_rate_alternatives">
+				<div id="specialRateAlternatives">
+					<mx:bloc id="alternative_1">
+						<mx:text id="label" />:
+						<mx:bloc id="alt1">
+							<mx:text id="rate" /></mx:bloc id="alt1">
+						<mx:bloc id="alt2">
+							<ul>
+								<mx:bloc id="alternative_2">
+									<li>
+										<mx:text id="label" />:
+										<mx:text id="rate" />
+									</li>
+								</mx:bloc id="alternative_2">
+							</ul>
+						</mx:bloc id="alt2">
+					</mx:bloc id="alternative_1">
+				</div>
+			</mx:bloc id="special_rate_alternatives">
+
+			<div class="stock">
+				<!--Affichage de l\'icône (En stock ou Pas en stock)-->
+				<span id="stock_icon" mXattribut="class:stockIconClass" class="stockIcon">
+					<mx:bloc id="stock_icon">
+						<mx:text id="icon" />
+					</mx:bloc id="stock_icon">
+				</span>
+				<!--Affichage du nombre de produit en stock-->
+				<mx:bloc id="stock_detail">
+					<!-- <div class="stockDetail"> -->
+						<span class="stockDetailLabel">
+							<mx:text id="detailLabel" />
+						</span>
+						<span id="stock_detail" mXattribut="class:stockDetailClass" class="stockDetailValue">
+							<mx:text id="detail" />
+						</span>
+					<!-- </div> -->
+				</mx:bloc id="stock_detail">
+				<!--Affichage de la date de disponibilité-->
+				<div id="stock_availability_date" mXattribut="class:stockAvailabilityDateClass" class="stockAvailabilityDate">
+					<mx:bloc id="stock_availability_date">
+						<span>Date de réapprovisionnement :</span>
+						<mx:text id="date" />
+					</mx:bloc id="stock_availability_date">
+				</div>
+				<!--Affichage de la disponibilité-->
+				<div id="stock_waiting" mXattribut="class:stockWaitingClass" class="stockWaiting">
+					<mx:bloc id="stock_waiting">
+						<span>Disponibilité :</span>
+						<mx:text id="waiting" />
+					</mx:bloc id="stock_waiting">
+				</div>
+			</div>
+
+			<!-- Produit en téléchargement -->
+			<mx:bloc id="productDownload">
+				<div class="productDownload">
+					<span>
+						<mx:text id="productDownload" />
+					</span>
+				</div>
+			</mx:bloc id="productDownload">
+
+			<!--Affichage des propriétés additionnelles -->
+			<mx:bloc id="additionnals_properties">
+				<div class="additionnals_properties">
+					<mx:text id="additionnals_properties" />
+				</div>
+			</mx:bloc id="additionnals_properties">
+
+			<mx:bloc id="price_attribut">
+				<!-- affichage du prix avec promotion -->
+				<mx:bloc id="special_price">
+					<div class="priceContainerProduct">
+						<span mXattribut="id:id" class="special_price">
+							<mx:text id="price" />
+						</span>
+					</div>
+				</mx:bloc id="special_price">
+
+				<form id="formproductversion" mXattribut="action:action" method="post">
+					<fieldset>
+						<legend>Ajout au panier</legend>
+						<!-- Variantes -->
+						<mx:bloc id="alternatives">
+							<div id="alternatives">
+								<mx:bloc id="alternative_1">
+									<div class="block_row">
+										<span class="label">
+											<label for="variante1">
+												<mx:text id="alternative_1_label" />
+											</label>
+										</span>
+										<span class="fields">
+											<select name="variante1" id="variante1" onchange="javascript:updatePrice();">
+												<mx:text id="options" />
+											</select>
+										</span>
+									</div>
+								</mx:bloc id="alternative_1">
+
+								<mx:bloc id="alternative_2">
+									<div class="block_row">
+										<span class="label">
+											<label for="variante2">
+												<mx:text id="alternative_2_label" />
+											</label>
+										</span>
+										<span class="fields">
+											<select name="variante2" id="variante2" onchange="javascript:updatePrice();">
+												<mx:text id="options" />
+											</select>
+										</span>
+									</div>
+								</mx:bloc id="alternative_2">
+							</div>
+						</mx:bloc id="alternatives">
+
+						<mx:bloc id="options">
+							<div id="productOptions">
+								<mx:bloc id="option">
+									<div class="block_row">
+										<span class="label">
+											<label for="options">
+												<mx:text id="option_label" />
+											</label>
+										</span>
+										<span class="fields">
+											<select name="options" id="options" onchange="javascript:updatePrice();">
+												<mx:text id="opts" />
+											</select>
+										</span>
+									</div>
+								</mx:bloc id="option">
+							</div>
+						</mx:bloc id="options">
+
+						<noscript>
+							<input type="submit" name="updateprice" id="updateprice" mXattribut="value:valueupdateprice" />
+						</noscript>
+						<mx:text id="add2cart" />
+						<!-- bouton ajout au panier, voir template add2cart_product.html -->
+
+					</fieldset>
+				</form>
+
+				<!-- Affichage de l'éco-participation -->
+				<mx:bloc id="eco_participation">
+					<div class="ecoParticipation">
+						<span class="ecoParticipationLabel">
+							<mx:text id="label" />
+						</span>
+						<span class="ecoParticipationPrice">
+							<mx:text id="price" />
+						</span>
+					</div>
+					<!--<mx:bloc id="code"><mx:text id="code" /></mx:bloc id="code">
+					<mx:bloc id="category"><mx:text id="category" /></mx:bloc id="category">-->
+				</mx:bloc id="eco_participation">
+
+				<!-- Affichage du bloc de reservation -->
+				<mx:bloc id="productReservation">
+					<mx:text id="productReservation" />
+				</mx:bloc id="productReservation">
+
+
+				<!-- Prix final -->
+				<mx:bloc id="total_price">
+					<p class="total_price">
+						<span>Total : </span>
+						<span mXattribut="id:id">
+							<mx:text id="price" />
+						</span>
+					</p>
+				</mx:bloc id="total_price">
+
+				<!-- Detail du prix produit -->
+				<!-- <div class="ecoParticipationDetail" >
+					<mx:bloc id="priceHtBeforeRate"><div id="priceHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtBeforeRate" /></span></div></mx:bloc id="priceHtBeforeRate">
+					<mx:bloc id="priceHtAfterRate"><div id="priceHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtAfterRate" /></span></div></mx:bloc id="priceHtAfterRate">
+					<mx:bloc id="rateHt"><div id="rateHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateHt" /></span></div></mx:bloc id="rateHt">
+					<mx:bloc id="rateTtc"><div id="rateTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateTtc" /></span></div></mx:bloc id="rateTtc">
+					<mx:bloc id="priceTtcBeforeRate"><div id="priceTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcBeforeRate" /></span></div></mx:bloc id="priceTtcBeforeRate">
+					<mx:bloc id="priceTtcAfterRate"><div id="priceTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcAfterRate" /></span></div></mx:bloc id="priceTtcAfterRate">
+					<mx:bloc id="ecoTaxeHt"><div id="ecoTaxeHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeHt" /></span></div></mx:bloc id="ecoTaxeHt">
+					<mx:bloc id="ecoTaxeTtc"><div id="ecoTaxeTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeTtc" /></span></div></mx:bloc id="ecoTaxeTtc">
+					<mx:bloc id="tvaOnEcoTaxe"><div id="tvaOnEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="tvaOnEcoTaxe" /></span></div></mx:bloc id="tvaOnEcoTaxe">
+					<mx:bloc id="priceTotHtBeforeRate"><div id="priceTotHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtBeforeRate" /></span></div></mx:bloc id="priceTotHtBeforeRate">
+					<mx:bloc id="priceTotHtAfterRate"><div id="priceTotHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtAfterRate" /></span></div></mx:bloc id="priceTotHtAfterRate">
+					<mx:bloc id="priceTotTtcBeforeRate"><div id="priceTotTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcBeforeRate" /></span></div></mx:bloc id="priceTotTtcBeforeRate">
+					<mx:bloc id="priceTotTtcAfterRate"><div id="priceTotTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcAfterRate" /></span></div></mx:bloc id="priceTotTtcAfterRate">
+					<mx:bloc id="amountTvaBeforeRate"><div id="amountTvaBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaBeforeRate" /></span></div></mx:bloc id="amountTvaBeforeRate">
+					<mx:bloc id="amountTvaAfterRate"><div id="amountTvaAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaAfterRate" /></span></div></mx:bloc id="amountTvaAfterRate">
+					<mx:bloc id="amountTvaEcoTaxe"><div id="amountTvaEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaEcoTaxe" /></span></div></mx:bloc id="amountTvaEcoTaxe">
+					<mx:bloc id="amountTvaTotBeforeRate"><div id="amountTvaTotBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotBeforeRate" /></span></div></mx:bloc id="amountTvaTotBeforeRate">
+					<mx:bloc id="amountTvaTotAfterRate"><div id="amountTvaTotAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotAfterRate" /></span></div></mx:bloc id="amountTvaTotAfterRate">
+					<mx:bloc id="ecoHtWEcoTaxe"><div id="ecoHtWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWEcoTaxe" /></span></div></mx:bloc id="ecoHtWEcoTaxe">
+					<mx:bloc id="ecoTtcWEcoTaxe"><div id="ecoTtcWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWEcoTaxe" /></span></div></mx:bloc id="ecoTtcWEcoTaxe">
+					<mx:bloc id="ecoHtWoEcoTaxe"><div id="ecoHtWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWoEcoTaxe" /></span></div></mx:bloc id="ecoHtWoEcoTaxe">
+					<mx:bloc id="ecoTtcWoEcoTaxe"><div id="ecoTtcWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWoEcoTaxe" /></span></div></mx:bloc id="ecoTtcWoEcoTaxe">
+				</div>  -->
+				<!-- Detail du total du prix produit -->
+				<!-- <div class="ecoTotalParticipationDetail" >
+					<mx:bloc id="priceHtBeforeRate"><div id="priceHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtBeforeRate" /></span></div></mx:bloc id="priceHtBeforeRate">
+					<mx:bloc id="priceHtAfterRate"><div id="priceHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceHtAfterRate" /></span></div></mx:bloc id="priceHtAfterRate">
+					<mx:bloc id="rateHt"><div id="rateHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateHt" /></span></div></mx:bloc id="rateHt">
+					<mx:bloc id="rateTtc"><div id="rateTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="rateTtc" /></span></div></mx:bloc id="rateTtc">
+					<mx:bloc id="priceTtcBeforeRate"><div id="priceTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcBeforeRate" /></span></div></mx:bloc id="priceTtcBeforeRate">
+					<mx:bloc id="priceTtcAfterRate"><div id="priceTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTtcAfterRate" /></span></div></mx:bloc id="priceTtcAfterRate">
+					<mx:bloc id="ecoTaxeHt"><div id="ecoTaxeHt"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeHt" /></span></div></mx:bloc id="ecoTaxeHt">
+					<mx:bloc id="ecoTaxeTtc"><div id="ecoTaxeTtc"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTaxeTtc" /></span></div></mx:bloc id="ecoTaxeTtc">
+					<mx:bloc id="tvaOnEcoTaxe"><div id="tvaOnEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="tvaOnEcoTaxe" /></span></div></mx:bloc id="tvaOnEcoTaxe">
+					<mx:bloc id="priceTotHtBeforeRate"><div id="priceTotHtBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtBeforeRate" /></span></div></mx:bloc id="priceTotHtBeforeRate">
+					<mx:bloc id="priceTotHtAfterRate"><div id="priceTotHtAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotHtAfterRate" /></span></div></mx:bloc id="priceTotHtAfterRate">
+					<mx:bloc id="priceTotTtcBeforeRate"><div id="priceTotTtcBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcBeforeRate" /></span></div></mx:bloc id="priceTotTtcBeforeRate">
+					<mx:bloc id="priceTotTtcAfterRate"><div id="priceTotTtcAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="priceTotTtcAfterRate" /></span></div></mx:bloc id="priceTotTtcAfterRate">
+					<mx:bloc id="amountTvaBeforeRate"><div id="amountTvaBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaBeforeRate" /></span></div></mx:bloc id="amountTvaBeforeRate">
+					<mx:bloc id="amountTvaAfterRate"><div id="amountTvaAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaAfterRate" /></span></div></mx:bloc id="amountTvaAfterRate">
+					<mx:bloc id="amountTvaEcoTaxe"><div id="amountTvaEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaEcoTaxe" /></span></div></mx:bloc id="amountTvaEcoTaxe">
+					<mx:bloc id="amountTvaTotBeforeRate"><div id="amountTvaTotBeforeRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotBeforeRate" /></span></div></mx:bloc id="amountTvaTotBeforeRate">
+					<mx:bloc id="amountTvaTotAfterRate"><div id="amountTvaTotAfterRate"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="amountTvaTotAfterRate" /></span></div></mx:bloc id="amountTvaTotAfterRate">
+					<mx:bloc id="ecoHtWEcoTaxe"><div id="ecoHtWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWEcoTaxe" /></span></div></mx:bloc id="ecoHtWEcoTaxe">
+					<mx:bloc id="ecoTtcWEcoTaxe"><div id="ecoTtcWEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWEcoTaxe" /></span></div></mx:bloc id="ecoTtcWEcoTaxe">
+					<mx:bloc id="ecoHtWoEcoTaxe"><div id="ecoHtWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoHtWoEcoTaxe" /></span></div></mx:bloc id="ecoHtWoEcoTaxe">
+					<mx:bloc id="ecoTtcWoEcoTaxe"><div id="ecoTtcWoEcoTaxe"><span class="label" ><mx:text id="label" /></span><span class="rate" ><mx:text id="ecoTtcWoEcoTaxe" /></span></div></mx:bloc id="ecoTtcWoEcoTaxe">
+				</div>  -->
+
+			</mx:bloc id="price_attribut">
+
+			<!--affichage du détail des prix quand paliers-->
+			<mx:bloc id="product_slice_price">
+				<div id="productSlicePrice">
+					<mx:text id="detail" />
+				</div>
+			</mx:bloc id="product_slice_price">
+
+			<!-- Affichage du taux de taxation -->
+			<mx:bloc id="rate_taxation">
+				<div class="rateTaxation">
+					<span class="rateTaxationLabel">
+						<mx:text id="label" /> :
+					</span>
+					<mx:text id="rate" />%
+				</div>
+			</mx:bloc id="rate_taxation">
+
+
+			<!-- Référence du produit -->
+			<mx:bloc id="reference">
+				<div id="reference" class="reference">
+					<span class="referenceLabel">
+						<mx:text id="referenceLabel" /> :</span>
+					<mx:text id="reference" />
+				</div>
+			</mx:bloc id="reference">
+
+		</div>
+
+		<!--  Gestion des produits associés (selon option du site)  -->
+		<mx:bloc id="associated_product" class="grid-4 has-gutter">
+			<mx:bloc id="associated_products">
+				<mx:text id="associated_products" />
+			</mx:bloc id="associated_products">
+		</mx:bloc id="associated_product">
+
+		<!-- Bouton de partage -->
+		<mx:bloc id="share">
+			<div class="shareLink"><mx:text id="shareLink" /></div>
+		</mx:bloc id="share">
+
+		<!-- Gestion des commentaires via le module communauté -->
+		<div id="produits_commentaires">
+
+			<mx:bloc id="links_comments">
+				<ul class="product_action">
+					<mx:bloc id="view_comments">
+						<li>
+							<a mXattribut="href:href;hreflang:hreflang;title:title">
+								<mx:text id="view_comments" />
+							</a>
+						</li>
+					</mx:bloc id="view_comments">
+					<mx:bloc id="add_comment">
+						<li>
+							<a mXattribut="href:href;hreflang:hreflang;title:title">
+								<mx:text id="add_comment" />
+							</a>
+						</li>
+					</mx:bloc id="add_comment">
+				</ul>
+			</mx:bloc id="links_comments">
+
+			<!-- Donnees relatives aux notes -->
+			<mx:bloc id="ratings_datas">
+				<div class="ratingsDatas">
+					<mx:text id="content" />
+				</div>
+			</mx:bloc id="ratings_datas">
+
+			<!-- Liste des commentaires -->
+			<mx:bloc id="list_comments">
+				<mx:text id="content" />
+			</mx:bloc id="list_comments">
+
+			<!-- Formulaire d'ajout de commentaire -->
+			<mx:bloc id="form_add_comment">
+				<mx:text id="content" />
+			</mx:bloc id="form_add_comment">
+			
+			<!-- Commentaire en mode mur d'activité -->
+			<mx:bloc id="commentsWall">
+				<div class="commentsWall" id="comments" >
+					<h3><mx:text id="title" /></h3>
+					<mx:text id="content" />
+				</div>
+			</mx:bloc id="commentsWall">
+
+		</div>
+		<!-- Gestion des commentaires via le module communauté -->
+
+		<!--Gestion d'un pager pour aller directement d'un produit à l'autre-->
+		<mx:bloc id="pager">
+			<div class="pager">
+				<mx:bloc id="previous">
+					<a mXattribut="href:href;hreflang:hreflang;title:title">
+						<mx:text id="previous_product" />
+						<!--<mx:text id="productLabel" />-->
+					</a>
+				</mx:bloc id="previous">
+				<mx:bloc id="next">
+					<a mXattribut="href:href;hreflang:hreflang;title:title">
+						<mx:text id="next_product" />
+						<!--<mx:text id="productLabel" />-->
+					</a>
+				</mx:bloc id="next">
+			</div>
+		</mx:bloc id="pager">
+
+	</div>
+
+	<mx:bloc id="productImagesBehavior">
+		<mx:bloc id="type">lightbox</mx:bloc id="type">
+		<mx:text id="js" />
+	</mx:bloc id="productImagesBehavior">
+</div>

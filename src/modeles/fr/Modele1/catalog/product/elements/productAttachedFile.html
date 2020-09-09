@@ -1,0 +1,80 @@
+<form mxAttribut="id:idForm;name:nameForm;action:actionForm;" method="post" enctype="multipart/form-data">
+    <fieldset>
+    <legend><mx:text id="fieldset_label" /></legend>
+
+    <mx:bloc id="file">
+		<div id="displayAttachedFile" class="displayFile">
+		    <div class="file">
+			<a mXattribut="href:href;hreflang:hreflang;title:title"><div class="fichier"><mx:text id="file" /></div></a>
+		    </div>
+		    <mx:bloc id="actions">
+			<div class="delete">
+			    <a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><mx:text id="label" /></a>
+			</div>
+		    </mx:bloc id="actions">
+		</div>
+    </mx:bloc id="file">
+ 
+    <mx:bloc id="files">
+		<div id="displayAttachedFiles">
+			<mx:bloc id="file">
+				<div class="file">
+				    <div class="detail">
+						<a mXattribut="href:href;hreflang:hreflang;title:title"><div class="fichier"><mx:text id="file" /></div></a>
+				    </div>
+				    <mx:bloc id="actions">
+						<div class="delete">
+						    <a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><mx:text id="label" /></a>
+						</div>
+				    </mx:bloc id="actions">
+				</div>
+		    </mx:bloc id="file">
+		    <mx:bloc id="actions">
+		    	<mx:bloc id="deleteAll">
+					<div class="deleteAll">
+					    <a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><mx:text id="label" /></a>
+					</div>
+				</mx:bloc id="deleteAll">
+				<!--<mx:bloc id="downloadAll">
+					<div class="downloadAll">
+					    <a mXattribut="href:href;hreflang:hreflang;title:title;onclick:onclick"><mx:text id="label" /></a>
+					</div>
+				</mx:bloc id="downloadAll">-->
+		    </mx:bloc id="actions">
+		</div>
+    </mx:bloc id="files">
+ 
+    <div class="block_row">
+	<mx:bloc id="uploading"><div mxAttribut="id:id;style:style"><mx:text id="message" /></div></mx:bloc id="uploading">
+	<mx:bloc id="errorType"><mx:text id="message" /></mx:bloc id="errorType">
+	<mx:bloc id="errorSize"><mx:text id="message" /></mx:bloc id="errorSize">
+	<mx:bloc id="errorNb"><mx:text id="message" /></mx:bloc id="errorNb">
+	
+	<label  mXattribut="for:for;class:error"><mx:text id="label" />&nbsp;</label>
+	<div id="inputuploadfile">
+	     <input type="hidden" name="MAX_FILE_SIZE" mXattribut="value:valueMaxFileSize" />
+	    <span mXattribut="class:error">
+		<input type="file" mXattribut="disabled:disabled;name:nameFile;id:idFile;accept:accept;onchange:onchange" />
+	    </span>
+	</div>
+	<mx:bloc id="informations">
+	    <div id="informations">
+			<ul>
+			    <mx:bloc id="information">
+				<li><mx:text id="type" /> (<mx:text id="extensions" />)</li>
+			    </mx:bloc id="information">
+			    <mx:bloc id="nbFiles">
+			    <li><mx:text id="nbFiles" /></li>
+			    </mx:bloc id="nbFiles">
+			</ul>
+	    </div>
+	</mx:bloc id="informations">
+    </div>
+   <noscript>
+	<div id="uploadfile" class="upload">
+	    <input type="submit" mXattribut="name:name;id:id;value:value;onclick:onclick;class:style" />
+	</div>
+    </noscript>
+
+    </fieldset>
+</form>

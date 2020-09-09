@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    <head>
+    </head>
+ <body bgcolor="#fff" link="black">
+ 
+ 
+        <!-- Saisissez ici vos styles si vous n'utilisez pas de feuille de styles  -->
+        <style type="text/css">
+            body {
+                padding:0;
+                margin:0;
+                width:100%;
+                font-family: Verdana, Arial, Helvetica, sans-serif;
+                font-size:62.5%;
+                background:#ffffff;
+            }
+            
+            img {
+                border:0;
+                vertical-align: bottom;
+                padding:0;
+                margin:0;
+            }
+        </style>
+    
+    <center>
+
+        <table align="center" width="640" border="0" cellpadding="0" cellspacing="0" style="font-family:arial, sans-serif; font-size:11px; color:#000000;">
+            <tr>
+                <td style="padding:20px 0;">
+                    <mx:text id="header_merchant_infos" />
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:10px 0; border-bottom: 5px solid #545454;">
+                    <center>
+                        <font style="color:#545454; font-size:25px;">
+                            <strong>BON DE LIVRAISON</strong>
+                        </font>
+
+                    </center>
+
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:15px 0;  border-bottom: 5px solid #545454;">
+                    <table align="center" width="640" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="320" valign="top" height="60">
+                                    <font style="color:#000; font-size:11px;">
+                                    <!-- données : facture -->
+                                       <strong>Date de la commande :</strong><mx:text id="date" /><br/>
+                                        <strong>R&eacute;f&eacute;rence de la commande :</strong>   <mx:text id="order_reference" /><br/>
+                                    </font>
+
+                                            <mx:bloc id="customer">
+                                                <h3><mx:text id="customer_title" /></h3>
+                                                <mx:bloc id="mail">
+                                                    <mx:text id="mail_label" />: <mx:text id="mail" />
+                                                    <br/>
+                                                </mx:bloc id="mail">
+                                                <mx:bloc id="tel">
+                                                    <mx:text id="tel_label" />: <mx:text id="tel" />
+                                                    <br/>
+                                                </mx:bloc id="tel">
+                                                <mx:bloc id="mobile">
+                                                    <mx:text id="mobile_label" />: <mx:text id="mobile" />
+                                                    <br/>
+                                                </mx:bloc id="mobile">
+                                                <mx:bloc id="fax">
+                                                    <mx:text id="fax_label" />: <mx:text id="fax" />
+                                                    <br/>
+                                                </mx:bloc id="fax">
+                                            </mx:bloc id="customer">
+
+
+                            </td>
+                            <td width="320"  valign="top" >
+
+                                        <mx:bloc id="payment">
+                                            <h3><mx:text id="title" /></h3>
+                                            <p><mx:text id="paymentLabel" /></p>
+                                        </mx:bloc id="payment">
+                                
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="padding:15px 0;">
+                                <table cellpadding="0" cellspacing="0" width="100%" style="margin:5px 0;">
+                                    <tr>
+                                        <td width="50%">
+                                        
+                                            <mx:bloc id="invoice">
+                                                <h3><mx:text id="invoice_title" /></h3>
+                                                <address>
+                                                    <mx:text id="address" />
+                                                </address>
+                                            </mx:bloc id="invoice">
+
+                                        </td>
+                                        
+                                        <td width="50%">
+                                            <mx:bloc id="delivery">
+                                                <h3><mx:text id="delivery_title" /></h3>
+                                                <address>
+                                                    <mx:text id="address" />
+                                                </address>
+                                            </mx:bloc id="delivery">
+
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+
+                <table align="center" width="640" border="0" cellpadding="0" cellspacing="0" style="margin:15px 0;">
+                    <thead>
+                        <tr>
+                            <th style="text-transform:uppercase; border-bottom:3px solid #545454; text-align:left; color:#545454;">
+                                <mx:text id="name_label" />
+                            </th>
+                            <th style="text-transform:uppercase; border-bottom:3px solid #545454; padding:10px 0; color:#545454; text-align: center;">
+                                <mx:text id="quantity_label" />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <mx:bloc id="products">
+                            <tr>
+                                <td style="border-bottom:1px solid #111f4e; padding:15px 0;" width="280">
+                                    <strong><mx:text id="name" /></strong><br/>
+                                    <mx:bloc id="alternatives">
+                                        <mx:bloc id="alternative_1">
+                                            <mx:text id="value" /><br/>
+                                        </mx:bloc id="alternative_1">
+                                        <mx:bloc id="alternative_2">
+                                            <mx:text id="value" /><br/>
+                                        </mx:bloc id="alternative_2">
+                                    </mx:bloc id="alternatives">
+
+                                </td>
+                                <td style="border-bottom:1px solid #111f4e; padding:15px 0; text-align: center;" width="80">
+                                    <center><mx:text id="quantity" /></center>
+                                </td>
+                            </tr>
+                        </mx:bloc id="products"><!--Affichage des actions de type Réduction sur la commande-->
+                    </tbody>
+                </table><!-- Affichage de l'éco-participation -->
+
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="padding:5px 0;">
+
+                    <!-- Affichage du message personnel du client-->
+                    <mx:bloc id="customer_message">
+                        <div id="customer_message">
+                        <h3><mx:text id="title" /></h3>
+                        <mx:text id="catalog_customer_message" /></div>
+                    </mx:bloc id="customer_message">
+
+
+                    <center><mx:text id="footer_merchant_infos" /></center>
+                </td>
+            </tr>
+
+
+
+        </table>
+</body>
+</html>

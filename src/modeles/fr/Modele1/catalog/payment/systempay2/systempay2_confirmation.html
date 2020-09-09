@@ -1,0 +1,33 @@
+<mx:bloc id="redirect">
+	<form id="systempay_form" method="post" mXattribut="action:action">
+	  <mx:bloc id="hidden"><input type="hidden" mXattribut="name:name;value:value" /></mx:bloc id="hidden">
+	  <input type="submit" name="button" mXattribut="value:value" />
+	</form>
+</mx:bloc id="redirect">
+
+<mx:bloc id="embeddedForm">
+	<mx:bloc id="error">
+		<span><mx:text id="msg"/></span>
+	</mx:bloc id="error">
+	<mx:bloc id="success">
+		<mx:bloc id="script">
+			<script mxAttribut="src:src;kr-public-key:publicKey;kr-post-url-success:urlSuccess"></script>
+		</mx:bloc id="script">
+
+		<link rel="stylesheet" mxAttribut="href:css">
+
+		<div class="kr-embedded" mxAttribut="kr-form-token:formToken">
+
+			<!-- payment form fields -->
+			<div class="kr-pan"></div>
+			<div class="kr-expiry"></div>
+			<div class="kr-security-code"></div>
+
+			<!-- payment form submit button -->
+			<button class="kr-payment-button"></button>
+
+	    	<!-- error zone -->
+	 		<div class="kr-form-error"></div>
+		</div>
+	</mx:bloc id="success">
+</mx:bloc id="embeddedForm">

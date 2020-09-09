@@ -1,0 +1,17 @@
+<mx:bloc id="mail_subject">Votre commande {site_name}</mx:bloc id="mail_subject"><h1>
+	<mx:text id="mail_title" /></h1>
+<mx:text id="date_label" /> : <mx:text id="date" /><br />
+<mx:text id="order_reference_label" /> : <mx:text id="order_reference" /><br />
+<mx:text id="new_order_state" /> : <mx:text id="state" /><br />
+<mx:bloc id="administrator_message"> Message du responsable de votre commande :
+<p>
+	<mx:text id="message" /></p>
+</mx:bloc id="administrator_message"> <mx:bloc id="follow_up_package">
+<p>
+	Vous pouvez suivre votre colis en cliquant sur le lien suivant :<br />
+	<a mxattribut="href:href;hreflang:hreflang;title:title"><mx:text id="follow_up_package" /></a></p>
+</mx:bloc id="follow_up_package">
+<p>
+	<mx:text id="thanks" /></p>
+<a mxattribut="href:hrefsite;hreflang:hreflangsite;title:titlesite"><mx:text id="site" /></a><br />
+<a mxattribut="href:hrefsuivicommande;hreflang:hreflangsuivicommande;title:titlesuivicommande"><mx:text id="follow_up_order" /></a>{USE_MAIN_TEMPLATE:1}

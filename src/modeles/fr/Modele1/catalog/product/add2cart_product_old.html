@@ -1,0 +1,65 @@
+<mx:bloc id="include_overlib"><script type="text/javascript" mXattribut="src:src"></script></mx:bloc id="include_overlib">
+<div mXattribut="id:idoverdiv" style="position:absolute; visibility:hidden; z-index:1000;" > </div>
+
+<mx:bloc id="form_declaration_begin"><!-- d�laration de formulaire pour les fiches courtes--></mx:bloc id="form_declaration_begin">
+
+	<mx:bloc id="quantity">
+		<mx:text id="quantity_label" />&nbsp;:&nbsp;<mx:text id="quantity_input" />
+	</mx:bloc id="quantity">
+	
+	<input type="hidden" name="id_product" mXattribut="value:valueIdProduct" />
+	<input type="hidden" name="addtocartsubmission" value="1" />
+	
+	<div mXattribut="id:id_add2cart_js" style="display:none;">
+		<a mXattribut="href:hrefjs;hreflang:hreflangjs;title:titlejs" onclick="javascript:displayContent<mx:text id="id_product" />('<mx:text id="add2cart_js" />');"><mx:text id="add2cart_js" /></a>
+	</div>
+	
+	<noscript>
+		<input type="submit" name="add2cart" mXattribut="value:addToCartNoscript" />
+	</noscript>
+
+<mx:bloc id="form_declaration_end"><!-- d�laration de fin formulaire pour les fiches courtes--></mx:bloc id="form_declaration_end">
+
+<script type="text/javascript">
+	<!--
+	document.getElementById('<mx:text id="id_add2cart_js" />').style.display='block';
+	function displayContent<mx:text id="id_product" />(caption) {
+		overlib('<mx:text id="please_wait_overlib" />',CAPTION,caption,STICKY,CLOSECLICK,CLOSETEXT,'x',CLOSETITLE,'<mx:text id="close_overlib" />',DRAGGABLE,DIVID,'<mx:text id="overdiv_id" />',MIDX,0,MIDY,0);
+		id_product='<mx:text id="id_product" />';
+		var q='';var var1='';var var2='';var opt='';var customised_text='';
+		if(document.getElementById('addToCartQuantityProduct'+id_product)){
+			q=document.getElementById('addToCartQuantityProduct'+id_product).value;
+		}
+		if(document.getElementById('variante1')){
+			var1=document.getElementById('variante1').value;
+		}
+		if(document.getElementById('variante2')){
+			var2=document.getElementById('variante2').value;
+		}
+		if(document.getElementById('options')){
+			opt=document.getElementById('options').value;
+		}
+		if(document.getElementById('customised_text')){
+			customised_text=document.getElementById('customised_text').value;
+		}
+		uri=location.href.split('/');
+		if(uri[uri.lenght-1]!=''){
+			uri.pop();
+			url=uri.join('/')+'/';
+		}else{
+			url=uri.join('/');
+		}
+		url+='addtocartoverlib-'+id_product+'-'+q+'-'+var1+'-'+var2+'-'+opt+'-'+customised_text;
+		xmlhttp.open("GET",url, false, null, null);
+		xmlhttp.send(null);
+		if (xmlhttp.readyState==4) {
+			var contentText=xmlhttp.responseText;
+			document.getElementById('overlibcontent').innerHTML=contentText;
+		}else{
+			document.forms['add2cartform'+id_product].submit();
+			cClick();
+		}
+		return false;
+	}
+	-->
+</script>

@@ -1,0 +1,91 @@
+<div id="produits_commentaires">
+<h4><mx:text id="product_comments_name" /></h4>
+
+<!-- Bloc indiquant qu'il n'y a pas de commentaires.-->
+<mx:bloc id="no_comments">
+	<div>
+		<span><mx:text id="noComments"/></span>
+	</div>
+</mx:bloc id="no_comments">
+
+<mx:bloc id="comments_list">
+	<div id="commentsList">
+  		<mx:bloc id="resume">
+  			<div class="commentsListResume" >
+    			<div class="nbComments" ><span><mx:text id="nb_comments"/></span></div>
+    			<div class="commentsListLibelle" ><span><mx:text id="libelle"/></span></div>
+    			<mx:bloc id="note">
+    				<span class="libelleAverage" ><mx:text id="libelle_average"/></span> : <span class="average" ><mx:text id="average"/></span>/<span class="noteMax"><mx:text id="note_max"/></span>
+    			</mx:bloc id="note">
+  			</div>
+  		</mx:bloc id="resume">
+  		<mx:bloc id="comments">
+    		<div class="block_row commentsListComments">
+      		<h6><mx:text id="title"/></h6>
+      		<mx:bloc id="note"><div class="commentsListNote">(<mx:text id="note"/>/<mx:text id="note_max"/>)</div></mx:bloc id="note">
+      		<div class="commentsListcomment"><mx:text id="comment"/></div>
+      		<em><span class="commentsListAuthor" ><mx:text id="author"/></span> - <span class="commentsListDate" ><mx:text id="date"/></span></em>
+    		</div>
+  		</mx:bloc id="comments">
+	</div>
+</mx:bloc id="comments_list">
+
+<mx:bloc id="link">
+    <a mXattribut="href:href;hreflang:hreflang;title:title" class="commentsLink" ><span><mx:text id="link" /></span></a>
+</mx:bloc id="link">
+
+<mx:bloc id="link_form">
+    <a mXattribut="href:href;hreflang:hreflang;title:title" class="commentsForm" ><span><mx:text id="link" /></span></a>
+</mx:bloc id="link_form">
+
+<mx:bloc id="add_comment">
+  <form mxAttribut="action:action;method:method" id="product_comments">
+    <fieldset>
+      <legend><mx:text id="legend_comment"/></legend>
+      
+      <mx:bloc id="error"><div class="error"><mx:text id="error"/></div></mx:bloc id="error">
+      
+      <div class="block_row">
+          <label for="title"><mx:text id="title" /> :</label>
+          <input id="title" type="text" name="title" size="30" mXattribut="value:value_title;"/>
+      </div>
+      
+      <div class="block_row">
+          <label for="comment"><mx:text id="comment" /> <span class="obligatory">*</span> :</label>
+          <textarea name="comment" id="comment" rows="5" cols="10"><mx:text id="value_comment"/></textarea>
+      </div>
+      
+      <mx:bloc id="author">
+        <div class="block_row">
+            <label for="author"><mx:text id="author" /> <span class="obligatory">*</span> :</label>
+            <input id="author" type="text" name="author" size="30" mXattribut="value:value_author"/>
+        </div>
+      </mx:bloc id="author">
+      
+      <mx:bloc id="note">
+        <div class="block_row">
+            <label for="note"><mx:text id="note" /> (/<mx:text id="note_max"/>) <span class="obligatory">*</span> :</label>
+            <select name="note" id="note">
+            <mx:bloc id="options_note">
+              <option mXattribut="value:value;selected:selected" class="note"><mx:text id="label" id="label" /></option>
+            </mx:bloc id="options_note">
+          </select>
+        </div>
+      </mx:bloc id="note">
+      
+      <mx:bloc id="captcha">
+        <div class="block_row">
+            <label><mx:text id="captcha_label" /></label>
+            <mx:bloc id="error_captcha"><div class="error_form"><mx:text id="error_captcha" /></div></mx:bloc id="error_captcha">
+            <mx:text id="captcha" />
+        </div>
+      </mx:bloc id="captcha">
+      
+      </fieldset>
+      <div class="submit">
+          <input type="submit" name="submit_add" mXattribut="value:value_submit" id="add_submit" />
+      </div>
+    
+  </form>
+</mx:bloc id="add_comment">
+</div>

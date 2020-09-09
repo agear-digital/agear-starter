@@ -1,0 +1,235 @@
+<mx:bloc id="subject">Votre commande {site_name}</mx:bloc id="subject"><table class="container" width="540" border="0" align="center" cellpadding="0" cellspacing="0" style="font-family:arial, sans-serif; font-size:12px; color:#1b2643">
+
+	<tr>
+		<td class="container" >
+			<br/>
+		</td>
+	</tr>
+	<tr>
+		<td class="container">
+			<table class="container" width="540" border="0" align="center" cellpadding="0" cellspacing="0" style="font-family:arial, sans-serif; font-size:12px; color:#1b2643">
+				<tr>
+					<td class="container" width="100" style="background:#e6e6e6; padding:20px;" valign="top">
+						<center>
+							 <font style="color:#545454; font-size:16px; line-height:16px;"><strong>Référence :<br/></strong></font><mx:text id="order_reference" />
+						</center>
+					</td>
+					<td class="none" width="15"></td>
+
+					<td class="container" width="205" style="background:#e6e6e6; padding:20px;" valign="top">
+						<center>
+							<mx:bloc id="invoicing">
+						    <font style="color:#545454; font-size:16px; line-height:16px;"><strong>Vos coordonnées</strong></font>
+						    <address>
+						        <mx:text id="address" />
+						    </address>
+							</mx:bloc id="invoicing">
+						</center>
+					</td>
+					<td class="none" width="15"></td>
+
+					<td class="container" width="205" style="background:#e6e6e6; padding:20px;" valign="top">
+						<center>
+							<mx:bloc id="delivery">
+						    <font style="color:#545454; font-size:16px; line-height:16px;"><strong>Adresse de livraison</strong></font>
+						    <mx:bloc id="mode"><div class="deliveryMode"><mx:text id="mode" /></div></mx:bloc id="mode">
+						    <address>
+						          <mx:text id="address" />
+						    </address>
+							</mx:bloc id="delivery">
+						</center>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td class="container" height="50">
+			<br/>
+		</td>
+	</tr>
+
+
+	<!--Détail de la réservation-->
+	<tr>
+		<td class="container">
+			<table class="container" width="540" border="0" align="center" cellpadding="0" cellspacing="0" style="font-family:arial, sans-serif; font-size:12px; color:#1b2643">
+			    <thead>
+			    	<tr>
+                            <th width="180" align="left" style="padding:15px 0px; color:#545454; border-bottom:3px solid #545454; font-weight:normal;">
+                                <strong><mx:text id="name_label" /></strong>
+                            </th>
+                            <th  width="90" align="left" style="text-align:center; padding:15px 0px; color:#545454; border-bottom:3px solid #545454; font-weight:normal;">
+                                <strong><mx:text id="quantity_label" /></strong>
+                            </th>
+                            <th width="90" align="left" style="text-align:center; padding:15px 0px; color:#545454; border-bottom:3px solid #545454; font-weight:normal;">
+                                <strong><mx:text id="unit_price_label" /></strong>
+                            </th >
+                            <th width="90" align="left" style="text-align:center; padding:15px 0px; color:#545454; border-bottom:3px solid #545454; font-weight:normal;">
+                                <strong><mx:text id="total_price_label" /></strong>
+                            </th>
+
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <mx:bloc id="products">
+			            <tr>
+                                <td width="180" align="left" style="padding:10px 10px 10px 0; border-bottom:1px solid #e6e6e6;">
+                                    <mx:text id="name" /><br/>
+                                    <mx:text id="reference" /><br/>
+                                    <mx:bloc id="alternatives">
+                                        <mx:bloc id="alternative_1">
+                                            <mx:text id="value" /><br/>
+                                        </mx:bloc id="alternative_1">
+                                        <mx:bloc id="alternative_2">
+                                            <mx:text id="value" /><br/>
+                                        </mx:bloc id="alternative_2">
+                                    </mx:bloc id="alternatives">
+
+                                </td>
+                                <td width="90" align="left" style="text-align:center; padding:10px 10px; border-bottom:1px solid #e6e6e6;">
+                                    <mx:text id="quantity" />
+                                </td>
+                                <td width="90" align="left" style="text-align:center; padding:10px 10px; border-bottom:1px solid #e6e6e6;">
+                                    <mx:text id="unit_price" />
+                                </td>
+                                <td width="90" align="left"  style="text-align:center; padding:10px 10px; border-bottom:1px solid #e6e6e6;">
+                                    <mx:text id="total_price" />
+                                </td>
+			            </tr>
+			        </mx:bloc id="products"><!--Affichage des actions de type Réduction sur la commande-->
+
+
+			        	<tr>
+			        		<td colspan="3" style="text-align:right; padding:20px 0;">
+
+			        			<table class="container" width="300" border="0" align="right" cellpadding="0" cellspacing="0" style="font-family:arial, sans-serif; font-size:12px; color:#1b2643">
+
+			        				<mx:bloc id="orders_actions">
+			        				    <mx:bloc id="item">
+			        				        <tr class="orders_actions">
+						                    <td width="50%" style=" padding:10px 0; border-bottom:1px solid #545454;" align="left">
+			        				                <mx:text id="label" />
+			        				                <mx:bloc id="description">
+			        				                    <mx:text id="description">
+			        				                </mx:bloc id="description">
+			        				            </td>
+						                    <td  width="50%" style="text-align:right; font-size:12px; font-weight:bold; padding:10px 0; border-bottom:1px solid #545454;"> 
+			        				                <mx:text id="value" />
+			        				            </td>
+			        				        </tr>
+			        				    </mx:bloc id="item">
+			        				</mx:bloc id="orders_actions"><!-- Gestion des coupons-->
+
+			        				<mx:bloc id="coupon">
+			        				    <tr class="coupon">
+			        				        <mx:bloc id="current_coupon">
+							                    <td width="50%" style=" padding:10px 0; border-bottom:1px solid #545454;" align="left">
+			        				                <mx:text id="label" />
+			        				            </td>
+						                    <td  width="50%" style="text-align:right; font-size:12px; font-weight:bold; padding:10px 0; border-bottom:1px solid #545454;"> 
+			        				                <mx:text id="value" />
+			        				            </td>
+			        				        </mx:bloc id="current_coupon">
+			        				    </tr>
+			        				</mx:bloc id="coupon">
+
+	        				        <mx:bloc id="shipping">
+							            <tr class="shipping amount">
+						                    <td width="50%" style=" padding:10px 0; border-bottom:1px solid #545454;" align="left">
+							                    <mx:text id="shipping_label" />
+							                    <mx:text id="ruleLabel" />
+							                </td>
+						                    <td  width="50%" style="text-align:right; font-size:12px; font-weight:bold; padding:10px 0; border-bottom:1px solid #545454;"> 
+							                    <mx:text id="shipping_amount" />
+							                </td>
+							            </tr>
+							        </mx:bloc id="shipping">
+
+							        <mx:bloc id="amount_detail">
+
+						            <mx:bloc id="HT_amount">
+						                <tr class="amount">
+						                    <td width="50%" style=" padding:10px 0; border-bottom:1px solid #545454;" align="left">
+						                        <mx:text id="label" />
+						                    </td>
+						                    <td  width="50%" style="text-align:right; font-size:12px; font-weight:bold; padding:10px 0; border-bottom:1px solid #545454;"> 
+						                        <mx:text id="value" />
+						                    </td>
+						                </tr>
+						            </mx:bloc id="HT_amount">
+						            <mx:bloc id="taxe_amount">
+						                <tr class="amount">
+						                    <td width="50%" style=" padding:10px 0; border-bottom:1px solid #545454;" align="left">
+						                        <mx:text id="label" />
+						                    </td>
+						                    <td  width="50%" style="text-align:right; font-size:12px; font-weight:bold; padding:10px 0; border-bottom:1px solid #545454;"> 
+						                        <mx:text id="value" />
+						                    </td>
+						                </tr>
+						            </mx:bloc id="taxe_amount">
+						            <mx:bloc id="total_amount">
+						                <tr class="amount">
+						                    <td width="50%" style="color:#000;  font-size:16px; font-weight:bold; padding:10px 0; border-bottom:5px solid #000;" align="left">
+						                        <mx:text id="label" />
+						                    </td>
+						                    <td  width="50%" style="color:#000; text-align:right; font-size:16px; font-weight:bold; padding:10px 0; border-bottom:5px solid #000;"> 
+						                        <mx:text id="value" />
+						                    </td>
+						                </tr>
+						            </mx:bloc id="total_amount">
+							        </mx:bloc id="amount_detail">
+			        			</table>
+			        		</td>
+			        	</tr>
+
+
+
+				    
+				    
+			    </tbody>
+			</table>
+
+
+		</td>
+
+	</tr>
+
+	<!--END // détail de la réservation-->
+
+
+	<tr>
+		<td>
+
+			<center>
+			<mx:bloc id="customer_message">
+			    <div id="customer_message">
+			        <h3><mx:text id="title" /></h3><mx:text id="catalog_customer_message" />
+			    </div>
+			</mx:bloc id="customer_message">
+
+
+
+			<br/>
+			<p>
+			    <mx:text id="thanks" />
+			</p><a mXattribut="href:hrefsite;hreflang:hreflangsite;title:titlesite"><mx:text id="site" /></a>
+			<br/>
+			</center>
+		</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<!--<a mXattribut="href:hrefsuivicommande;hreflang:hreflangsuivicommande;title:titlesuivicommande"><mx:text id="follow_up_order" /></a>-->
+<!--
+<mx:bloc id="colspanValueIfTableWithAlternatives">4</mx:bloc id="colspanValueIfTableWithAlternatives">
+<mx:bloc id="colspanValueIfTableWithoutAlternatives">5</mx:bloc id="colspanValueIfTableWithoutAlternatives">
+-->{USE_MAIN_TEMPLATE:1}

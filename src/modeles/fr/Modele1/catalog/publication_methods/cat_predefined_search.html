@@ -1,0 +1,95 @@
+<h2><mx:text id="title" /><mx:pagerCurrentPage format=" - Page %s" /></h2>
+
+
+<mx:bloc id="description">
+	<div class="description">
+		<mx:text id="description" />
+	</div>
+</mx:bloc id="description">
+
+<mx:bloc id="product">
+	<mx:bloc id="back_to_results_page">
+		<a mXattribut="href:href;hreflang:hreflang;title:title"><mx:text id="back_to_results_page" /></a>
+	</mx:bloc id="back_to_results_page">
+
+	<div id="productAvailability">
+		<h5><mx:text id="availability_title" /></h5>
+		<ul>
+			<mx:bloc id="path">
+				<li><a mXattribut="href:href;hreflang:hreflang;title:title"><span><mx:text id="path" /></span></a></li>
+			</mx:bloc id="path">
+		</ul>
+	</div>
+
+	<mx:text id="detail" />
+</mx:bloc id="product">
+
+<mx:bloc id="msg_no_products"><div id="msgNoProducts"><mx:text id="msg" /></div></mx:bloc id="msg_no_products">
+<div class="methodCatPredefined">
+<mx:bloc id="sorting_form">
+	<form id="catalog_search_sort_form" method="post" mXattribut="action:action">
+		<fieldset>
+			<legend><mx:text id="sorting_form_label"/></legend>
+			<div class="block_row">
+				<label mXattribut="for:select_id"><mx:text id="select_label"/></label>
+				<select mXattribut="name:name;id:id;size:size;">
+					<mx:bloc id="options">
+						<option mXattribut="value:value;selected:selected"><mx:text id="option" /></option>
+					</mx:bloc id="options">
+				</select>
+			</div>
+			<div class="block_row">
+				<label mXattribut="for:label_asc_id"><mx:text id="asc_label"/></label>
+				<input type="radio" mXattribut="name:asc_name;id:asc_id;value:asc_value;checked:asc_checked" class="radio" />
+			</div>
+			<div class="block_row">
+				<label mXattribut="for:label_desc_id"><mx:text id="desc_label"/></label>
+				<input type="radio" mXattribut="name:desc_name;id:desc_id;value:desc_value;checked:desc_checked" class="radio" />
+			</div>
+		</fieldset>
+		<div class="submit">
+			<input type="submit" mXattribut="name:submit_name;value:submit_value" />
+		</div>
+	</form>
+</mx:bloc id="sorting_form">
+
+<!--  Bloc qui affiche un formulaire pour sélectionner le nombre de produits à afficher  -->
+<mx:bloc id="nb_products_selector">
+	<div class="block_row">
+		<form id="nb_products_form" method="post" mXattribut="action:action">
+			<label for="nb_products"><mx:text id="label_nb_products" /></label>
+			<select name="nb_products_selector" id="nb_products" onchange="submit();">
+				<mx:bloc id="options">
+					<option mXattribut="value:value;selected:selected;"><mx:text id="option" /></option>
+				</mx:bloc id="options">
+			</select>
+			<noscript>
+				<div class="submit">
+					<input type="submit" value="OK" name="submit_nb_products" />
+				</div>
+			</noscript>
+		</form>
+	</div>
+</mx:bloc id="nb_products_selector">
+
+
+<mx:bloc id="products">
+	<div mXattribut="id:id;class:class">
+		<mx:bloc id="product">
+			<div mXattribut="id:id;class:class">
+				<mx:text id="short_product" />
+			</div>
+		</mx:bloc id="product">
+	</div>
+</mx:bloc id="products">
+</div>
+
+<mx:bloc id="pager">
+	<hr class="separator" />
+	<mx:bloc id="first">&lt;&lt;</mx:bloc id="first">
+	<mx:bloc id="previous">&lt;</mx:bloc id="previous">
+	<mx:bloc id="last">&gt;&gt;</mx:bloc id="last">
+	<mx:bloc id="next">&gt;</mx:bloc id="next">
+	<mx:bloc id="separator">&nbsp;</mx:bloc id="separator">
+	<div class="pager"><mx:bloc id="items"><mx:text id="spacer" /><a mXattribut="href:href;hreflang:hreflang;title:title;id:id"><span><mx:text id="item" /></span></a></mx:bloc id="items"></div>
+</mx:bloc id="pager">

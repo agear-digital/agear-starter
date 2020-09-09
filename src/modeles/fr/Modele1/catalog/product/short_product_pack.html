@@ -1,0 +1,67 @@
+<div mXattribut="class:product_class">
+  <h3><mx:text id="product_name"/></h3>
+  <!--
+    gestion des nouveauté
+    Il est possible d'utiliser l'attribut suivant afin de contextualiser un élément : mXattribut = "class:novelty_class"
+  -->
+  <mx:bloc id="novelty">
+    <!--Affichage de l'image définie dans la configuration du catalogue-->
+    <mx:text id="novelty_img" />
+  </mx:bloc id="novelty">
+  
+
+	<div class="picture"><mx:text id="picture"/></div>
+	<div class="reference"><mx:text id="reference"/></div>
+	<div class="description"><mx:text id="description"/></div>
+
+	<div class="viewProduct" ><a mXattribut="href:href;hreflang:hreflang;title:title"><span>Voir la fiche</span></a></div>
+  <div mXattribut="class:price_class"><mx:bloc id="from_price"><mx:text id="from_price" /></mx:bloc id="from_price"> <span class="prix"><mx:text id="price"/></span></div>
+  
+	<!-- Affichage du taux de taxation -->
+	<mx:bloc id="rate_taxation">
+	 	<div class="rateTaxation" >
+		 	<span class="rateTaxationLabel" ><mx:text id="label" /></span><span class="rateTaxationRate" ><mx:text id="rate" /></span>
+	 	</div>  
+	</mx:bloc id="rate_taxation">
+  
+	<!-- affichage du prix avec promotion -->
+	<mx:bloc id="special_price">
+  		<div class="special_price"><mx:bloc id="from_price"><mx:text id="from_price" /></mx:bloc id="from_price"> <mx:text id="price" /></div>
+	</mx:bloc id="special_price">
+  
+	<mx:text id="add2cart"/><!-- ajout au panier voir template add2cart_product.html-->
+
+	<!-- Affichage du taux de réduction -->
+	<mx:bloc id="special_rate">
+		<div id="specialRate">
+  			<span><mx:text id="rate" /></span>
+  		</div>
+	</mx:bloc id="special_rate">
+  
+	<!--Affichage de l'icône de la réduction-->	
+	<mx:bloc id="special_icon">
+  		<div class="specialIcon"><mx:text id="icon" /></div>
+	</mx:bloc id="special_icon">
+  
+	<!--Affichage du nombre de produit en stock-->	
+	<mx:bloc id="stock_detail">
+		<div id="stockDetail">
+  			<span><mx:text id="detail" /></span>
+  		</div>
+	</mx:bloc id="stock_detail">
+	
+	<!--Affichage de l'icône (En stock ou Pas en stock)-->
+	<mx:bloc id="stock_icon">
+		<div id="stockIcon">
+  			<mx:text id="icon" />
+  		</div>
+	</mx:bloc id="stock_icon">
+  
+	<!--Affichage de la date de disponibilité-->
+	<mx:bloc id="stock_availability_date">
+		<div id="stockAvailabilityDate">
+			<span><mx:text id="date" /></span>
+  		</div>
+	</mx:bloc id="stock_availability_date">
+
+</div>
